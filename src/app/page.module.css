@@ -1,0 +1,197 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.heroImageWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0; /* Changed from -1 to avoid hiding behind body background */
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(49, 56, 81, 0.95) 0%, rgba(49, 56, 81, 0.4) 100%);
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.heroContent {
+  color: var(--color-light);
+  max-width: 750px;
+}
+
+.heroTitle {
+  color: var(--color-light);
+  margin-bottom: var(--spacing-md);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.heroSubtitle {
+  color: var(--color-light);
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.heroActions {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.uspGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.usps {
+  /* optional specific overrides for usps section */
+}
+
+.uspCard {
+  background-color: var(--color-light); /* #F6F3ED */
+  padding: 32px !important;
+  border: 2px solid var(--color-dark) !important;
+  border-radius: 6px !important;
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 24px rgba(49, 56, 81, 0.15) !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.uspIcon {
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+}
+
+.uspIcon svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--color-dark);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.uspCard:hover {
+  transform: translateY(-5px);
+}
+
+.uspCard h3 {
+  color: var(--color-dark); /* #313851 */
+  margin-bottom: var(--spacing-sm);
+}
+
+.uspCard p {
+  margin-bottom: 0;
+  color: var(--color-dark); /* #313851 */
+  opacity: 0.9;
+}
+
+.services {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+
+.servicesContainer {
+  display: block; /* Centered block instead of grid */
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.servicesContent {
+  color: var(--color-dark); /* #313851 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicesContent .sectionTitle {
+  text-align: center;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-dark);
+}
+
+.serviceList {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--spacing-md);
+  text-align: left; /* Keep list left aligned for readability */
+  display: inline-block; /* Allows the left-aligned block to be centered by the parent */
+}
+
+.serviceList li {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  color: var(--color-dark); /* #313851 */
+  display: flex;
+  align-items: center;
+}
+
+.servicesImage {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.roundedImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .servicesContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gridFour {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 1024px) {
+  .gridFour {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gridFour {
+    grid-template-columns: 1fr;
+  }
+}

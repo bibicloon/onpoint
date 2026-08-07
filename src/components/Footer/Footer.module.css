@@ -1,0 +1,133 @@
+.footer {
+  background-color: #10141C; /* Custom dark tint */
+  color: #F6F3ED; /* Creme / light text */
+  padding-top: 60px;
+}
+
+.footerContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px;
+  padding-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .footerContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footerContainer {
+    grid-template-columns: 1.5fr 1fr 2fr 1.5fr;
+    gap: 30px;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #F6F3ED;
+  letter-spacing: 0.5px;
+}
+
+.subheading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #F6F3ED;
+}
+
+.text {
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.6;
+  color: #C2CBD3;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.link {
+  color: #C2CBD3;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.link:hover {
+  color: #F6F3ED;
+  text-decoration: underline;
+}
+
+.textItem {
+  color: #C2CBD3;
+  font-size: 0.9rem;
+}
+
+.seoList {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  row-gap: 6px;
+  align-items: center;
+}
+
+.seoLink {
+  color: #C2CBD3;
+  text-decoration: none;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  transition: color 0.2s ease;
+}
+
+.seoLink:hover {
+  color: #F6F3ED;
+}
+
+.seoSeparator {
+  color: #C2CBD3;
+  font-size: 0.875rem;
+  opacity: 0.5;
+}
+
+.bottomBar {
+  border-top: 1px solid rgba(194, 203, 211, 0.2);
+  padding: 20px 0;
+}
+
+.bottomContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+@media (min-width: 768px) {
+  .bottomContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: #C2CBD3;
+  margin: 0;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 20px;
+}
