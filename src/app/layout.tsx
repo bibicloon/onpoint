@@ -23,6 +23,14 @@ export const metadata: Metadata = {
     description: 'Direct onderweg. Rechtstreeks geleverd. Premium spoedtransport voor bedrijven.',
     url: 'https://onpointkoeriers.nl',
     siteName: 'OnPoint Koeriers',
+    images: [
+      {
+        url: '/images/hero-cinematic-onpoint.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'OnPoint Premium Spoedtransport',
+      },
+    ],
     locale: 'nl_NL',
     type: 'website',
   },
@@ -30,6 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'OnPoint | Premium spoedtransport',
     description: 'Direct onderweg. Rechtstreeks geleverd. Premium spoedtransport voor bedrijven.',
+    images: ['/images/hero-cinematic-onpoint.jpg'],
   },
 };
 
