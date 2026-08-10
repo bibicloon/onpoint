@@ -12,7 +12,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://onpointkoerier.nl'),
+  metadataBase: new URL('https://onpointkoeriers.nl'),
   title: 'OnPoint | Premium spoedtransport voor bedrijven',
   description: 'OnPoint verzorgt premium spoedtransport voor urgente zendingen die passen in een personenauto of compacte bestelwagen. Direct onderweg. Rechtstreeks geleverd.',
   alternates: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'OnPoint | Premium spoedtransport',
     description: 'Direct onderweg. Rechtstreeks geleverd. Premium spoedtransport voor bedrijven.',
-    url: 'https://onpointkoerier.nl',
+    url: 'https://onpointkoeriers.nl',
     siteName: 'OnPoint Koeriers',
     locale: 'nl_NL',
     type: 'website',

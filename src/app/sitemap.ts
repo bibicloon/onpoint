@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://onpointkoerier.nl';
+  const baseUrl = 'https://onpointkoeriers.nl';
 
   // Vaste hoofdpagina's
   const staticPages = [

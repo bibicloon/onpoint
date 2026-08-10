@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function DenHaagPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Den-Haag", "image": "https://onpointkoerier.nl/logo.png", "url": "https://onpointkoerier.nl/werkgebied/den-haag", "telephone": "0630037257", "areaServed": { "@type": "City", "name": "Den-Haag" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Den-Haag", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/den-haag", "telephone": "0630037257", "areaServed": { "@type": "City", "name": "Den-Haag" } }) }} />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>

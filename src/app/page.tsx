@@ -14,9 +14,9 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "CourierService",
     "name": "OnPoint Koeriers",
-    "image": "https://onpointkoerier.nl/logo.png",
+    "image": "https://onpointkoeriers.nl/logo.png",
     "@id": "",
-    "url": "https://onpointkoerier.nl",
+    "url": "https://onpointkoeriers.nl",
     "telephone": "0630037257",
     "address": {
       "@type": "PostalAddress",

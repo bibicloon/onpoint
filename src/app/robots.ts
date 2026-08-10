@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://onpointkoerier.nl/sitemap.xml',
+    sitemap: 'https://onpointkoeriers.nl/sitemap.xml',
   };
 }

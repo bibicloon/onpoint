@@ -15,7 +15,7 @@ export default function ContactForm() {
     
     // Web3Forms config
     formData.append("access_key", "b082243b-61e3-4ae9-b3f7-c6d3b8229971");
-    formData.append("subject", "Nieuwe transportaanvraag via OnPointKoerier.nl");
+    formData.append("subject", "Nieuwe transportaanvraag via onpointkoeriers.nl");
     formData.append("from_name", "OnPoint Koeriers");
     // Web3Forms Auto-reply instellingen
     formData.append("autoresponse", "Beste klant,\n\nHartelijk dank voor uw aanvraag bij OnPoint Koeriers. We hebben uw gegevens in goede orde ontvangen.\n\nEén van onze planners neemt binnen 15 tot 30 minuten contact met u op om de zending te bespreken en in te plannen.\n\nMet vriendelijke groet,\n\nTeam OnPoint Koeriers\n06 30 03 72 57\ninfo@onpointkoeriers.nl");
