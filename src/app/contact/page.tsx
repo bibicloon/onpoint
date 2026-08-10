@@ -49,7 +49,7 @@ export default function ContactPage() {
               </div>
               <div className={styles.infoItem}>
                 <span className={styles.infoLabel}>E-mail</span>
-                <a href="mailto:info@onpoint-koeriers.nl" className={styles.infoValue}>info@onpoint-koeriers.nl</a>
+                <a href="mailto:onpointkoerier@outlook.com" className={styles.infoValue}>onpointkoerier@outlook.com</a>
               </div>
               <div className={styles.infoItem}>
                 <span className={styles.infoLabel}>KVK-nummer</span>

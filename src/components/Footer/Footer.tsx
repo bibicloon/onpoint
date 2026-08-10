@@ -47,7 +47,7 @@ export default function Footer() {
           <h4 className={styles.subheading}>Contact</h4>
           <ul className={styles.list}>
             <li><a href="tel:0630037257" className={styles.link}>06 30 03 72 57</a></li>
-            <li><a href="mailto:info@onpointkoeriers.nl" className={styles.link}>info@onpointkoeriers.nl</a></li>
+            <li><a href="mailto:onpointkoerier@outlook.com" className={styles.link}>onpointkoerier@outlook.com</a></li>
             <li className={styles.textItem}>Vestiging: Amsterdam</li>
             <li className={styles.textItem}>KVK: 42077914 | BTW: NL005478178B19</li>
           </ul>

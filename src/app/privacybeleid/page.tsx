@@ -51,7 +51,7 @@ export default function Privacybeleid() {
 
           <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginTop: '2rem', marginBottom: '1rem' }}>Contact</h2>
           <p style={{ marginBottom: '1.5rem' }}>
-            Heeft u vragen over ons privacybeleid of wilt u gebruikmaken van uw rechten omtrent persoonsgegevens? Neem dan contact met ons op via info@onpointkoeriers.nl.
+            Heeft u vragen over ons privacybeleid of wilt u gebruikmaken van uw rechten omtrent persoonsgegevens? Neem dan contact met ons op via onpointkoerier@outlook.com.
           </p>
         </div>
       </div>
