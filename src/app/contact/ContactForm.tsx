@@ -87,23 +87,14 @@ export default function ContactForm() {
         {/* VISUELE VOERTUIGKEUZE */}
         <div className={styles.formGroup}>
           <label style={{ color: '#313851', marginBottom: '8px' }}>Formaat van uw zending:</label>
-          <div style={{ display: 'flex', gap: '12px', flexDirection: 'row', flexWrap: 'wrap' }}>
+          <div className={styles.vehicleGrid}>
             {/* Kaart 1 */}
             <div 
               onClick={() => setVehicle('Personenauto')}
+              className={styles.vehicleCard}
               style={{
-                flex: '1 1 200px',
-                cursor: 'pointer',
                 backgroundColor: vehicle === 'Personenauto' ? '#C2CBD3' : '#F6F3ED',
-                border: vehicle === 'Personenauto' ? '3px solid #313851' : '2px solid #313851',
-                borderRadius: '6px',
-                padding: '12px',
-                boxShadow: '0 4px 12px rgba(49, 56, 81, 0.1)',
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                gap: '12px',
-                transition: 'all 0.2s ease-in-out'
+                border: vehicle === 'Personenauto' ? '3px solid #313851' : '1.5px solid #313851',
               }}
             >
               <CarFront color="#313851" size={24} />
@@ -116,19 +107,10 @@ export default function ContactForm() {
             {/* Kaart 2 */}
             <div 
               onClick={() => setVehicle('Caddy-formaat')}
+              className={styles.vehicleCard}
               style={{
-                flex: '1 1 200px',
-                cursor: 'pointer',
                 backgroundColor: vehicle === 'Caddy-formaat' ? '#C2CBD3' : '#F6F3ED',
-                border: vehicle === 'Caddy-formaat' ? '3px solid #313851' : '2px solid #313851',
-                borderRadius: '6px',
-                padding: '12px',
-                boxShadow: '0 4px 12px rgba(49, 56, 81, 0.1)',
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                gap: '12px',
-                transition: 'all 0.2s ease-in-out'
+                border: vehicle === 'Caddy-formaat' ? '3px solid #313851' : '1.5px solid #313851',
               }}
             >
               <Truck color="#313851" size={24} />

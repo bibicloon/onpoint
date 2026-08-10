@@ -1,35 +1,38 @@
 .contactGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-lg);
+  gap: 30px;
   max-width: 1200px;
-  margin: -120px auto 0; /* Negatieve marge voor overlap over hero, uitsluitend op deze container */
+  margin: -100px auto 0; /* Negatieve marge voor overlap over hero op desktop */
   position: relative;
   z-index: 10;
   align-items: stretch;
   background-color: var(--color-light); /* #F6F3ED */
   padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(49, 56, 81, 0.15); /* Subtiele schaduw */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(49, 56, 81, 0.15);
 }
 
 @media (max-width: 768px) {
   .contactGrid {
     grid-template-columns: 1fr;
-    margin-top: -60px;
-    padding: 20px;
+    margin-top: 0px; /* Geen overlap op mobiel om krapte te voorkomen */
+    padding: 20px 16px;
+    gap: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(49, 56, 81, 0.1);
   }
 }
 
 .infoCard {
   background-color: var(--color-steel); /* #C2CBD3 */
-  padding: 40px;
-  border-radius: 4px;
+  padding: 30px;
+  border-radius: 8px;
   height: 100%;
 }
 
 .infoItem {
-  margin-bottom: var(--spacing-md);
+  margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
 }
@@ -52,6 +55,7 @@
   color: var(--color-dark);
   text-decoration: none;
   font-weight: 500;
+  word-break: break-word;
 }
 
 .infoValue[href]:hover {
@@ -88,18 +92,21 @@
 .formControl {
   width: 100%;
   padding: 14px;
-  border: none; /* randen weglaten */
-  border-radius: 4px; 
+  border: 1.5px solid #313851; /* Duidelijke rand voor optimale zichtbaarheid */
+  border-radius: 6px; 
   font-family: inherit;
-  font-size: 1rem;
-  background-color: var(--color-steel); /* #C2CBD3 */
-  color: var(--color-dark); /* #313851 */
-  transition: opacity 0.2s ease;
+  font-size: 16px; /* Prevents auto-zoom in iOS Safari */
+  background-color: #FFFFFF; /* Hoge contrast achtergrond voor mobiel */
+  color: #313851; /* #313851 */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  box-sizing: border-box;
 }
 
 .formControl:focus {
   outline: none;
-  opacity: 0.8;
+  border-color: #313851;
+  box-shadow: 0 0 0 3px rgba(49, 56, 81, 0.15);
 }
 
 textarea.formControl {
@@ -108,28 +115,53 @@ textarea.formControl {
   flex-grow: 1; 
 }
 
+.vehicleGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 550px) {
+  .vehicleGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.vehicleCard {
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(49, 56, 81, 0.08);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .submitBtn {
   width: 100%;
-  margin-top: auto; /* Lijn uit aan de onderkant */
+  margin-top: 1rem;
   border: none;
   padding: 16px;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
-  border-radius: 4px;
-}
-
-.submitBtn:hover {
+  border-radius: 6px;
+  box-sizing: border-box;
 }
 
 .formRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-md);
+  gap: 16px;
 }
 
 @media (max-width: 600px) {
   .formRow {
     grid-template-columns: 1fr;
+    gap: 0;
   }
 }
