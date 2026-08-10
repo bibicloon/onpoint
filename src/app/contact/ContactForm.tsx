@@ -6,40 +6,81 @@ import { CarFront, Truck } from 'lucide-react';
 
 export default function ContactForm() {
   const [vehicle, setVehicle] = useState('');
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setStatus('submitting');
+    const formData = new FormData(event.currentTarget);
+    
+    // Web3Forms config
+    formData.append("access_key", "b082243b-61e3-4ae9-b3f7-c6d3b8229971");
+    formData.append("subject", "Nieuwe transportaanvraag via OnPointKoerier.nl");
+    formData.append("from_name", "OnPoint Koeriers");
+    // Web3Forms Auto-reply instellingen
+    formData.append("autoresponse", "Beste klant,\n\nHartelijk dank voor uw aanvraag bij OnPoint Koeriers. We hebben uw gegevens in goede orde ontvangen.\n\nEén van onze planners neemt binnen 15 tot 30 minuten contact met u op om de zending te bespreken en in te plannen.\n\nMet vriendelijke groet,\n\nTeam OnPoint Koeriers\n06 30 03 72 57\ninfo@onpointkoeriers.nl");
+    formData.append("replyto", "onpointkoerier@outlook.com");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+      const data = await response.json();
+      if (data.success) {
+        setStatus('success');
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
+  };
+
+  if (status === 'success') {
+    return (
+      <div className={styles.formWrapper} style={{ textAlign: 'center', padding: '4rem 2rem' }}>
+        <div style={{ backgroundColor: '#F6F3ED', padding: '3rem', borderRadius: '8px', border: '2px solid #C2CBD3' }}>
+          <h3 style={{ color: '#313851', marginBottom: '1rem', fontSize: '1.5rem' }}>Bedankt voor uw aanvraag!</h3>
+          <p style={{ color: '#313851', fontSize: '1.1rem', marginBottom: '0' }}>We hebben uw gegevens succesvol ontvangen. Eén van onze planners neemt binnen 15 tot 30 minuten telefonisch contact met u op. U ontvangt tevens een bevestiging per e-mail.</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.formWrapper}>
-      <form className={styles.contactForm}>
+      <form className={styles.contactForm} onSubmit={onSubmit}>
         <div className={styles.formRow}>
           <div className={styles.formGroup}>
             <label htmlFor="naam">Naam</label>
-            <input type="text" id="naam" className={styles.formControl} required />
+            <input type="text" id="naam" name="naam" className={styles.formControl} required />
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="bedrijfsnaam">Bedrijfsnaam</label>
-            <input type="text" id="bedrijfsnaam" className={styles.formControl} />
+            <input type="text" id="bedrijfsnaam" name="bedrijfsnaam" className={styles.formControl} />
           </div>
         </div>
         
         <div className={styles.formRow}>
           <div className={styles.formGroup}>
             <label htmlFor="email">E-mailadres</label>
-            <input type="email" id="email" className={styles.formControl} required />
+            <input type="email" id="email" name="email" className={styles.formControl} required />
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="telefoon">Telefoonnummer</label>
-            <input type="tel" id="telefoon" className={styles.formControl} required />
+            <input type="tel" id="telefoon" name="telefoon" className={styles.formControl} required />
           </div>
         </div>
 
         <div className={styles.formRow}>
           <div className={styles.formGroup}>
             <label htmlFor="ophaallocatie">Ophaallocatie</label>
-            <input type="text" id="ophaallocatie" className={styles.formControl} required />
+            <input type="text" id="ophaallocatie" name="ophaallocatie" className={styles.formControl} required />
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="bestemming">Bestemming</label>
-            <input type="text" id="bestemming" className={styles.formControl} required />
+            <input type="text" id="bestemming" name="bestemming" className={styles.formControl} required />
           </div>
         </div>
 
@@ -111,10 +152,16 @@ export default function ContactForm() {
 
         <div className={styles.formGroup}>
           <label htmlFor="bericht">Bericht</label>
-          <textarea id="bericht" className={styles.formControl} required></textarea>
+          <textarea id="bericht" name="bericht" className={styles.formControl} required></textarea>
         </div>
 
-        <button type="button" className={`btn btn-secondary ${styles.submitBtn}`}>Verstuur Aanvraag</button>
+        {status === 'error' && (
+          <p style={{ color: 'red', marginTop: '1rem', marginBottom: '1rem' }}>Er is helaas iets misgegaan. Probeer het opnieuw of bel ons direct.</p>
+        )}
+
+        <button type="submit" className={`btn btn-secondary ${styles.submitBtn}`} disabled={status === 'submitting'}>
+          {status === 'submitting' ? 'Aanvraag versturen...' : 'Verstuur Aanvraag'}
+        </button>
       </form>
     </div>
   );
