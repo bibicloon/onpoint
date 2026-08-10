@@ -15,6 +15,22 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://onpointkoerier.nl'),
   title: 'OnPoint | Premium spoedtransport voor bedrijven',
   description: 'OnPoint verzorgt premium spoedtransport voor urgente zendingen die passen in een personenauto of compacte bestelwagen. Direct onderweg. Rechtstreeks geleverd.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'OnPoint | Premium spoedtransport',
+    description: 'Direct onderweg. Rechtstreeks geleverd. Premium spoedtransport voor bedrijven.',
+    url: 'https://onpointkoerier.nl',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'OnPoint | Premium spoedtransport',
+    description: 'Direct onderweg. Rechtstreeks geleverd. Premium spoedtransport voor bedrijven.',
+  },
 };
 
 export default function RootLayout({

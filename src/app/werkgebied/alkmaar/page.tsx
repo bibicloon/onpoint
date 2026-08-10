@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 export default function AlkmaarPage() {
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Alkmaar", "image": "https://onpointkoerier.nl/logo.png", "url": "https://onpointkoerier.nl/werkgebied/alkmaar", "telephone": "0630037257", "areaServed": { "@type": "City", "name": "Alkmaar" } }) }} />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -30,7 +31,7 @@ export default function AlkmaarPage() {
               Direct onderweg vanuit regio Alkmaar.
             </h1>
             <p className={styles.heroSubtitle} style={{ color: '#F6F3ED', maxWidth: '800px', margin: '0 auto 2rem' }}>
-              Premium spoedtransport voor de zakelijke markt. Exclusief met wendbare personenauto's of compacte bestelwagens.
+              Premium <Link href="/spoedtransport" style={{ textDecoration: 'underline' }}>spoedtransport</Link> voor de <Link href="/zakelijk" style={{ textDecoration: 'underline' }}>zakelijke markt</Link>. Exclusief met wendbare personenauto's of compacte bestelwagens.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
               <Link href="/contact" className="btn btn-action">

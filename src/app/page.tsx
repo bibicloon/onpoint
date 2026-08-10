@@ -23,6 +23,16 @@ export default function Home() {
       "addressLocality": "Amsterdam",
       "addressCountry": "NL"
     },
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "Netherlands"
+      },
+      {
+        "@type": "Continent",
+        "name": "Europe"
+      }
+    ],
     "taxID": "NL005478178B19",
     "identifier": {
       "@type": "PropertyValue",
