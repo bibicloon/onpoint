@@ -56,7 +56,9 @@ export default function Footer() {
 
       <div className={styles.bottomBar}>
         <div className={`container ${styles.bottomContainer}`}>
-          <p className={styles.copyright}>&copy; {new Date().getFullYear()} OnPoint Koeriers. Alle rechten voorbehouden.</p>
+          <p className={styles.copyright}>
+            &copy; {new Date().getFullYear()} OnPoint Koeriers. Alle rechten voorbehouden. | Website laten maken door <a href="https://webvastgoed.nl" target="_blank" rel="noopener noreferrer" className={styles.agencyLink}>Webvastgoed.nl</a>
+          </p>
           <div className={styles.legalLinks}>
             <Link href="/algemene-voorwaarden" className={styles.link}>Algemene Voorwaarden</Link>
             <Link href="/privacybeleid" className={styles.link}>Privacybeleid</Link>

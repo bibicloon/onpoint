@@ -127,6 +127,16 @@
   margin: 0;
 }
 
+.agencyLink {
+  color: #C2CBD3;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.agencyLink:hover {
+  color: #F6F3ED;
+}
+
 .legalLinks {
   display: flex;
   gap: 20px;
