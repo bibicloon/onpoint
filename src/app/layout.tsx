@@ -3,7 +3,6 @@ import { Montserrat } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
-import CookieBanner from '@/components/CookieBanner/CookieBanner';
 
 const montserrat = Montserrat({ 
   subsets: ['latin'],
@@ -44,7 +43,6 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <CookieBanner />
         <a 
           href="https://wa.me/31630037257" 
           target="_blank" 
