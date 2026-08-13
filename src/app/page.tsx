@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
 import { Target, ShieldCheck, Globe } from 'lucide-react';
+import FAQAccordion from '@/components/FAQ/FAQAccordion';
+import { faqData } from '@/data/faqData';
 
 export const metadata: Metadata = {
   title: 'OnPoint Koeriers | Snel, Flexibel & Wendbaar Spoedtransport',
@@ -151,6 +153,28 @@ export default function Home() {
             <Link href="/werkgebied/haarlem" className="btn btn-action">Haarlem</Link>
             <Link href="/werkgebied/zaandam" className="btn btn-action">Zaandam</Link>
             <Link href="/werkgebied/alkmaar" className="btn btn-action">Alkmaar</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Preview Section */}
+      <section style={{ padding: '80px 0', backgroundColor: 'var(--color-light)' }}>
+        <div className="container" style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <h2 style={{ color: '#313851', fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', marginBottom: '1rem' }}>
+              Veelgestelde Vragen
+            </h2>
+            <p style={{ color: '#313851', fontSize: '1.1rem', maxWidth: '700px', margin: '0 auto' }}>
+              Heeft u een vraag over onze tarieven, levertijden of dedicated spoedtransport? Bekijk onze antwoorden:
+            </p>
+          </div>
+
+          <FAQAccordion items={faqData.slice(0, 5)} />
+
+          <div style={{ textAlign: 'center', marginTop: '40px' }}>
+            <Link href="/faq" className="btn btn-action">
+              Bekijk alle 14 veelgestelde vragen →
+            </Link>
           </div>
         </div>
       </section>

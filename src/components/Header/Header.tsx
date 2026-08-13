@@ -30,6 +30,7 @@ export default function Header() {
             <li><Link href="/spoedtransport" className={styles.navLink}>Spoedtransport</Link></li>
             <li><Link href="/diensten" className={styles.navLink}>Diensten</Link></li>
             <li><Link href="/tarieven" className={styles.navLink}>Tarieven</Link></li>
+            <li><Link href="/faq" className={styles.navLink}>FAQ</Link></li>
             <li><Link href="/zakelijk" className={styles.navLink}>Zakelijk</Link></li>
             <li><Link href="/over-ons" className={styles.navLink}>Over Ons</Link></li>
           </ul>
@@ -72,6 +73,7 @@ export default function Header() {
             <li><Link href="/spoedtransport" className={styles.mobileNavLink} onClick={closeMenu}>Spoedtransport</Link></li>
             <li><Link href="/diensten" className={styles.mobileNavLink} onClick={closeMenu}>Diensten</Link></li>
             <li><Link href="/tarieven" className={styles.mobileNavLink} onClick={closeMenu}>Tarieven</Link></li>
+            <li><Link href="/faq" className={styles.mobileNavLink} onClick={closeMenu}>Veelgestelde Vragen (FAQ)</Link></li>
             <li><Link href="/zakelijk" className={styles.mobileNavLink} onClick={closeMenu}>Zakelijk</Link></li>
             <li><Link href="/over-ons" className={styles.mobileNavLink} onClick={closeMenu}>Over Ons</Link></li>
             <li><Link href="/contact" className={styles.mobileNavLink} onClick={closeMenu}>Contact</Link></li>

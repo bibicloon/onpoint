@@ -13,7 +13,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: '/zakelijk', priority: 0.9 },
     { url: '/over-ons', priority: 0.9 },
     { url: '/contact', priority: 0.9 },
-    { url: '/spoedtransport', priority: 0.9 }
+    { url: '/spoedtransport', priority: 0.9 },
+    { url: '/faq', priority: 0.9 }
   ];
 
   const staticRoutes: MetadataRoute.Sitemap = staticPages.map((page) => ({

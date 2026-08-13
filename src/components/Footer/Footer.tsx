@@ -20,6 +20,7 @@ export default function Footer() {
             <li><Link href="/" className={styles.link}>Home</Link></li>
             <li><Link href="/diensten" className={styles.link}>Diensten</Link></li>
             <li><Link href="/tarieven" className={styles.link}>Tarieven</Link></li>
+            <li><Link href="/faq" className={styles.link}>Veelgestelde Vragen (FAQ)</Link></li>
             <li><Link href="/over-ons" className={styles.link}>Over Ons</Link></li>
             <li><Link href="/contact" className={styles.link}>Contact</Link></li>
           </ul>

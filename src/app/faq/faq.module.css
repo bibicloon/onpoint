@@ -1,0 +1,71 @@
+.introSection {
+  background-color: #C2CBD3;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.introTitle {
+  color: #313851;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.introText {
+  color: #313851;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.faqSection {
+  background-color: var(--color-light); /* #F6F3ED */
+  padding: 80px 0 100px 0;
+}
+
+.ctaCard {
+  max-width: 900px;
+  margin: 60px auto 0;
+  background-color: #313851;
+  color: #F6F3ED;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(49, 56, 81, 0.2);
+}
+
+.ctaTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #F6F3ED;
+}
+
+.ctaText {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #C2CBD3;
+}
+
+.ctaActions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .introSection {
+    padding: 50px 0;
+  }
+  
+  .faqSection {
+    padding: 50px 0 80px 0;
+  }
+  
+  .ctaCard {
+    padding: 24px 16px;
+    margin-top: 40px;
+  }
+}
