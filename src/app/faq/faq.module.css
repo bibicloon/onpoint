@@ -1,6 +1,6 @@
 .introSection {
   background-color: #C2CBD3;
-  padding: 80px 0;
+  padding: 80px 0 20px 0;
   text-align: center;
 }
 
@@ -20,8 +20,8 @@
 }
 
 .faqSection {
-  background-color: var(--color-light); /* #F6F3ED */
-  padding: 80px 0 100px 0;
+  background-color: #C2CBD3; /* Volledige lichtblauwe achtergrond */
+  padding: 40px 0 100px 0;
 }
 
 .ctaCard {
