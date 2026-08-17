@@ -28,6 +28,11 @@ export default function ContactForm() {
       });
       const data = await response.json();
       if (data.success) {
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'conversion', {
+            'send_to': 'AW-18273397053/kf8TCLvw4MYcEL3St41E'
+          });
+        }
         setStatus('success');
       } else {
         setStatus('error');
