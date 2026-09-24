@@ -9,6 +9,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages = [
     { url: '', priority: 1.0 },
     { url: '/diensten', priority: 0.9 },
+    { url: '/diensten/medisch-spoedtransport', priority: 0.9 },
+    { url: '/diensten/juridisch-documenten-koerier', priority: 0.9 },
+    { url: '/diensten/automotive-onderdelen', priority: 0.9 },
     { url: '/tarieven', priority: 0.9 },
     { url: '/zakelijk', priority: 0.9 },
     { url: '/over-ons', priority: 0.9 },
