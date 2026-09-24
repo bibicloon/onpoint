@@ -273,13 +273,13 @@ export default function Home() {
       </section>
 
       {/* FAQ Preview Section */}
-      <section style={{ padding: '80px 0', backgroundColor: 'var(--color-light)' }}>
+      <section style={{ padding: '80px 0', backgroundColor: '#C2CBD3' }}>
         <div className="container" style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <h2 style={{ color: '#313851', fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', marginBottom: '1rem' }}>
+            <h2 style={{ color: '#313851', fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', marginBottom: '1rem', fontWeight: 700 }}>
               Veelgestelde Vragen
             </h2>
-            <p style={{ color: '#313851', fontSize: '1.1rem', maxWidth: '700px', margin: '0 auto' }}>
+            <p style={{ color: '#313851', fontSize: '1.1rem', maxWidth: '700px', margin: '0 auto', fontWeight: 500 }}>
               Heeft u een vraag over onze tarieven, levertijden of dedicated spoedtransport? Bekijk onze antwoorden:
             </p>
           </div>
