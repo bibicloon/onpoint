@@ -214,12 +214,21 @@ export default function Home() {
       </section>
 
       {/* Kennisbank Preview Section */}
-      <section style={{ padding: '80px 0', backgroundColor: '#F6F3ED' }}>
-        <div className="container" style={{ maxWidth: '1100px', margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ color: '#313851', marginBottom: '1rem', fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 700 }}>
+      <section style={{ position: 'relative', padding: '100px 0', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 0 }}>
+          <Image
+            src="/images/bg_spoedtransport_dark_left.jpg"
+            alt="Kennisbank spoedtransport achtergrond"
+            fill
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
+          />
+        </div>
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(16, 20, 28, 0.65)', zIndex: 1 }}></div>
+        <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '1100px', margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ color: '#F6F3ED', marginBottom: '1rem', fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 700 }}>
             Kennisbank & Logistiek Advies
           </h2>
-          <p style={{ color: '#313851', fontSize: '1.1rem', marginBottom: '3rem', maxWidth: '750px', margin: '0 auto 3rem auto' }}>
+          <p style={{ color: '#F6F3ED', fontSize: '1.1rem', marginBottom: '3rem', maxWidth: '750px', margin: '0 auto 3rem auto' }}>
             Wilt u alles weten over tarieven per kilometer, levertijden en de garanties van dedicated spoedtransport? Bekijk onze nieuwste artikelen:
           </p>
 
@@ -266,7 +275,7 @@ export default function Home() {
 
           </div>
 
-          <Link href="/kennisbank" className="btn btn-secondary">
+          <Link href="/kennisbank" className="btn btn-action">
             BEKIJK ALLE ARTIKELEN IN DE KENNISBANK →
           </Link>
         </div>
