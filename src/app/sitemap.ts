@@ -17,6 +17,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: '/over-ons', priority: 0.9 },
     { url: '/contact', priority: 0.9 },
     { url: '/spoedtransport', priority: 0.9 },
+    { url: '/kennisbank', priority: 0.9 },
     { url: '/faq', priority: 0.9 }
   ];
 
@@ -28,12 +29,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   // Dynamische werkgebieden uitlezen
-  let dynamicRoutes: MetadataRoute.Sitemap = [];
+  let werkgebiedRoutes: MetadataRoute.Sitemap = [];
   try {
     const werkgebiedDir = path.join(process.cwd(), 'src', 'app', 'werkgebied');
     const entries = await fs.promises.readdir(werkgebiedDir, { withFileTypes: true });
     
-    dynamicRoutes = entries
+    werkgebiedRoutes = entries
       .filter((entry) => entry.isDirectory() && !entry.name.startsWith('['))
       .map((dir) => ({
         url: `${baseUrl}/werkgebied/${dir.name}`,
@@ -45,5 +46,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.error('Kon werkgebied map niet uitlezen voor sitemap:', error);
   }
 
-  return [...staticRoutes, ...dynamicRoutes];
+  // Dynamische kennisbank artikelen uitlezen
+  let kennisbankRoutes: MetadataRoute.Sitemap = [];
+  try {
+    const kennisbankDir = path.join(process.cwd(), 'src', 'app', 'kennisbank');
+    const entries = await fs.promises.readdir(kennisbankDir, { withFileTypes: true });
+    
+    kennisbankRoutes = entries
+      .filter((entry) => entry.isDirectory() && !entry.name.startsWith('['))
+      .map((dir) => ({
+        url: `${baseUrl}/kennisbank/${dir.name}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      }));
+  } catch (error) {
+    console.error('Kon kennisbank map niet uitlezen voor sitemap:', error);
+  }
+
+  return [...staticRoutes, ...werkgebiedRoutes, ...kennisbankRoutes];
 }
