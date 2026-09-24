@@ -7,8 +7,8 @@ import FAQAccordion from '@/components/FAQ/FAQAccordion';
 import { faqData } from '@/data/faqData';
 
 export const metadata: Metadata = {
-  title: 'OnPoint Koeriers | Snel, Flexibel & Wendbaar Spoedtransport',
-  description: 'Snel spoedtransport nodig? OnPoint Koeriers levert direct. Flexibel en snel op de bestemming dankzij ons compacte wagenpark. Binnen 30 minuten onderweg.',
+  title: '⚡ Spoedkoerier Binnen 30 Min. Ter Plaatse | Bel 06 30 03 72 57',
+  description: 'Acute spoedzending? OnPoint Koeriers is binnen 30-45 min. op locatie in heel NL & EU. 24/7 dedicated vervoer zonder overslag. Bel direct: 06 30 03 72 57.',
 };
 
 export default function Home() {

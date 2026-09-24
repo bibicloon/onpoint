@@ -5,8 +5,8 @@ import styles from '@/app/page.module.css';
 import { Timer, CarFront, Globe } from 'lucide-react';
 
 export const metadata: Metadata = { 
-  title: 'Spoedkoerier Schiphol | Direct Onderweg | OnPoint Koeriers', 
-  description: 'Uw betrouwbare koerier in Schiphol. Wij navigeren moeiteloos door de stad voor al uw spoedzendingen. Direct beschikbaar.', 
+  title: '⚡ Spoedkoerier Schiphol Airport | 24/7 Ter Plaatse | Bel 06 30 03 72 57', 
+  description: 'Urgente luchtvracht of documenten op Schiphol Airport? OnPoint Koeriers staat binnen 30 minuten klaar. 100% dedicated transport. Bel direct: 06 30 03 72 57.', 
 };
 
 export default function SchipholPage() {

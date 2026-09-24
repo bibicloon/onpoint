@@ -5,8 +5,8 @@ import styles from '@/app/page.module.css';
 import { Timer, CarFront, Globe } from 'lucide-react';
 
 export const metadata: Metadata = { 
-  title: 'Spoedkoerier Amsterdam | Direct Onderweg | OnPoint Koeriers', 
-  description: 'Uw betrouwbare koerier in Amsterdam. Wij navigeren moeiteloos door de stad voor al uw spoedzendingen. Direct beschikbaar.', 
+  title: '⚡ Spoedkoerier Amsterdam | Binnen 30 Min. Ter Plaatse | Bel 06 30 03 72 57', 
+  description: 'Direct een spoedkoerier in Amsterdam of Zuidas nodig? Binnen 30 minuten op de ophaallocatie. 100% dedicated vervoer zonder overslag. Bel nu: 06 30 03 72 57.', 
 };
 
 export default function AmsterdamPage() {

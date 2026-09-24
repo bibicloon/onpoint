@@ -5,8 +5,8 @@ import styles from '@/app/page.module.css';
 import { CarFront, Target, Lock, PhoneCall, Zap, UserCheck } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Spoedtransport | OnPoint Koeriers',
-  description: 'Spoedtransport: Snel, Veilig en 100% Dedicated. Uw zending direct van A naar B zonder overslag. Wendbaar, discreet en altijd de hoogste prioriteit.',
+  title: '⚡ Spoedtransport 24/7 | Binnen 30 Min. Ter Plaatse | Bel 06 30 03 72 57',
+  description: 'Direct spoedtransport nodig? OnPoint Koeriers is binnen 30 minuten op de ophaallocatie. 100% dedicated vervoer zonder overslag in NL & EU. Bel nu: 06 30 03 72 57.',
 };
 
 export default function SpoedtransportPage() {

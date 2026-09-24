@@ -5,8 +5,8 @@ import styles from '@/app/page.module.css';
 import { Timer, CarFront, Globe } from 'lucide-react';
 
 export const metadata: Metadata = { 
-  title: 'Spoedkoerier Eindhoven | Direct Onderweg | OnPoint Koeriers', 
-  description: 'Uw betrouwbare koerier in Eindhoven. Wij navigeren moeiteloos door de stad voor al uw spoedzendingen. Direct beschikbaar.', 
+  title: '⚡ Spoedkoerier Eindhoven | High Tech Campus 24/7 | Bel 06 30 03 72 57', 
+  description: 'Spoedkoerier in Eindhoven of Brabant nodig? Binnen 30-45 minuten op de ophaallocatie. 100% dedicated B2B vervoer. Bel nu direct: 06 30 03 72 57.', 
 };
 
 export default function EindhovenPage() {

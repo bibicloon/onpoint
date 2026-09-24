@@ -5,8 +5,8 @@ import styles from '@/app/page.module.css';
 import { CarFront, Truck, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Tarieven Spoedtransport | Transparant & Scherp | OnPoint Koeriers',
-  description: 'Transparante tarieven voor spoedtransport. Geen verborgen kosten, heldere afspraken. U weet vooraf precies waar u aan toe bent.',
+  title: '⚡ Tarieven Spoedkoerier Per KM | Direct Offerte: 06 30 03 72 57',
+  description: 'Eerlijke kilometerprijs vanaf € 0,60/km voor spoedtransport. Geen verborgen toeslagen. Binnen 30 min. onderweg. Bel direct voor prijsopgave: 06 30 03 72 57.',
 };
 
 export default function TarievenPage() {
