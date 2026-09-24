@@ -232,9 +232,9 @@ export default function Home() {
             Wilt u alles weten over tarieven per kilometer, levertijden en de garanties van dedicated spoedtransport? Bekijk onze nieuwste artikelen:
           </p>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', textAlign: 'left', marginBottom: '40px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', textAlign: 'left', marginBottom: '40px' }}>
             
-            <div style={{ backgroundColor: '#C2CBD3', border: '1.5px solid #313851', borderRadius: '12px', padding: '30px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div style={{ backgroundColor: '#C2CBD3', border: '1.5px solid #313851', borderRadius: '12px', padding: 'clamp(20px, 4vw, 30px)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
                 <div style={{ marginBottom: '12px' }}><Calculator color="#313851" size={32} /></div>
                 <h3 style={{ color: '#313851', fontSize: '1.25rem', marginBottom: '10px', fontWeight: 700 }}>Wat Kost een Spoedkoerier per KM?</h3>
@@ -247,7 +247,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div style={{ backgroundColor: '#C2CBD3', border: '1.5px solid #313851', borderRadius: '12px', padding: '30px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div style={{ backgroundColor: '#C2CBD3', border: '1.5px solid #313851', borderRadius: '12px', padding: 'clamp(20px, 4vw, 30px)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
                 <div style={{ marginBottom: '12px' }}><Scale color="#313851" size={32} /></div>
                 <h3 style={{ color: '#313851', fontSize: '1.25rem', marginBottom: '10px', fontWeight: 700 }}>Spoedkoerier vs. Pakketdienst</h3>
@@ -260,7 +260,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div style={{ backgroundColor: '#C2CBD3', border: '1.5px solid #313851', borderRadius: '12px', padding: '30px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div style={{ backgroundColor: '#C2CBD3', border: '1.5px solid #313851', borderRadius: '12px', padding: 'clamp(20px, 4vw, 30px)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
                 <div style={{ marginBottom: '12px' }}><Clock color="#313851" size={32} /></div>
                 <h3 style={{ color: '#313851', fontSize: '1.25rem', marginBottom: '10px', fontWeight: 700 }}>Hoe Snel Ter Plaatse?</h3>

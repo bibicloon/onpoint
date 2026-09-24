@@ -193,3 +193,46 @@ p {
   height: 32px;
   fill: #FFFFFF;
 }
+
+/* RESPONSIVE MEDIA QUERIES VOOR MOBIEL EN TABLET */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem !important;
+  }
+  
+  .section {
+    padding: 3.5rem 0 !important;
+  }
+
+  .btn {
+    padding: 0.85rem 1.25rem;
+    font-size: 0.95rem;
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .whatsapp-widget {
+    bottom: 16px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .whatsapp-widget svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem !important;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

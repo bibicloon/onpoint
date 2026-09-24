@@ -79,10 +79,10 @@ export default function KennisbankPage() {
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(16, 20, 28, 0.6)', zIndex: 1 }}></div>
         <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '1200px', margin: '0 auto' }}>
           
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
             
             {/* Artikel 1 */}
-            <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: '35px 30px', border: '2px solid #313851', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(18px, 3vw, 30px)', border: '2px solid #313851', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
                 <div style={{ marginBottom: '16px' }}><Calculator color="#313851" size={36} /></div>
                 <h3 style={{ color: '#313851', fontSize: '1.35rem', marginBottom: '12px', fontWeight: 700 }}>
@@ -98,7 +98,7 @@ export default function KennisbankPage() {
             </div>
 
             {/* Artikel 2 */}
-            <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: '35px 30px', border: '2px solid #313851', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(18px, 3vw, 30px)', border: '2px solid #313851', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
                 <div style={{ marginBottom: '16px' }}><Scale color="#313851" size={36} /></div>
                 <h3 style={{ color: '#313851', fontSize: '1.35rem', marginBottom: '12px', fontWeight: 700 }}>
@@ -114,7 +114,7 @@ export default function KennisbankPage() {
             </div>
 
             {/* Artikel 3 */}
-            <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: '35px 30px', border: '2px solid #313851', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(18px, 3vw, 30px)', border: '2px solid #313851', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
                 <div style={{ marginBottom: '16px' }}><Clock color="#313851" size={36} /></div>
                 <h3 style={{ color: '#313851', fontSize: '1.35rem', marginBottom: '12px', fontWeight: 700 }}>
@@ -136,7 +136,7 @@ export default function KennisbankPage() {
             backgroundColor: '#C2CBD3', 
             borderRadius: '8px', 
             boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)', 
-            padding: '60px 40px', 
+            padding: 'clamp(32px, 5vw, 60px) clamp(20px, 4vw, 40px)', 
             maxWidth: '800px', 
             margin: '60px auto 20px auto', 
             textAlign: 'center' 
