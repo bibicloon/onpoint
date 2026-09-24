@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
-import { Target, ShieldCheck, Globe } from 'lucide-react';
+import { Target, ShieldCheck, Globe, Calculator, Scale, Clock, ArrowRight } from 'lucide-react';
 import FAQAccordion from '@/components/FAQ/FAQAccordion';
 import { faqData } from '@/data/faqData';
 
@@ -210,6 +210,65 @@ export default function Home() {
             <Link href="/werkgebied/zaandam" className="btn btn-action">Zaandam</Link>
             <Link href="/werkgebied/alkmaar" className="btn btn-action">Alkmaar</Link>
           </div>
+        </div>
+      </section>
+
+      {/* Kennisbank Preview Section */}
+      <section style={{ padding: '80px 0', backgroundColor: '#F6F3ED' }}>
+        <div className="container" style={{ maxWidth: '1100px', margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ color: '#313851', marginBottom: '1rem', fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 700 }}>
+            Kennisbank & Logistiek Advies
+          </h2>
+          <p style={{ color: '#313851', fontSize: '1.1rem', marginBottom: '3rem', maxWidth: '750px', margin: '0 auto 3rem auto' }}>
+            Wilt u alles weten over tarieven per kilometer, levertijden en de garanties van dedicated spoedtransport? Bekijk onze nieuwste artikelen:
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', textAlign: 'left', marginBottom: '40px' }}>
+            
+            <div style={{ backgroundColor: '#C2CBD3', border: '1.5px solid #313851', borderRadius: '12px', padding: '30px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <div style={{ marginBottom: '12px' }}><Calculator color="#313851" size={32} /></div>
+                <h3 style={{ color: '#313851', fontSize: '1.25rem', marginBottom: '10px', fontWeight: 700 }}>Wat Kost een Spoedkoerier per KM?</h3>
+                <p style={{ color: '#313851', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '20px' }}>
+                  Kilometer tarieven vanaf €0,60/km, starttarieven, toeslagen en praktische rekenvoorbeelden.
+                </p>
+              </div>
+              <Link href="/kennisbank/wat-kost-een-spoedkoerier-per-km" className="btn btn-action" style={{ textAlign: 'center', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                Lees artikel <ArrowRight size={16} />
+              </Link>
+            </div>
+
+            <div style={{ backgroundColor: '#C2CBD3', border: '1.5px solid #313851', borderRadius: '12px', padding: '30px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <div style={{ marginBottom: '12px' }}><Scale color="#313851" size={32} /></div>
+                <h3 style={{ color: '#313851', fontSize: '1.25rem', marginBottom: '10px', fontWeight: 700 }}>Spoedkoerier vs. Pakketdienst</h3>
+                <p style={{ color: '#313851', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '20px' }}>
+                  De 5 belangrijkste verschillen tussen 100% dedicated vervoer en distributienetwerken.
+                </p>
+              </div>
+              <Link href="/kennisbank/spoedkoerier-vs-pakketdienst-verschillen" className="btn btn-action" style={{ textAlign: 'center', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                Lees artikel <ArrowRight size={16} />
+              </Link>
+            </div>
+
+            <div style={{ backgroundColor: '#C2CBD3', border: '1.5px solid #313851', borderRadius: '12px', padding: '30px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <div style={{ marginBottom: '12px' }}><Clock color="#313851" size={32} /></div>
+                <h3 style={{ color: '#313851', fontSize: '1.25rem', marginBottom: '10px', fontWeight: 700 }}>Hoe Snel Ter Plaatse?</h3>
+                <p style={{ color: '#313851', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '20px' }}>
+                  Binnen 30 minuten onderweg. Ontdek hoe wendbare voertuigen de bezorgsnelheid garanderen.
+                </p>
+              </div>
+              <Link href="/kennisbank/hoe-snel-is-een-spoedkoerier-ter-plaatse" className="btn btn-action" style={{ textAlign: 'center', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                Lees artikel <ArrowRight size={16} />
+              </Link>
+            </div>
+
+          </div>
+
+          <Link href="/kennisbank" className="btn btn-secondary">
+            BEKIJK ALLE ARTIKELEN IN DE KENNISBANK →
+          </Link>
         </div>
       </section>
 
