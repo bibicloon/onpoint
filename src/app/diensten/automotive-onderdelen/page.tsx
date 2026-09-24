@@ -50,8 +50,8 @@ export default function AutomotiveOnderdelenPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      {/* HERO */}
-      <section className={styles.hero} style={{ minHeight: '55vh', height: '55vh' }}>
+      {/* SECTIE 1 - HERO */}
+      <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
           <Image 
             src="/images/bg_tarieven_automotive.jpg" 
@@ -60,72 +60,96 @@ export default function AutomotiveOnderdelenPage() {
             priority
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
-          <div className={styles.heroOverlay} style={{ background: 'rgba(49, 56, 81, 0.75)' }}></div>
+          <div className={styles.heroOverlay}></div>
         </div>
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.heroContent} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', margin: '0 auto' }}>
-            <h1 className={styles.heroTitle} style={{ color: 'var(--color-light)', fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
+            <h1 className={styles.heroTitle} style={{ color: '#F6F3ED', fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
               Automotive & Onderdelen Koerier
             </h1>
-            <p className={styles.heroSubtitle} style={{ color: 'var(--color-light)', maxWidth: '800px', margin: '0 auto' }}>
+            <p className={styles.heroSubtitle} style={{ color: '#F6F3ED', maxWidth: '800px', margin: '0 auto 2rem' }}>
               Directe levering van kritieke onderdelen, motoren, elektronica en gereedschappen aan garages en dealers.
             </p>
+            <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <Link href="/contact" className="btn btn-action">
+                Plan uw transport
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* INTRO */}
-      <section style={{ backgroundColor: '#C2CBD3', padding: '80px 0', textAlign: 'center' }}>
-        <div className="container" style={{ maxWidth: '900px', margin: '0 auto' }}>
-          <h2 style={{ color: '#313851', marginBottom: '1.5rem', fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}>
+      {/* SECTIE 2 - INTRO */}
+      <section className="section section-light" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '100px 0', backgroundColor: '#C2CBD3' }}>
+        <div className="container" style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <h2 style={{ color: '#313851', marginBottom: '1.5rem', fontSize: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
             Geen Stilstand in Werkplaats of Productielijn
           </h2>
-          <p style={{ color: '#313851', fontSize: '1.1rem', lineHeight: '1.75' }}>
-            Als een auto in de werkplaats staat te wachten op die ene specifieke sensor, versnellingsbak of koplamp, kan elke uur vertraging omzet kosten. OnPoint Koeriers haalt het benodigde onderdeel direct op bij het centrale magazijn of de leverancier en bezorgt het rechtstreeks bij de monteur in de werkplaats.
+          <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
+            Als een auto in de werkplaats staat te wachten op die ene specifieke sensor, versnellingsbak of koplamp, kan elk uur vertraging omzet kosten. OnPoint Koeriers haalt het benodigde onderdeel direct op bij het centrale magazijn of de leverancier en bezorgt het rechtstreeks bij de monteur in de werkplaats.
           </p>
         </div>
       </section>
 
-      {/* USPs */}
-      <section style={{ backgroundColor: '#F6F3ED', padding: '80px 0' }}>
-        <div className="container" style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
-            
-            <div style={{ backgroundColor: '#FFFFFF', border: '1.5px solid #313851', borderRadius: '12px', padding: '30px' }}>
-              <div style={{ color: '#313851', marginBottom: '15px' }}><Zap size={36} /></div>
-              <h3 style={{ color: '#313851', fontSize: '1.3rem', marginBottom: '10px' }}>Directe Ophaalsnelheid</h3>
-              <p style={{ color: '#313851', lineHeight: '1.6' }}>Binnen 30-45 minuten na de oproep rijdt onze koerier voor bij het distributiecentrum of de onderdelenleverancier.</p>
+      {/* SECTIE 3 - DE 3 USP KAARTEN EN CTA BLOK */}
+      <section style={{ position: 'relative', padding: '100px 0', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 0 }}>
+          <Image
+            src="/images/bg_spoedtransport_dark_left.jpg"
+            alt="Automotive spoedtransport achtergrond"
+            fill
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
+          />
+        </div>
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(16, 20, 28, 0.6)', zIndex: 1 }}></div>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          
+          <div className={styles.uspGrid}>
+            <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
+              <div className={styles.uspIcon}><Zap color="#313851" /></div>
+              <h3 style={{ color: '#313851' }}>Directe Ophaalsnelheid</h3>
+              <p style={{ color: '#313851' }}>Binnen 30-45 minuten na de oproep rijdt onze koerier voor bij het distributiecentrum of de onderdelenleverancier.</p>
             </div>
 
-            <div style={{ backgroundColor: '#FFFFFF', border: '1.5px solid #313851', borderRadius: '12px', padding: '30px' }}>
-              <div style={{ color: '#313851', marginBottom: '15px' }}><Truck size={36} /></div>
-              <h3 style={{ color: '#313851', fontSize: '1.3rem', marginBottom: '10px' }}>Auto & Caddy Voertuigen</h3>
-              <p style={{ color: '#313851', lineHeight: '1.6' }}>Van een klein elektronisch stuurapparaat in onze personenauto tot een europallet met onderdelen in onze Caddy-bestelbus.</p>
+            <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
+              <div className={styles.uspIcon}><Truck color="#313851" /></div>
+              <h3 style={{ color: '#313851' }}>Auto & Caddy Voertuigen</h3>
+              <p style={{ color: '#313851' }}>Van een klein elektronisch stuurapparaat in onze personenauto tot een europallet met onderdelen in onze Caddy-bestelbus.</p>
             </div>
 
-            <div style={{ backgroundColor: '#FFFFFF', border: '1.5px solid #313851', borderRadius: '12px', padding: '30px' }}>
-              <div style={{ color: '#313851', marginBottom: '15px' }}><Wrench size={36} /></div>
-              <h3 style={{ color: '#313851', fontSize: '1.3rem', marginBottom: '10px' }}>Werkplaats Bezorging</h3>
-              <p style={{ color: '#313851', lineHeight: '1.6' }}>Onze chauffeur levert het onderdeel persoonlijk af aan de werkplaatsbalie of baliebeheerder, inclusief aftekening.</p>
+            <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
+              <div className={styles.uspIcon}><Wrench color="#313851" /></div>
+              <h3 style={{ color: '#313851' }}>Werkplaats Bezorging</h3>
+              <p style={{ color: '#313851' }}>Onze chauffeur levert het onderdeel persoonlijk af aan de werkplaatsbalie of baliebeheerder, inclusief aftekening.</p>
             </div>
-
           </div>
 
-          {/* CHECKLIST */}
-          <div style={{ marginTop: '60px', backgroundColor: '#313851', color: '#F6F3ED', padding: '40px', borderRadius: '12px' }}>
-            <h3 style={{ color: '#F6F3ED', fontSize: '1.5rem', marginBottom: '20px', textAlign: 'center' }}>Wat vervoeren wij voor de automotive- en industriële sector?</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '15px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><CheckCircle2 color="#C2CBD3" size={20} /> Carrosserie- & motordelen</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><CheckCircle2 color="#C2CBD3" size={20} /> Stuurapparaten & ECU elektronica</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><CheckCircle2 color="#C2CBD3" size={20} /> Diagnoseapparatuur & speciaal gereedschap</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><CheckCircle2 color="#C2CBD3" size={20} /> Banden, velgen & uitlaatsystemen</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><CheckCircle2 color="#C2CBD3" size={20} /> Machineonderdelen voor de industrie</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><CheckCircle2 color="#C2CBD3" size={20} /> Schadeherstel vervangende onderdelen</div>
+          {/* ONDERWERPEN CHECKLIST BLOK */}
+          <div style={{ 
+            backgroundColor: '#C2CBD3', 
+            borderRadius: '8px', 
+            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)', 
+            padding: '60px 40px', 
+            maxWidth: '900px', 
+            margin: '60px auto 40px auto', 
+            textAlign: 'center' 
+          }}>
+            <h2 style={{ color: '#313851', marginBottom: '1.5rem', fontSize: '2rem', fontWeight: 'bold' }}>
+              Wat vervoeren wij voor de automotive- en industriële sector?
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '15px', textAlign: 'left', marginBottom: '2.5rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Carrosserie- & motordelen</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Stuurapparaten & ECU elektronica</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Diagnoseapparatuur & speciaal gereedschap</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Banden, velgen & uitlaatsystemen</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Machineonderdelen voor de industrie</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Schadeherstel vervangende onderdelen</div>
             </div>
-            <div style={{ textAlign: 'center', marginTop: '35px' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">AUTOMOTIVE SPOEDRIT VERVOEREN: 06 30 03 72 57</a>
-            </div>
+            <Link href="/contact" className="btn btn-action">
+              NEEM DIRECT CONTACT OP
+            </Link>
           </div>
+
         </div>
       </section>
     </main>
