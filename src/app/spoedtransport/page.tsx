@@ -40,10 +40,10 @@ export default function SpoedtransportPage() {
       <section className="section section-light" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '100px 0', backgroundColor: '#C2CBD3' }}>
         <div className="container" style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2 style={{ color: '#313851', marginBottom: '1.5rem', fontSize: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
-            Razendsnel ter plaatse in Noord-Holland & Noord-Brabant
+            Razendsnel ter plaatse in heel Nederland & Europa
           </h2>
-          <p style={{ color: '#313851', fontSize: '1.125rem', fontWeight: 'bold', maxWidth: '800px', margin: '0 auto' }}>
-            Omdat elke minuut telt bij spoedtransport, opereren wij vanuit strategische kernregio's. Vanuit onze directe uitvalsbases in Noord-Holland en Noord-Brabant garanderen wij de allersnelste aanrijtijden. Valt uw ophaallocatie buiten deze provincies? Geen probleem. Dankzij een nauwkeurig geselecteerd landelijk netwerk staan we overal in Nederland direct voor u klaar.
+          <p style={{ color: '#313851', fontSize: '1.125rem', fontWeight: 'bold', maxWidth: '850px', margin: '0 auto', lineHeight: '1.7' }}>
+            Omdat elke minuut telt bij spoedtransport, opereren wij vanuit strategische kernregio's zoals <Link href="/werkgebied/amsterdam" style={{ textDecoration: 'underline' }}>Amsterdam</Link>, <Link href="/werkgebied/utrecht" style={{ textDecoration: 'underline' }}>Utrecht</Link>, <Link href="/werkgebied/rotterdam" style={{ textDecoration: 'underline' }}>Rotterdam</Link>, <Link href="/werkgebied/eindhoven" style={{ textDecoration: 'underline' }}>Eindhoven</Link>, <Link href="/werkgebied/breda" style={{ textDecoration: 'underline' }}>Breda</Link> en rondom de luchthaven <Link href="/werkgebied/schiphol" style={{ textDecoration: 'underline' }}>Schiphol</Link>. Of het nu gaat om <Link href="/diensten/medisch-spoedtransport" style={{ textDecoration: 'underline' }}>medisch spoedtransport</Link>, <Link href="/diensten/juridisch-documenten-koerier" style={{ textDecoration: 'underline' }}>vertrouwelijke akten</Link> of <Link href="/diensten/automotive-onderdelen" style={{ textDecoration: 'underline' }}>cruciale auto-onderdelen</Link>: wij garanderen directe opname en rechtstreekse levering volgens transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometer tarieven</Link>.
           </p>
         </div>
       </section>

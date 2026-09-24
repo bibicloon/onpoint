@@ -44,9 +44,12 @@ export default function TarievenPage() {
       {/* SECTIE 2 - INTRO */}
       <section className="section section-light" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '100px 0', backgroundColor: '#C2CBD3' }}>
         <div className="container" style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <h2 style={{ color: '#313851', fontSize: 'clamp(1.5rem, 3vw, 2.5rem)', maxWidth: '800px', margin: '0 auto 2.5rem', fontWeight: 'bold', lineHeight: '1.4' }}>
-            Tarieven worden berekend op basis van de gereden afstand (van postcode tot postcode).
+          <h2 style={{ color: '#313851', fontSize: 'clamp(1.5rem, 3vw, 2.5rem)', maxWidth: '850px', margin: '0 auto 1.5rem', fontWeight: 'bold', lineHeight: '1.4' }}>
+            Eerlijke & Transparante Kilometer Prijzen voor Spoedkoerier Ritten
           </h2>
+          <p style={{ color: '#313851', fontSize: '1.1rem', maxWidth: '800px', margin: '0 auto 2.5rem', lineHeight: '1.6' }}>
+            Bij OnPoint Koeriers weet u vooraf exact wat uw <Link href="/spoedtransport" style={{ textDecoration: 'underline' }}>spoedtransport</Link> kost. Onze tarieven worden transparant berekend op basis van de gereden afstand (van postcode tot postcode). Zowel voor <Link href="/zakelijk" style={{ textDecoration: 'underline' }}>zakelijke ritten</Link> als voor <Link href="/diensten/medisch-spoedtransport" style={{ textDecoration: 'underline' }}>medisch vervoer</Link> en <Link href="/diensten/juridisch-documenten-koerier" style={{ textDecoration: 'underline' }}>vertrouwelijke documenten</Link>.
+          </p>
 
           {/* VOORWAARDEN BINNEN DE INTRO */}
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'left' }}>

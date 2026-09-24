@@ -43,10 +43,10 @@ export default function OverOnsPage() {
             Snel, Veilig en Altijd Direct.
           </h2>
           <p style={{ color: 'var(--color-dark)', fontSize: '1.125rem', fontWeight: 'bold', maxWidth: '800px', margin: '0 auto', marginBottom: '1rem' }}>
-            Bij OnPoint Koeriers geloven we niet in vertragende processen. Wij werken uitsluitend zonder overslag en maken geen gebruik van distributiecentra. Dit betekent dat uw pakket of document vanaf het moment van ophalen onafgebroken onderweg is naar de eindbestemming.
+            Bij OnPoint Koeriers geloven we niet in vertragende processen. Wij werken uitsluitend zonder overslag en maken geen gebruik van distributiecentra. Of het nu gaat om <Link href="/diensten/medisch-spoedtransport" style={{ textDecoration: 'underline' }}>medisch spoedtransport</Link> of <Link href="/diensten/juridisch-documenten-koerier" style={{ textDecoration: 'underline' }}>vertrouwelijke akten</Link>: uw zending is vanaf het moment van ophalen onafgebroken onderweg.
           </p>
           <p style={{ color: 'var(--color-dark)', fontSize: '1.125rem', fontWeight: 'bold', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            Onze kracht ligt in onze wendbaarheid en flexibiliteit. Door de slimme inzet van vlotte personenauto's en ruime, representatieve Caddy-bestelbussen, hebben wij voor elke urgente zending direct het juiste voertuig klaarstaan. Geen wachttijden, geen logistieke ruis: alleen het allerbeste spoedtransport.
+            Onze kracht ligt in onze wendbaarheid. Door de slimme inzet van personenauto's en Caddy-bestelbussen bieden we voor elke zending transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>spoedkoerier tarieven</Link>. Bekijk ook ons <Link href="/werkgebied/nederland" style={{ textDecoration: 'underline' }}>landelijke werkgebied</Link> of neem direct <Link href="/contact" style={{ textDecoration: 'underline' }}>contact met ons op</Link>.
           </p>
         </div>
       </section>
