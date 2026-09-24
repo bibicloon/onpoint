@@ -196,12 +196,16 @@ export default function Home() {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
             <Link href="/werkgebied/nederland" className="btn btn-action">Nederland</Link>
             <Link href="/werkgebied/amsterdam" className="btn btn-action">Amsterdam</Link>
+            <Link href="/werkgebied/utrecht" className="btn btn-action">Utrecht</Link>
             <Link href="/werkgebied/schiphol" className="btn btn-action">Schiphol</Link>
             <Link href="/werkgebied/rotterdam" className="btn btn-action">Rotterdam</Link>
             <Link href="/werkgebied/den-haag" className="btn btn-action">Den Haag</Link>
             <Link href="/werkgebied/eindhoven" className="btn btn-action">Eindhoven</Link>
             <Link href="/werkgebied/breda" className="btn btn-action">Breda</Link>
             <Link href="/werkgebied/tilburg" className="btn btn-action">Tilburg</Link>
+            <Link href="/werkgebied/arnhem" className="btn btn-action">Arnhem</Link>
+            <Link href="/werkgebied/venlo" className="btn btn-action">Venlo</Link>
+            <Link href="/werkgebied/dordrecht" className="btn btn-action">Dordrecht</Link>
             <Link href="/werkgebied/haarlem" className="btn btn-action">Haarlem</Link>
             <Link href="/werkgebied/zaandam" className="btn btn-action">Zaandam</Link>
             <Link href="/werkgebied/alkmaar" className="btn btn-action">Alkmaar</Link>

@@ -37,12 +37,16 @@ export default function Footer() {
           <h4 className={styles.subheading}>Werkgebieden</h4>
           <div className={styles.seoList}>
             <Link href="/werkgebied/amsterdam" className={styles.seoLink}>Amsterdam</Link><span className={styles.seoSeparator}>•</span>
+            <Link href="/werkgebied/utrecht" className={styles.seoLink}>Utrecht</Link><span className={styles.seoSeparator}>•</span>
             <Link href="/werkgebied/schiphol" className={styles.seoLink}>Schiphol</Link><span className={styles.seoSeparator}>•</span>
             <Link href="/werkgebied/rotterdam" className={styles.seoLink}>Rotterdam</Link><span className={styles.seoSeparator}>•</span>
             <Link href="/werkgebied/den-haag" className={styles.seoLink}>Den Haag</Link><span className={styles.seoSeparator}>•</span>
             <Link href="/werkgebied/eindhoven" className={styles.seoLink}>Eindhoven</Link><span className={styles.seoSeparator}>•</span>
             <Link href="/werkgebied/breda" className={styles.seoLink}>Breda</Link><span className={styles.seoSeparator}>•</span>
             <Link href="/werkgebied/tilburg" className={styles.seoLink}>Tilburg</Link><span className={styles.seoSeparator}>•</span>
+            <Link href="/werkgebied/arnhem" className={styles.seoLink}>Arnhem</Link><span className={styles.seoSeparator}>•</span>
+            <Link href="/werkgebied/venlo" className={styles.seoLink}>Venlo</Link><span className={styles.seoSeparator}>•</span>
+            <Link href="/werkgebied/dordrecht" className={styles.seoLink}>Dordrecht</Link><span className={styles.seoSeparator}>•</span>
             <Link href="/werkgebied/haarlem" className={styles.seoLink}>Haarlem</Link><span className={styles.seoSeparator}>•</span>
             <Link href="/werkgebied/zaandam" className={styles.seoLink}>Zaandam</Link><span className={styles.seoSeparator}>•</span>
             <Link href="/werkgebied/alkmaar" className={styles.seoLink}>Alkmaar</Link>
