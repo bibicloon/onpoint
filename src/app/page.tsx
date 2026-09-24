@@ -132,6 +132,58 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Gespecialiseerde B2B Niche Logistiek Section */}
+      <section style={{ padding: '80px 0', backgroundColor: '#F6F3ED' }}>
+        <div className="container" style={{ maxWidth: '1100px', margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ color: '#313851', marginBottom: '1rem', fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}>
+            Gespecialiseerde B2B Logistiek
+          </h2>
+          <p style={{ color: '#313851', fontSize: '1.1rem', marginBottom: '3rem', maxWidth: '750px', margin: '0 auto 3rem auto' }}>
+            Maatwerk spoedtransport voor specifieke sectoren met de hoogste eisen aan snelheid, discreet vervoer en zorgvuldigheid:
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', textAlign: 'left' }}>
+            
+            <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: '30px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', border: '1.5px solid #313851' }}>
+              <div>
+                <h3 style={{ color: '#313851', fontSize: '1.3rem', marginBottom: '12px', fontWeight: 700 }}>Medisch Spoedtransport</h3>
+                <p style={{ color: '#313851', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '20px' }}>
+                  Spoedvervoer van laboratoriummonsters, bloed, medicatie en medische hulpmiddelen voor zorginstellingen.
+                </p>
+              </div>
+              <Link href="/diensten/medisch-spoedtransport" className="btn btn-action" style={{ textAlign: 'center' }}>
+                Bekijk Medische Service →
+              </Link>
+            </div>
+
+            <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: '30px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', border: '1.5px solid #313851' }}>
+              <div>
+                <h3 style={{ color: '#313851', fontSize: '1.3rem', marginBottom: '12px', fontWeight: 700 }}>Juridisch & Documenten</h3>
+                <p style={{ color: '#313851', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '20px' }}>
+                  Discrete en persoonlijke overhandiging van notariële akten, processtukken, contracten en paspoorten.
+                </p>
+              </div>
+              <Link href="/diensten/juridisch-documenten-koerier" className="btn btn-action" style={{ textAlign: 'center' }}>
+                Bekijk Juridische Service →
+              </Link>
+            </div>
+
+            <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: '30px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', border: '1.5px solid #313851' }}>
+              <div>
+                <h3 style={{ color: '#313851', fontSize: '1.3rem', marginBottom: '12px', fontWeight: 700 }}>Automotive & Onderdelen</h3>
+                <p style={{ color: '#313851', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '20px' }}>
+                  Direct spoedtransport van auto-onderdelen, gereedschap en elektronica voor garages en dealers.
+                </p>
+              </div>
+              <Link href="/diensten/automotive-onderdelen" className="btn btn-action" style={{ textAlign: 'center' }}>
+                Bekijk Automotive Service →
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </section>
       {/* Werkgebied Section */}
       <section className="section section-steel" style={{ padding: '80px 0', backgroundColor: '#C2CBD3' }}>
         <div className="container" style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>

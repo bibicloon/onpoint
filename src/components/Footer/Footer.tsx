@@ -24,6 +24,12 @@ export default function Footer() {
             <li><Link href="/over-ons" className={styles.link}>Over Ons</Link></li>
             <li><Link href="/contact" className={styles.link}>Contact</Link></li>
           </ul>
+          <h4 className={styles.subheading} style={{ marginTop: '20px' }}>Specialismen</h4>
+          <ul className={styles.list}>
+            <li><Link href="/diensten/medisch-spoedtransport" className={styles.link}>Medisch Transport</Link></li>
+            <li><Link href="/diensten/juridisch-documenten-koerier" className={styles.link}>Juridisch & Documenten</Link></li>
+            <li><Link href="/diensten/automotive-onderdelen" className={styles.link}>Automotive Onderdelen</Link></li>
+          </ul>
         </div>
 
         {/* Kolom 3 */}
