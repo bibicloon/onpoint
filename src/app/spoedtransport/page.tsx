@@ -7,11 +7,40 @@ import { CarFront, Target, Lock, PhoneCall, Zap, UserCheck } from 'lucide-react'
 export const metadata: Metadata = {
   title: '⚡ Spoedtransport 24/7 | Binnen 30 Min. Ter Plaatse | Bel 06 30 03 72 57',
   description: 'Direct spoedtransport nodig? OnPoint Koeriers is binnen 30 minuten op de ophaallocatie. 100% dedicated vervoer zonder overslag in NL & EU. Bel nu: 06 30 03 72 57.',
+  alternates: {
+    canonical: '/spoedtransport',
+  },
+  openGraph: {
+    title: '⚡ Spoedtransport 24/7 | Binnen 30 Min. Ter Plaatse | OnPoint Koeriers',
+    description: 'Direct spoedtransport nodig? Binnen 30 minuten op de ophaallocatie. 100% dedicated vervoer zonder overslag in NL & EU.',
+    url: 'https://onpointkoeriers.nl/spoedtransport',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function SpoedtransportPage() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "24/7 Spoedtransport & Spoedkoerier",
+    "provider": {
+      "@type": "CourierService",
+      "name": "OnPoint Koeriers",
+      "telephone": "+31630037257",
+      "url": "https://onpointkoeriers.nl"
+    },
+    "areaServed": ["NL", "BE", "DE", "EU"],
+    "description": "Direct spoedtransport binnen 30 minuten op de ophaallocatie. 100% dedicated vervoer zonder overslag in Nederland en Europa."
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -29,9 +58,17 @@ export default function SpoedtransportPage() {
             <h1 className={styles.heroTitle} style={{ color: '#F6F3ED', fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
               Spoedtransport: Snel, Veilig en 100% Dedicated
             </h1>
-            <p className={styles.heroSubtitle} style={{ color: '#F6F3ED', maxWidth: '800px', margin: '0 auto' }}>
+            <p className={styles.heroSubtitle} style={{ color: '#F6F3ED', maxWidth: '800px', margin: '0 auto 2rem' }}>
               Uw zending direct van A naar B zonder overslag. Wendbaar, discreet en altijd de hoogste prioriteit.
             </p>
+            <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
+              <Link href="/contact" className="btn btn-action">
+                PLAN UW TRANSPORT
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -119,9 +156,6 @@ export default function SpoedtransportPage() {
           </div>
         </div>
       </section>
-
-
-
     </main>
   );
 }

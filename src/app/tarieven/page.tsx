@@ -7,6 +7,17 @@ import { CarFront, Truck, CheckCircle2 } from 'lucide-react';
 export const metadata: Metadata = {
   title: '⚡ Tarieven Spoedkoerier Per KM | Direct Offerte: 06 30 03 72 57',
   description: 'Eerlijke kilometerprijs vanaf € 0,60/km voor spoedtransport. Geen verborgen toeslagen. Binnen 30 min. onderweg. Bel direct voor prijsopgave: 06 30 03 72 57.',
+  alternates: {
+    canonical: '/tarieven',
+  },
+  openGraph: {
+    title: '⚡ Tarieven Spoedkoerier Per KM (€ 0,60/km) | OnPoint Koeriers',
+    description: 'Eerlijke kilometerprijs vanaf € 0,60/km voor spoedtransport en € 0,65/km voor Caddy bestelwagen. Geen spoedtoeslag.',
+    url: 'https://onpointkoeriers.nl/tarieven',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function TarievenPage() {
@@ -32,7 +43,10 @@ export default function TarievenPage() {
             <p className={styles.heroSubtitle} style={{ color: '#F6F3ED', maxWidth: '800px', margin: '0 auto 2rem' }}>
               Geen verborgen kosten, heldere afspraken. U weet vooraf precies waar u aan toe bent.
             </p>
-            <div className={styles.heroActions}>
+            <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
               <Link href="/contact" className="btn btn-action">
                 BEREKEN RITPRIJS
               </Link>
@@ -162,8 +176,6 @@ export default function TarievenPage() {
           </div>
         </div>
       </section>
-
-
     </main>
   );
 }

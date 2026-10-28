@@ -5,8 +5,19 @@ import styles from '@/app/page.module.css';
 import { Target, PhoneCall, Lock, Timer } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Over Ons | OnPoint Spoedtransport',
-  description: 'OnPoint Koeriers is uw betrouwbare partner voor dedicated spoedtransport. Wij rijden altijd direct, veilig en discreet naar elke bestemming.',
+  title: 'Over OnPoint Koeriers | 24/7 Dedicated Spoedtransport Specialist',
+  description: 'OnPoint Koeriers (KVK 42077914) is uw betrouwbare partner voor dedicated spoedtransport in Nederland & Europa. Altijd direct, veilig en discreet zonder overslag.',
+  alternates: {
+    canonical: '/over-ons',
+  },
+  openGraph: {
+    title: 'Over OnPoint Koeriers | 24/7 Dedicated Spoedtransport Specialist',
+    description: 'Maak kennis met OnPoint Koeriers: 100% dedicated spoedtransport zonder overslag door heel Nederland en Europa.',
+    url: 'https://onpointkoeriers.nl/over-ons',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function OverOnsPage() {

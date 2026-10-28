@@ -2,7 +2,18 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Privacybeleid | OnPoint Koeriers',
-  description: 'Lees het privacybeleid van OnPoint Koeriers. Wij gaan zorgvuldig om met uw gegevens.',
+  description: 'Lees het AVG-conforme privacybeleid van OnPoint Koeriers. Wij gaan zorgvuldig en discreet om met uw zakelijke gegevens en transportopdrachten.',
+  alternates: {
+    canonical: '/privacybeleid',
+  },
+  openGraph: {
+    title: 'Privacybeleid | OnPoint Koeriers',
+    description: 'Lees het privacybeleid van OnPoint Koeriers.',
+    url: 'https://onpointkoeriers.nl/privacybeleid',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function Privacybeleid() {

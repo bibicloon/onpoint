@@ -8,7 +8,18 @@ import { faqData } from '@/data/faqData';
 
 export const metadata: Metadata = {
   title: '⚡ Spoedkoerier Binnen 30 Min. Ter Plaatse | Bel 06 30 03 72 57',
-  description: 'Acute spoedzending? OnPoint Koeriers is binnen 30-45 min. op locatie in heel NL & EU. 24/7 dedicated vervoer zonder overslag. Bel direct: 06 30 03 72 57.',
+  description: 'Acute spoedzending? OnPoint Koeriers is binnen 30-45 min. op locatie in heel NL & EU. 24/7 dedicated vervoer zonder overslag vanaf €0,60/km. Bel direct: 06 30 03 72 57.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: '⚡ Spoedkoerier Binnen 30 Min. Ter Plaatse | OnPoint Koeriers',
+    description: 'Acute spoedzending? Binnen 30-45 min. op locatie in heel NL & EU. 24/7 dedicated vervoer zonder overslag vanaf €0,60/km.',
+    url: 'https://onpointkoeriers.nl',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function Home() {
@@ -17,23 +28,52 @@ export default function Home() {
     "@type": "CourierService",
     "name": "OnPoint Koeriers",
     "image": "https://onpointkoeriers.nl/logo.png",
-    "@id": "",
+    "@id": "https://onpointkoeriers.nl/#organization",
     "url": "https://onpointkoeriers.nl",
-    "telephone": "0630037257",
+    "telephone": "+31630037257",
+    "priceRange": "€0,60 - €0,65 per km (starttarief €25)",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Amsterdam",
       "addressCountry": "NL"
     },
-    "areaServed": [
+    "openingHoursSpecification": [
       {
-        "@type": "Country",
-        "name": "Netherlands"
-      },
-      {
-        "@type": "Continent",
-        "name": "Europe"
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
       }
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+31630037257",
+      "contactType": "customer service",
+      "availableLanguage": ["Dutch", "English"],
+      "areaServed": ["NL", "BE", "DE", "EU"]
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "Netherlands" },
+      { "@type": "Continent", "name": "Europe" },
+      { "@type": "City", "name": "Amsterdam" },
+      { "@type": "City", "name": "Utrecht" },
+      { "@type": "City", "name": "Rotterdam" },
+      { "@type": "City", "name": "Den Haag" },
+      { "@type": "City", "name": "Eindhoven" },
+      { "@type": "City", "name": "Schiphol" },
+      { "@type": "City", "name": "Breda" },
+      { "@type": "City", "name": "Tilburg" },
+      { "@type": "City", "name": "Arnhem" },
+      { "@type": "City", "name": "Venlo" },
+      { "@type": "City", "name": "Dordrecht" }
     ],
     "taxID": "NL005478178B19",
     "identifier": {
@@ -43,11 +83,28 @@ export default function Home() {
     }
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.slice(0, 5).map((item) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+
   return (
     <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {/* Hero Section */}
       <section className={styles.hero}>

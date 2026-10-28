@@ -7,12 +7,23 @@ import { Timer, CarFront, Globe } from 'lucide-react';
 export const metadata: Metadata = { 
   title: '⚡ Spoedkoerier Utrecht | Binnen 30 Min. Ter Plaatse | Bel 06 30 03 72 57', 
   description: 'Direct een spoedkoerier in Utrecht, Lage Weide of Papendorp nodig? Binnen 30 minuten op locatie. 100% dedicated vervoer. Bel direct: 06 30 03 72 57.', 
+  alternates: {
+    canonical: '/werkgebied/utrecht',
+  },
+  openGraph: {
+    title: '⚡ Spoedkoerier Utrecht | Binnen 30 Min. Ter Plaatse | OnPoint Koeriers',
+    description: 'Centraal en direct onderweg: spoedtransport vanuit Utrecht, Lage Weide en Papendorp naar elke bestemming in Nederland & Europa.',
+    url: 'https://onpointkoeriers.nl/werkgebied/utrecht',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function UtrechtPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Utrecht", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/utrecht", "telephone": "0630037257", "areaServed": { "@type": "City", "name": "Utrecht" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Utrecht", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/utrecht", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Utrecht" } }) }} />
       
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
@@ -35,6 +46,9 @@ export default function UtrechtPage() {
               Premium <Link href="/spoedtransport" style={{ textDecoration: 'underline' }}>spoedtransport</Link> voor de <Link href="/zakelijk" style={{ textDecoration: 'underline' }}>zakelijke markt</Link> in Utrecht, Lage Weide en Papendorp.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
               </Link>
@@ -50,7 +64,7 @@ export default function UtrechtPage() {
             Het Centrale Knooppunt van Nederland
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            Als centraal verkeersknooppunt van Nederland zijn de snelwegen A1, A2, A12 en A27 rond Utrecht van cruciaal belang voor snelle logistiek. OnPoint Koeriers navigeert met compacte personenauto's en Caddy-bestelbussen razendsnel door het Utrechtse stadsverkeer en over de drukke bedrijventerreinen zoals Lage Weide en Papendorp.
+            Als centraal verkeersknooppunt van Nederland zijn de snelwegen A1, A2, A12 en A27 rond Utrecht van cruciaal belang voor snelle logistiek. OnPoint Koeriers navigeert met compacte personenauto's en Caddy-bestelbussen razendsnel door het Utrechtse stadsverkeer en over bedrijventerreinen zoals Lage Weide, Papendorp, Rijnsweerd en Nieuwegein tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>

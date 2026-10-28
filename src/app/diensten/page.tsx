@@ -5,8 +5,19 @@ import styles from '@/app/page.module.css';
 import { CarFront, Truck, Target, Plane } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Onze Diensten | OnPoint Spoedtransport',
-  description: 'Van razendsnel spoedtransport met personenauto tot dedicated stadsdistributie. Ontdek onze premium koeriersdiensten.',
+  title: 'Koeriersdiensten Nederland: Spoedtransport, Medisch & Dedicated | OnPoint Koeriers',
+  description: 'Van razendsnel 24/7 spoedtransport met personenauto of Caddy tot medisch vervoer, juridische koeriersdiensten en Courier On Board. Binnen 30 min. onderweg.',
+  alternates: {
+    canonical: '/diensten',
+  },
+  openGraph: {
+    title: 'Koeriersdiensten Nederland: Spoedtransport, Medisch & Dedicated | OnPoint',
+    description: 'Ontdek onze 100% dedicated koeriersdiensten: spoedtransport, medisch vervoer, juridische documenten en automotive onderdelen.',
+    url: 'https://onpointkoeriers.nl/diensten',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function DienstenPage() {
@@ -29,9 +40,17 @@ export default function DienstenPage() {
             <h1 className={styles.heroTitle} style={{ color: 'var(--color-light)', fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
               Onze Koeriersdiensten
             </h1>
-            <p className={styles.heroSubtitle} style={{ color: 'var(--color-light)', maxWidth: '800px', margin: '0 auto' }}>
+            <p className={styles.heroSubtitle} style={{ color: 'var(--color-light)', maxWidth: '800px', margin: '0 auto 2rem' }}>
               Razendsnel en flexibel spoedtransport, direct onderweg voor uw belangrijkste zendingen.
             </p>
+            <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
+              <Link href="/contact" className="btn btn-action">
+                PLAN UW TRANSPORT
+              </Link>
+            </div>
           </div>
         </div>
       </section>

@@ -7,12 +7,23 @@ import { Timer, CarFront, Globe } from 'lucide-react';
 export const metadata: Metadata = { 
   title: '⚡ Spoedkoerier Arnhem | Binnen 30 Min. Ter Plaatse | Bel 06 30 03 72 57', 
   description: 'Direct een spoedkoerier in Arnhem, IPKW of Gelderland nodig? Binnen 30 minuten op locatie. 100% dedicated vervoer. Bel direct: 06 30 03 72 57.', 
+  alternates: {
+    canonical: '/werkgebied/arnhem',
+  },
+  openGraph: {
+    title: '⚡ Spoedkoerier Arnhem & Gelderland | OnPoint Koeriers',
+    description: 'Binnen 30 minuten op locatie in Arnhem, IPKW, IJsseloord en Gelderland voor direct spoedtransport.',
+    url: 'https://onpointkoeriers.nl/werkgebied/arnhem',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function ArnhemPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Arnhem", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/arnhem", "telephone": "0630037257", "areaServed": { "@type": "City", "name": "Arnhem" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Arnhem", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/arnhem", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Arnhem" } }) }} />
       
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
@@ -35,6 +46,9 @@ export default function ArnhemPage() {
               Directe <Link href="/spoedtransport" style={{ textDecoration: 'underline' }}>spoedkoerier</Link> voor bedrijven op IPKW, Het Broek, IJsseloord en heel Arnhem-Nijmegen.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
               </Link>
@@ -50,7 +64,7 @@ export default function ArnhemPage() {
             Strategisch Logistiek Knooppunt in Oost-Nederland
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            Gelegen aan de kruising van de A12, A50 en A325 is Arnhem de cruciale schakel tussen de Randstad, Twente en het Duitse achterland. OnPoint Koeriers staat klaar voor direct geconditioneerd of dedicated spoedvervoer op Industriepark Kleefse Waard (IPKW), Het Broek en IJsseloord I & II.
+            Gelegen aan de kruising van de A12, A50 en A325 is Arnhem de cruciale schakel tussen de Randstad, Twente en het Duitse achterland. OnPoint Koeriers staat klaar voor direct dedicated spoedvervoer op Industriepark Kleefse Waard (IPKW), Het Broek, IJsseloord I & II en richting Nijmegen en Oberhausen tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>

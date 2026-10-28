@@ -7,12 +7,23 @@ import { Timer, CarFront, Globe } from 'lucide-react';
 export const metadata: Metadata = { 
   title: '⚡ Spoedkoerier Dordrecht | Binnen 30 Min. Ter Plaatse | Bel 06 30 03 72 57', 
   description: 'Direct een spoedkoerier in Dordrecht, Drechtsteden of Kil 1, 2, 3 nodig? Binnen 30 minuten op locatie. 100% dedicated vervoer. Bel direct: 06 30 03 72 57.', 
+  alternates: {
+    canonical: '/werkgebied/dordrecht',
+  },
+  openGraph: {
+    title: '⚡ Spoedkoerier Dordrecht & Drechtsteden | OnPoint Koeriers',
+    description: 'Binnen 30 minuten op locatie op Dordtse Kil, Krabbepolder en heel de Drechtsteden voor direct spoedtransport.',
+    url: 'https://onpointkoeriers.nl/werkgebied/dordrecht',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function DordrechtPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Dordrecht", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/dordrecht", "telephone": "0630037257", "areaServed": { "@type": "City", "name": "Dordrecht" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Dordrecht", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/dordrecht", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Dordrecht" } }) }} />
       
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
@@ -35,6 +46,9 @@ export default function DordrechtPage() {
               Snelle en betrouwbare <Link href="/spoedtransport" style={{ textDecoration: 'underline' }}>spoedkoerier</Link> in Dordrecht, Papendrecht, Sliedrecht en Zwijndrecht.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
               </Link>
@@ -50,7 +64,7 @@ export default function DordrechtPage() {
             Spoedvervoer in het Hart van de Drechtsteden
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            Gelegen aan de drukke A16 en A15 verbindt Dordrecht Rotterdam met Brabant en Antwerpen. OnPoint Koeriers is uw toegewijde partner voor spoedzendingen op bedrijventerreinen zoals Krabbepolder, Dordtse Kil I, II, III en Weststad. Wij garanderen een directe rit zonder stops.
+            Gelegen aan de drukke A16 en N3 verbindt Dordrecht de Rotterdamse haven met Moerdijk, Breda en Antwerpen. OnPoint Koeriers is uw toegewijde partner voor spoedzendingen op bedrijventerreinen zoals Krabbepolder, Dordtse Kil I, II, III en IV en maritieme bedrijven in de Drechtsteden tegen heldere <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>

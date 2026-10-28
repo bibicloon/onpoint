@@ -5,8 +5,19 @@ import styles from './contact.module.css';
 import ContactForm from './ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Contact | OnPoint Spoedtransport',
-  description: 'Voor spoedtransport telt elke seconde. Bel ons direct of laat uw gegevens achter. Wij staan 24/7 voor u klaar.',
+  title: 'Direct Spoedkoerier Boeken (24/7) | Contact | Bel 06 30 03 72 57',
+  description: 'Voor spoedtransport telt elke seconde. Bel direct 06 30 03 72 57 of plan uw spoedrit online in. Onze koeriers staan 24/7 binnen 30 minuten voor u klaar.',
+  alternates: {
+    canonical: '/contact',
+  },
+  openGraph: {
+    title: 'Direct Spoedkoerier Boeken (24/7) | Contact OnPoint Koeriers',
+    description: 'Bel direct 06 30 03 72 57 of vraag direct uw ritprijs aan. Binnen 30 minuten onderweg in heel Nederland.',
+    url: 'https://onpointkoeriers.nl/contact',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function ContactPage() {

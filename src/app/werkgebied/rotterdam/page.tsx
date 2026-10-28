@@ -5,14 +5,25 @@ import styles from '@/app/page.module.css';
 import { Timer, Route, CarFront } from 'lucide-react';
 
 export const metadata: Metadata = { 
-  title: 'Spoedkoerier Rotterdam | Direct Onderweg | OnPoint Koeriers', 
-  description: 'Uw betrouwbare koerier in Rotterdam. Wij navigeren moeiteloos door de stad voor al uw spoedzendingen. Direct beschikbaar.', 
+  title: '⚡ Spoedkoerier Rotterdam & Haven | Binnen 30 Min. | Bel 06 30 03 72 57', 
+  description: 'Spoedkoerier in Rotterdam, Botlek, Europoort of Maasvlakte nodig? Binnen 30 minuten ter plaatse voor haven, industrie en zakelijk vervoer. Bel 06 30 03 72 57.', 
+  alternates: {
+    canonical: '/werkgebied/rotterdam',
+  },
+  openGraph: {
+    title: '⚡ Spoedkoerier Rotterdam & Haven | OnPoint Koeriers',
+    description: 'Direct vervoer voor de Rotterdamse haven, Botlek, Maasvlakte en zakelijke markt. Binnen 30 minuten op locatie.',
+    url: 'https://onpointkoeriers.nl/werkgebied/rotterdam',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function RotterdamPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Rotterdam", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/rotterdam", "telephone": "0630037257", "areaServed": { "@type": "City", "name": "Rotterdam" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Rotterdam", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/rotterdam", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Rotterdam" } }) }} />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -34,6 +45,9 @@ export default function RotterdamPage() {
               Uw zending vanuit de Maasstad razendsnel en zonder overslag naar de eindbestemming.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
               </Link>
@@ -46,10 +60,10 @@ export default function RotterdamPage() {
       <section className="section section-light" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '100px 0', backgroundColor: '#C2CBD3' }}>
         <div className="container" style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2 style={{ color: '#313851', marginBottom: '1.5rem', fontSize: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
-            Razendsnel ter plaatse in Rotterdam en de havens
+            Razendsnel ter plaatse in Rotterdam, Waalhaven, Botlek en Maasvlakte
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            In de dynamiek van de Rotterdamse haven en industrie telt elke minuut. Wij zijn direct inzetbaar voor het vervoer van cruciale onderdelen, maritieme documenten en spoedpakketten. Met onze compacte voertuigen omzeilen we files en rijden we zonder overslag direct van en naar Rotterdam.
+            In de dynamiek van de Rotterdamse haven en industrie telt elke minuut. Wij zijn 24/7 inzetbaar voor het vervoer van scheepsonderdelen, maritieme douanedocumenten en urgente onderdelen op Spaanse Polder, Waalhaven, Botlek, Europoort en de Maasvlakte. Via de A15, A16 en A20 rijden we zonder overslag direct van en naar Rotterdam tegen heldere <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>

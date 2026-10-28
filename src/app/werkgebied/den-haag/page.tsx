@@ -5,14 +5,25 @@ import styles from '@/app/page.module.css';
 import { Lock, UserCheck, CarFront } from 'lucide-react';
 
 export const metadata: Metadata = { 
-  title: 'Spoedkoerier Den Haag | Direct Onderweg | OnPoint Koeriers', 
-  description: 'Uw betrouwbare koerier in Den Haag. Wij navigeren moeiteloos door de stad voor al uw spoedzendingen. Direct beschikbaar.', 
+  title: '⚡ Spoedkoerier Den Haag | Discreet & Binnen 30 Min. | Bel 06 30 03 72 57', 
+  description: 'Discreet spoedtransport en documenten koerier in Den Haag, Beatrixkwartier en Forepark. Binnen 30 min. ter plaatse voor advocatuur, overheid en bedrijven.', 
+  alternates: {
+    canonical: '/werkgebied/den-haag',
+  },
+  openGraph: {
+    title: '⚡ Spoedkoerier Den Haag | Discreet & Veilig | OnPoint Koeriers',
+    description: 'Representatief spoedvervoer voor overheid, ambassades, advocatuur en bedrijven in Den Haag. Binnen 30 minuten ter plaatse.',
+    url: 'https://onpointkoeriers.nl/werkgebied/den-haag',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function DenHaagPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Den-Haag", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/den-haag", "telephone": "0630037257", "areaServed": { "@type": "City", "name": "Den-Haag" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Den Haag", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/den-haag", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Den Haag" } }) }} />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -34,6 +45,9 @@ export default function DenHaagPage() {
               Representatief spoedvervoer voor de overheid, advocatuur en zakelijke dienstverlening.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
               </Link>
@@ -46,10 +60,10 @@ export default function DenHaagPage() {
       <section className="section section-light" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '100px 0', backgroundColor: '#C2CBD3' }}>
         <div className="container" style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2 style={{ color: '#313851', marginBottom: '1.5rem', fontSize: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
-            Betrouwbaar spoedtransport vanuit Den Haag
+            Betrouwbaar spoedtransport vanuit Den Haag, Beatrixkwartier en Forepark
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            In het politieke en zakelijke hart van Nederland is discretie van het grootste belang. Wij zijn gespecialiseerd in het veilig en razendsnel vervoeren van vertrouwelijke documenten, contracten en paspoorten. Onze representatieve chauffeurs en onopvallende voertuigen garanderen 100% dedicated vervoer van hand tot hand.
+            In het politieke en zakelijke hart van Nederland is discretie van het grootste belang. Wij zijn gespecialiseerd in het veilig en razendsnel vervoeren van <Link href="/diensten/juridisch-documenten-koerier" style={{ textDecoration: 'underline' }}>juridische dossiers, notariële akten, ambassade-documenten en paspoorten</Link>. Onze representatieve chauffeurs bedienen onder meer het Beatrixkwartier, Binckhorst, Forepark en de rechtbanken met 100% dedicated vervoer van hand tot hand.
           </p>
         </div>
       </section>

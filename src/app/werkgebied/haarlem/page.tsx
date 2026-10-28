@@ -5,14 +5,25 @@ import styles from '@/app/page.module.css';
 import { Timer, CarFront, Globe } from 'lucide-react';
 
 export const metadata: Metadata = { 
-  title: 'Spoedkoerier Haarlem | Direct Onderweg | OnPoint Koeriers', 
-  description: 'Uw betrouwbare koerier in Haarlem. Wij navigeren moeiteloos door de stad voor al uw spoedzendingen. Direct beschikbaar.', 
+  title: '⚡ Spoedkoerier Haarlem & Waarderpolder | Binnen 30 Min. | Bel 06 30 03 72 57', 
+  description: 'Direct een spoedkoerier in Haarlem, Waarderpolder of Zuid-Kennemerland nodig? Binnen 30 minuten op locatie voor B2B spoedtransport. Bel 06 30 03 72 57.', 
+  alternates: {
+    canonical: '/werkgebied/haarlem',
+  },
+  openGraph: {
+    title: '⚡ Spoedkoerier Haarlem & Waarderpolder | OnPoint Koeriers',
+    description: 'Binnen 30 minuten ter plaatse in Haarlem en de Waarderpolder voor 100% dedicated spoedtransport.',
+    url: 'https://onpointkoeriers.nl/werkgebied/haarlem',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function HaarlemPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Haarlem", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/haarlem", "telephone": "0630037257", "areaServed": { "@type": "City", "name": "Haarlem" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Haarlem", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/haarlem", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Haarlem" } }) }} />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -28,12 +39,15 @@ export default function HaarlemPage() {
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.heroContent} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', margin: '0 auto' }}>
             <h1 className={styles.heroTitle} style={{ color: '#F6F3ED', fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
-              Direct onderweg vanuit regio Haarlem.
+              Spoedkoerier Haarlem: Direct Onderweg vanuit Kennemerland
             </h1>
             <p className={styles.heroSubtitle} style={{ color: '#F6F3ED', maxWidth: '800px', margin: '0 auto 2rem' }}>
               Premium <Link href="/spoedtransport" style={{ textDecoration: 'underline' }}>spoedtransport</Link> voor de <Link href="/zakelijk" style={{ textDecoration: 'underline' }}>zakelijke markt</Link>. Exclusief met wendbare personenauto's of compacte bestelwagens.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
               </Link>
@@ -46,10 +60,10 @@ export default function HaarlemPage() {
       <section className="section section-light" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '100px 0', backgroundColor: '#C2CBD3' }}>
         <div className="container" style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2 style={{ color: '#313851', marginBottom: '1.5rem', fontSize: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
-            Binnen no-time onderweg vanuit Haarlem
+            Binnen no-time onderweg vanuit Haarlem en de Waarderpolder
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            Of uw bedrijf zich nu in de bruisende binnenstad van Haarlem of op de Waarderpolder bevindt, tijd is geld. Heeft u met spoed een contract of cruciaal onderdeel nodig? Vanuit regio Haarlem schakelen wij direct. OnPoint verzorgt hoogwaardig spoedtransport naar elke bestemming in Nederland en Europa. Snel, discreet en zonder onnodige overslag.
+            Of uw bedrijf zich nu in de bruisende binnenstad van Haarlem, rond het Spaarne Gasthuis of op bedrijventerrein de Waarderpolder bevindt: via de A200 en A9 schakelen wij direct. OnPoint Koeriers verzorgt hoogwaardig spoedtransport naar Amsterdam, Schiphol en de rest van Nederland en Europa tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>

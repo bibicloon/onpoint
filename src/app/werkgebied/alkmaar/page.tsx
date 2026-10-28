@@ -5,14 +5,25 @@ import styles from '@/app/page.module.css';
 import { Timer, CarFront, Globe } from 'lucide-react';
 
 export const metadata: Metadata = { 
-  title: 'Spoedkoerier Alkmaar | Direct Onderweg | OnPoint Koeriers', 
-  description: 'Uw betrouwbare koerier in Alkmaar. Wij navigeren moeiteloos door de stad voor al uw spoedzendingen. Direct beschikbaar.', 
+  title: '⚡ Spoedkoerier Alkmaar & Boekelermeer | Binnen 30 Min. | Bel 06 30 03 72 57', 
+  description: 'Direct een spoedkoerier in Alkmaar, Boekelermeer, Beverkoog of Noord-Holland nodig? Binnen 30 minuten ter plaatse voor B2B spoedtransport. Bel 06 30 03 72 57.', 
+  alternates: {
+    canonical: '/werkgebied/alkmaar',
+  },
+  openGraph: {
+    title: '⚡ Spoedkoerier Alkmaar & Boekelermeer | OnPoint Koeriers',
+    description: 'Binnen 30 minuten ter plaatse in Alkmaar, Boekelermeer en Beverkoog voor direct spoedtransport zonder overslag.',
+    url: 'https://onpointkoeriers.nl/werkgebied/alkmaar',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function AlkmaarPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Alkmaar", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/alkmaar", "telephone": "0630037257", "areaServed": { "@type": "City", "name": "Alkmaar" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Alkmaar", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/alkmaar", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Alkmaar" } }) }} />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -28,12 +39,15 @@ export default function AlkmaarPage() {
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.heroContent} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', margin: '0 auto' }}>
             <h1 className={styles.heroTitle} style={{ color: '#F6F3ED', fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
-              Direct onderweg vanuit regio Alkmaar.
+              Spoedkoerier Alkmaar: Direct Onderweg in Noord-Holland
             </h1>
             <p className={styles.heroSubtitle} style={{ color: '#F6F3ED', maxWidth: '800px', margin: '0 auto 2rem' }}>
               Premium <Link href="/spoedtransport" style={{ textDecoration: 'underline' }}>spoedtransport</Link> voor de <Link href="/zakelijk" style={{ textDecoration: 'underline' }}>zakelijke markt</Link>. Exclusief met wendbare personenauto's of compacte bestelwagens.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
               </Link>
@@ -46,10 +60,10 @@ export default function AlkmaarPage() {
       <section className="section section-light" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '100px 0', backgroundColor: '#C2CBD3' }}>
         <div className="container" style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2 style={{ color: '#313851', marginBottom: '1.5rem', fontSize: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
-            Binnen no-time onderweg vanuit Alkmaar
+            Binnen no-time onderweg vanaf Boekelermeer, Beverkoog en Overdie
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            In Alkmaar en omgeving mag uw bedrijfsvoering niet haperen. Heeft u met spoed een contract, belangrijk onderdeel of sample nodig? Vanuit regio Alkmaar schakelen wij direct. OnPoint verzorgt hoogwaardig spoedtransport naar elke bestemming in Nederland en Europa. Snel, discreet en zonder onnodige overslag.
+            In Alkmaar en de Kop van Noord-Holland mag uw bedrijfsvoering niet haperen. Heeft uw organisatie op de Boekelermeer, Beverkoog, Oudorp of Overdie met spoed een onderdeel, medisch pakket of contract nodig? Via de A9 schakelen wij direct en verzorgen wij 100% dedicated transport tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>

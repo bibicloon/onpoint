@@ -2,7 +2,18 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Algemene Voorwaarden | OnPoint Koeriers',
-  description: 'De algemene voorwaarden van OnPoint Koeriers.',
+  description: 'De algemene voorwaarden van OnPoint Koeriers (KVK 42077914) voor nationaal en internationaal dedicated spoedtransport.',
+  alternates: {
+    canonical: '/algemene-voorwaarden',
+  },
+  openGraph: {
+    title: 'Algemene Voorwaarden | OnPoint Koeriers',
+    description: 'De algemene voorwaarden van OnPoint Koeriers voor dedicated spoedtransport.',
+    url: 'https://onpointkoeriers.nl/algemene-voorwaarden',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function AlgemeneVoorwaarden() {

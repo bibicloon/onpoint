@@ -5,8 +5,19 @@ import styles from '@/app/page.module.css';
 import { Handshake, FileText, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Zakelijk & Partnerships | OnPoint Spoedtransport',
-  description: 'Wij bouwen aan duurzame partnerships voor al uw vaste routes en periodieke spoedzendingen. Een betrouwbaar verlengstuk van uw organisatie.',
+  title: 'Zakelijke Koeriersdienst & Vaste B2B Spoedkoerier | OnPoint Koeriers',
+  description: 'Op zoek naar een vaste zakelijke koeriersdienst? OnPoint Koeriers verzorgt B2B spoedtransport, vaste routes en periodieke zendingen op factuur. Bel 06 30 03 72 57.',
+  alternates: {
+    canonical: '/zakelijk',
+  },
+  openGraph: {
+    title: 'Zakelijke Koeriersdienst & Vaste B2B Spoedkoerier | OnPoint Koeriers',
+    description: 'Duurzame B2B partnerships voor vaste routes en urgente zakelijke spoedzendingen in Nederland en Europa.',
+    url: 'https://onpointkoeriers.nl/zakelijk',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function ZakelijkPage() {
@@ -27,12 +38,15 @@ export default function ZakelijkPage() {
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.heroContent} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', margin: '0 auto' }}>
             <h1 className={styles.heroTitle} style={{ color: '#F6F3ED', fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
-              Uw Vaste Logistieke Partner
+              Zakelijke Koeriersdienst & Vaste Logistieke Partner
             </h1>
             <p className={styles.heroSubtitle} style={{ color: '#F6F3ED', maxWidth: '800px', margin: '0 auto 2rem' }}>
               Structureel ontzorgd worden? Wij bouwen graag aan duurzame partnerships voor al uw vaste routes en periodieke spoedzendingen.
             </p>
-            <div className={styles.heroActions}>
+            <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
               <Link href="/contact" className="btn btn-action">
                 NEEM CONTACT OP
               </Link>

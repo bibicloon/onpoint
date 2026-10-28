@@ -2,11 +2,22 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import styles from '@/app/page.module.css';
-import { BookOpen, Calculator, Scale, Clock, ArrowRight } from 'lucide-react';
+import { Calculator, Scale, Clock, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Kennisbank Spoedtransport & Logistiek | OnPoint Koeriers',
   description: 'Antwoorden op alle vragen over spoedkoeriers, tarieven per km, levertijden, wetgeving en de verschillen met standaard pakketdiensten.',
+  alternates: {
+    canonical: '/kennisbank',
+  },
+  openGraph: {
+    title: 'Kennisbank Spoedtransport & Logistiek | OnPoint Koeriers',
+    description: 'Alles over spoedkoerier tarieven per km, ophaaltijden en dedicated vervoer.',
+    url: 'https://onpointkoeriers.nl/kennisbank',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function KennisbankPage() {
@@ -46,6 +57,9 @@ export default function KennisbankPage() {
               Alles wat u moet weten over spoedvervoer, kilometer tarieven, wetgeving en logistieke oplossingen.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
               <Link href="/contact" className="btn btn-action">
                 Stel direct een vraag
               </Link>
@@ -148,7 +162,7 @@ export default function KennisbankPage() {
               Onze planners staan 24/7 klaar om u direct te adviseren of uw spoedrit in te plannen.
             </p>
             <Link href="/contact" className="btn btn-action">
-              DIRECT CONTACT OPNEEMEN
+              DIRECT CONTACT OPNEMEN
             </Link>
           </div>
 

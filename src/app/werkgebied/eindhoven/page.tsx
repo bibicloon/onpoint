@@ -6,13 +6,24 @@ import { Timer, CarFront, Globe } from 'lucide-react';
 
 export const metadata: Metadata = { 
   title: '⚡ Spoedkoerier Eindhoven | High Tech Campus 24/7 | Bel 06 30 03 72 57', 
-  description: 'Spoedkoerier in Eindhoven of Brabant nodig? Binnen 30-45 minuten op de ophaallocatie. 100% dedicated B2B vervoer. Bel nu direct: 06 30 03 72 57.', 
+  description: 'Spoedkoerier in Eindhoven, Brainport of High Tech Campus nodig? Binnen 30-45 minuten op de ophaallocatie. 100% dedicated B2B vervoer. Bel nu: 06 30 03 72 57.', 
+  alternates: {
+    canonical: '/werkgebied/eindhoven',
+  },
+  openGraph: {
+    title: '⚡ Spoedkoerier Eindhoven & Brainport | OnPoint Koeriers',
+    description: 'Direct spoedtransport voor de high-tech en maakindustrie in Eindhoven, De Hurk, Flight Forum en High Tech Campus.',
+    url: 'https://onpointkoeriers.nl/werkgebied/eindhoven',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function EindhovenPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Eindhoven", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/eindhoven", "telephone": "0630037257", "areaServed": { "@type": "City", "name": "Eindhoven" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Eindhoven", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/eindhoven", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Eindhoven" } }) }} />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -28,12 +39,15 @@ export default function EindhovenPage() {
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.heroContent} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', margin: '0 auto' }}>
             <h1 className={styles.heroTitle} style={{ color: 'var(--color-light)', fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
-              Direct onderweg vanuit regio Eindhoven.
+              Spoedkoerier Eindhoven: Direct Onderweg voor High-Tech & Industrie
             </h1>
             <p className={styles.heroSubtitle} style={{ color: 'var(--color-light)', maxWidth: '800px', margin: '0 auto 2rem' }}>
               Premium spoedtransport voor de zakelijke markt en high-tech industrie. Exclusief met personenauto's of compacte bestelwagens.
             </p>
-            <div className={styles.heroActions}>
+            <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
               </Link>
@@ -46,10 +60,10 @@ export default function EindhovenPage() {
       <section className="section section-steel" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '100px 0' }}>
         <div className="container" style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2 style={{ color: 'var(--color-dark)', marginBottom: '1.5rem', fontSize: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
-            Binnen no-time onderweg vanuit Eindhoven
+            Binnen no-time onderweg vanuit Eindhoven, Brainport & De Hurk
           </h2>
           <p style={{ color: 'var(--color-dark)', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            In de high-tech en maakindustrie telt iedere minuut. Valt een productieproces stil of wacht er een monteur op een cruciaal onderdeel? Vanuit regio Eindhoven schakelen wij direct. OnPoint verzorgt hoogwaardig spoedtransport naar elke bestemming in Nederland en Europa. Snel, discreet en zonder onnodige overslag.
+            In de Brainport-regio, op de High Tech Campus, Flight Forum en bedrijventerrein De Hurk telt iedere minuut. Valt een productieproces stil of wacht er een monteur op een cruciaal <Link href="/diensten/automotive-onderdelen" style={{ textDecoration: 'underline' }}>machine- of elektronica-onderdeel</Link>? Via de A2, A50 en A67 verzorgt OnPoint Koeriers rechtstreeks spoedtransport vanuit Eindhoven naar elke bestemming in Nederland, België en Duitsland.
           </p>
         </div>
       </section>

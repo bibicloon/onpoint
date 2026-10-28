@@ -2,11 +2,22 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import styles from '@/app/page.module.css';
-import { CheckCircle2, Calculator, ArrowLeft } from 'lucide-react';
+import { CheckCircle2, ArrowLeft } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: '⚡ Wat Kost een Spoedkoerier per KM? | Prijzen 2026 | Bel 06 30 03 72 57',
   description: 'Wat kost een spoedkoerier per kilometer? Bekijk heldere tarieven vanaf €0,60/km, starttarieven, toeslagen en praktische rekenvoorbeelden. Bel direct 06 30 03 72 57.',
+  alternates: {
+    canonical: '/kennisbank/wat-kost-een-spoedkoerier-per-km',
+  },
+  openGraph: {
+    title: 'Wat Kost een Spoedkoerier per KM? | Prijzen & Berekening 2026',
+    description: 'Bekijk heldere kilometer tarieven vanaf €0,60/km, starttarieven (€25) en praktische rekenvoorbeelden voor spoedtransport.',
+    url: 'https://onpointkoeriers.nl/kennisbank/wat-kost-een-spoedkoerier-per-km',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'article',
+  },
 };
 
 export default function WatKostEenSpoedkoerierPage() {
@@ -19,9 +30,14 @@ export default function WatKostEenSpoedkoerierPage() {
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": "Wat Kost een Spoedkoerier per KM? Prijzen & Berekening",
+            "description": "Transparante uitleg over kilometerprijzen vanaf €0,60/km, starttarieven en rekenvoorbeelden voor zakelijk spoedtransport.",
+            "image": "https://onpointkoeriers.nl/images/hero-tarieven.jpg",
+            "datePublished": "2026-01-15T09:00:00+01:00",
+            "dateModified": "2026-10-28T17:00:00+01:00",
             "author": {
               "@type": "Organization",
-              "name": "OnPoint Koeriers"
+              "name": "OnPoint Koeriers",
+              "url": "https://onpointkoeriers.nl"
             },
             "publisher": {
               "@type": "Organization",
@@ -70,7 +86,7 @@ export default function WatKostEenSpoedkoerierPage() {
             Hoe Wordt het Tarief van een Spoedkoerier Berekend?
           </h2>
           <p style={{ fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '1.5rem' }}>
-            Wanneer u met spoed een document, onderdelen of een medisch pakket moet laten vervoeren, wilt u vooraf exact weten waar u aan toe bent. De prijs van een dedicated <Link href="/spoedtransport" style={{ textDecoration: 'underline' }}>spoedkoerier</Link> wordt vrijwel altijd berekend op basis van de **gereden kilometers van postcode tot postcode**.
+            Wanneer u met spoed een document, onderdelen of een medisch pakket moet laten vervoeren, wilt u vooraf exact weten waar u aan toe bent. De prijs van een dedicated <Link href="/spoedtransport" style={{ textDecoration: 'underline' }}>spoedkoerier</Link> wordt vrijwel altijd berekend op basis van de <strong>gereden kilometers van postcode tot postcode</strong>.
           </p>
           <p style={{ fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '0' }}>
             Anders dan bij reguliere pakketdiensten koopt u bij een spoedkoerier 100% exclusieve capaciteit. Het voertuig rijdt uitsluitend voor uw zending en stopt niet onderweg.
@@ -92,7 +108,7 @@ export default function WatKostEenSpoedkoerierPage() {
         <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '950px', margin: '0 auto' }}>
           
           {/* TARIEVEN OVERZICHT CARD */}
-          <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: '40px', color: '#313851', marginBottom: '40px' }}>
+          <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 40px)', color: '#313851', marginBottom: '40px' }}>
             <h3 style={{ fontSize: '1.6rem', marginBottom: '1.5rem', fontWeight: 700, borderBottom: '2px solid #313851', paddingBottom: '10px' }}>
               1. De Basistarieven per KM (2026)
             </h3>
@@ -107,13 +123,13 @@ export default function WatKostEenSpoedkoerierPage() {
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '1.05rem' }}>
                 <CheckCircle2 color="#313851" size={22} style={{ flexShrink: 0, marginTop: '2px' }} />
-                <span><strong>Starttarief / Voorrijkosten:</strong> € 25,- (vaste instapkosten)</span>
+                <span><strong>Starttarief / Voorrijkosten:</strong> € 25,- (vaste instapkosten, 0% spoedtoeslag overdag)</span>
               </li>
             </ul>
           </div>
 
           {/* REKENVOORBEELDEN CARD */}
-          <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: '40px', color: '#313851', marginBottom: '40px' }}>
+          <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 40px)', color: '#313851', marginBottom: '40px' }}>
             <h3 style={{ fontSize: '1.6rem', marginBottom: '1.5rem', fontWeight: 700, borderBottom: '2px solid #313851', paddingBottom: '10px' }}>
               2. Praktijk Rekenvoorbeelden
             </h3>
@@ -123,7 +139,7 @@ export default function WatKostEenSpoedkoerierPage() {
                 Voorbeeld A: Amsterdam naar Utrecht (ca. 45 km, Personenauto)
               </h4>
               <p style={{ margin: 0, lineHeight: '1.6' }}>
-                Starttarief (€ 25) + 45 km x € 0,60 (€ 27) = **€ 52,- ex BTW**. Binnen 30 minuten opgehaald in Amsterdam en rechtstreeks afgeleverd op Lage Weide in Utrecht.
+                Starttarief (€ 25) + 45 km x € 0,60 (€ 27) = <strong>€ 52,- ex BTW</strong>. Binnen 30 minuten opgehaald in Amsterdam en rechtstreeks afgeleverd op Lage Weide in Utrecht.
               </p>
             </div>
 
@@ -132,13 +148,13 @@ export default function WatKostEenSpoedkoerierPage() {
                 Voorbeeld B: Rotterdam naar Eindhoven (ca. 110 km, Caddy)
               </h4>
               <p style={{ margin: 0, lineHeight: '1.6' }}>
-                Starttarief (€ 25) + 110 km x € 0,65 (€ 71,50) = **€ 96,50 ex BTW**. Dedicated transport van reserveonderdelen rechtstreeks van de haven naar High Tech Campus Eindhoven.
+                Starttarief (€ 25) + 110 km x € 0,65 (€ 71,50) = <strong>€ 96,50 ex BTW</strong>. Dedicated transport van reserveonderdelen rechtstreeks van de haven naar High Tech Campus Eindhoven.
               </p>
             </div>
           </div>
 
           {/* TOESLAGEN CARD */}
-          <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: '40px', color: '#313851', marginBottom: '40px' }}>
+          <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 40px)', color: '#313851', marginBottom: '40px' }}>
             <h3 style={{ fontSize: '1.6rem', marginBottom: '1.5rem', fontWeight: 700, borderBottom: '2px solid #313851', paddingBottom: '10px' }}>
               3. Eventuele Aanvullende Toeslagen
             </h3>
@@ -166,7 +182,7 @@ export default function WatKostEenSpoedkoerierPage() {
             backgroundColor: '#C2CBD3', 
             borderRadius: '8px', 
             boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', 
-            padding: '50px 40px', 
+            padding: 'clamp(32px, 5vw, 50px) clamp(20px, 4vw, 40px)', 
             textAlign: 'center' 
           }}>
             <h3 style={{ color: '#313851', marginBottom: '1rem', fontSize: '1.8rem', fontWeight: 'bold' }}>
@@ -175,9 +191,14 @@ export default function WatKostEenSpoedkoerierPage() {
             <p style={{ color: '#313851', marginBottom: '2rem', fontSize: '1.05rem' }}>
               Bel onze planningsdienst. U krijgt direct een scherpe prijsopgave en de chauffeur kan binnen 30 minuten rijden.
             </p>
-            <Link href="/contact" className="btn btn-action">
-              BEREKEN RITPRIJS OF BEL DIRECT
-            </Link>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
+              <Link href="/contact" className="btn btn-action">
+                BEREKEN RITPRIJS ONLINE
+              </Link>
+            </div>
           </div>
 
         </div>

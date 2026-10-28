@@ -6,13 +6,24 @@ import { Timer, CarFront, Globe } from 'lucide-react';
 
 export const metadata: Metadata = { 
   title: '⚡ Spoedkoerier Schiphol Airport | 24/7 Ter Plaatse | Bel 06 30 03 72 57', 
-  description: 'Urgente luchtvracht of documenten op Schiphol Airport? OnPoint Koeriers staat binnen 30 minuten klaar. 100% dedicated transport. Bel direct: 06 30 03 72 57.', 
+  description: 'Urgente luchtvracht of documenten op Schiphol Airport, Schiphol-Rijk of Aalsmeer? OnPoint Koeriers staat binnen 30 minuten klaar. Bel direct: 06 30 03 72 57.', 
+  alternates: {
+    canonical: '/werkgebied/schiphol',
+  },
+  openGraph: {
+    title: '⚡ Spoedkoerier Schiphol Airport | 24/7 Ter Plaatse | OnPoint Koeriers',
+    description: 'Urgente luchtvracht, AOG-onderdelen of douanedocumenten op Schiphol Airport? Binnen 30 minuten ter plaatse.',
+    url: 'https://onpointkoeriers.nl/werkgebied/schiphol',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function SchipholPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Schiphol", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/schiphol", "telephone": "0630037257", "areaServed": { "@type": "City", "name": "Schiphol" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Schiphol", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/schiphol", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Schiphol" } }) }} />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -34,6 +45,9 @@ export default function SchipholPage() {
               Premium spoedtransport voor de logistieke markt. Exclusief met wendbare personenauto's of compacte bestelwagens.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
               </Link>
@@ -46,10 +60,10 @@ export default function SchipholPage() {
       <section className="section section-light" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '100px 0', backgroundColor: '#C2CBD3' }}>
         <div className="container" style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2 style={{ color: '#313851', marginBottom: '1.5rem', fontSize: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
-            Essentieel transport rondom de logistieke ring
+            Essentieel transport rondom de logistieke ring A4 & A9
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            Rondom de luchthaven staan de ontwikkelingen nooit stil. Wij richten ons specifiek op de logistieke ring: Schiphol, Schiphol-Rijk, Aalsmeer en Hoofddorp. Ligt er een cruciaal douanedocument klaar of wacht er een AOG-onderdeel (Aircraft on Ground) op direct vervoer? Wij zijn perfect gepositioneerd voor zakelijke ritten rondom de vrachtterminals en de bloemenveiling. Snel, efficiënt en direct inzetbaar.
+            Rondom de luchthaven staan de ontwikkelingen nooit stil. Wij richten ons specifiek op de logistieke ring: Schiphol-Centrum, Schiphol-Rijk, Schiphol-Zuidoost, Aalsmeer en Hoofddorp. Ligt er een cruciaal douanedocument klaar of wacht er een AOG-onderdeel (Aircraft on Ground) op direct vervoer? Wij zijn perfect gepositioneerd voor <Link href="/zakelijk" style={{ textDecoration: 'underline' }}>zakelijke spoedritten</Link> rondom de vrachtterminals en Royal FloraHolland tegen vaste <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>

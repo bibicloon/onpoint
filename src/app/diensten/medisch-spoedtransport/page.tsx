@@ -36,7 +36,7 @@ export default function MedischSpoedtransportPage() {
     "provider": {
       "@type": "CourierService",
       "name": "OnPoint Koeriers",
-      "telephone": "0630037257",
+      "telephone": "+31630037257",
       "url": "https://onpointkoeriers.nl"
     },
     "areaServed": "NL",
@@ -71,6 +71,9 @@ export default function MedischSpoedtransportPage() {
               Zorgvuldig en dedicated vervoer voor ziekenhuizen, laboratoria, apotheken en medische leveranciers.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
               </Link>

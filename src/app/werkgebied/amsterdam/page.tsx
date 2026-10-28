@@ -6,13 +6,24 @@ import { Timer, CarFront, Globe } from 'lucide-react';
 
 export const metadata: Metadata = { 
   title: '⚡ Spoedkoerier Amsterdam | Binnen 30 Min. Ter Plaatse | Bel 06 30 03 72 57', 
-  description: 'Direct een spoedkoerier in Amsterdam of Zuidas nodig? Binnen 30 minuten op de ophaallocatie. 100% dedicated vervoer zonder overslag. Bel nu: 06 30 03 72 57.', 
+  description: 'Direct een spoedkoerier in Amsterdam, Zuidas of Westpoort nodig? Binnen 30 minuten op de ophaallocatie. 100% dedicated vervoer zonder overslag. Bel nu: 06 30 03 72 57.', 
+  alternates: {
+    canonical: '/werkgebied/amsterdam',
+  },
+  openGraph: {
+    title: '⚡ Spoedkoerier Amsterdam | Binnen 30 Min. Ter Plaatse | OnPoint Koeriers',
+    description: 'Direct een spoedkoerier in Amsterdam, Zuidas of Westpoort nodig? Binnen 30 minuten op de ophaallocatie. 100% dedicated vervoer.',
+    url: 'https://onpointkoeriers.nl/werkgebied/amsterdam',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function AmsterdamPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Amsterdam", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/amsterdam", "telephone": "0630037257", "areaServed": { "@type": "City", "name": "Amsterdam" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Amsterdam", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/amsterdam", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Amsterdam" } }) }} />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -34,6 +45,9 @@ export default function AmsterdamPage() {
               Premium <Link href="/spoedtransport" style={{ textDecoration: 'underline' }}>spoedtransport</Link> voor de <Link href="/zakelijk" style={{ textDecoration: 'underline' }}>zakelijke markt</Link>. Exclusief met wendbare personenauto's of compacte bestelwagens.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
               </Link>
@@ -46,10 +60,10 @@ export default function AmsterdamPage() {
       <section className="section section-light" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '100px 0', backgroundColor: '#C2CBD3' }}>
         <div className="container" style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2 style={{ color: '#313851', marginBottom: '1.5rem', fontSize: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
-            Ontwijk de drukte in het centrum en op de Zuidas
+            Ontwijk de drukte in het centrum, Westpoort en op de Zuidas
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            In Amsterdam is het verkeer vaak een grote uitdaging voor reguliere transporteurs. Met onze compacte Caddy's en personenauto's omzeilen wij het vastgelopen vrachtverkeer in het centrum, de grachtengordel en rond de zakelijke districten zoals de Zuidas. Wij zijn de ideale partner voor vertrouwelijke documenten en directe zakelijke zendingen. Snel inladen en razendsnel van en naar Amsterdam rijden, zonder onnodige vertraging.
+            In Amsterdam is het verkeer vaak een grote uitdaging voor reguliere transporteurs. Met onze compacte Caddy's en personenauto's omzeilen wij het vastgelopen vrachtverkeer in het centrum, de grachtengordel en rond zakelijke districten zoals de Zuidas, Sloterdijk, Westpoort en Amsterdam Zuidoost. Wij zijn de ideale partner voor <Link href="/diensten/juridisch-documenten-koerier" style={{ textDecoration: 'underline' }}>vertrouwelijke documenten</Link> en directe zakelijke zendingen tegen heldere <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometer tarieven</Link>.
           </p>
         </div>
       </section>

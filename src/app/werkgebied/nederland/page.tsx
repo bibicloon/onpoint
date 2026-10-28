@@ -5,14 +5,25 @@ import styles from '@/app/page.module.css';
 import { Timer, Target, PhoneCall } from 'lucide-react';
 
 export const metadata: Metadata = { 
-  title: 'Spoedkoerier Nederland | Direct Onderweg | OnPoint Koeriers', 
-  description: 'Uw betrouwbare koerier in Nederland. Wij navigeren moeiteloos door de stad voor al uw spoedzendingen. Direct beschikbaar.', 
+  title: '⚡ Spoedkoerier Nederland & Europa | Binnen 30 Min. Onderweg | Bel 06 30 03 72 57', 
+  description: 'Landelijke spoedkoerier in heel Nederland & Europa. Binnen 30-45 minuten op elke ophaallocatie. 100% dedicated vervoer zonder overslag vanaf €0,60/km. Bel 06 30 03 72 57.',
+  alternates: {
+    canonical: '/werkgebied/nederland',
+  },
+  openGraph: {
+    title: '⚡ Spoedkoerier Nederland & Europa | OnPoint Koeriers',
+    description: 'Landelijke dekking, lokale snelheid: binnen 30-45 minuten ter plaatse in heel Nederland voor direct spoedtransport naar elke bestemming in Europa.',
+    url: 'https://onpointkoeriers.nl/werkgebied/nederland',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function NederlandPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Nederland", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/nederland", "telephone": "0630037257", "areaServed": { "@type": "City", "name": "Nederland" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Nederland", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/nederland", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "Country", "name": "Netherlands" } }) }} />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -28,11 +39,19 @@ export default function NederlandPage() {
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.heroContent} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', margin: '0 auto' }}>
             <h1 className={styles.heroTitle} style={{ color: 'var(--color-light)', fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
-              Overal in Nederland direct ter plaatse.
+              Spoedkoerier Nederland: Overal Direct Ter Plaatse
             </h1>
-            <p className={styles.heroSubtitle} style={{ color: 'var(--color-light)', maxWidth: '800px', margin: '0 auto' }}>
-              Uw betrouwbare partner voor nationaal en internationaal spoedtransport.
+            <p className={styles.heroSubtitle} style={{ color: 'var(--color-light)', maxWidth: '800px', margin: '0 auto 2rem' }}>
+              Uw betrouwbare partner voor nationaal en internationaal spoedtransport zonder overslag.
             </p>
+            <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
+              <Link href="/contact" className="btn btn-action">
+                Plan uw transport
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -44,7 +63,7 @@ export default function NederlandPage() {
             Landelijke dekking, lokale snelheid
           </h2>
           <p style={{ color: 'var(--color-dark)', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            Of uw zending nu van Groningen naar Maastricht moet, of de grens over gaat; OnPoint Koeriers garandeert direct vertrek zonder onnodige tussenstops. Wij bieden de perfecte logistieke oplossing voor zendingen die geen minuut te verliezen hebben.
+            Of uw zending nu vanuit de Randstad naar Noord-Brabant, van Groningen naar Maastricht moet, of direct de grens over gaat naar België, Duitsland of Frankrijk: OnPoint Koeriers garandeert direct vertrek zonder tussenstops. Bekijk ook onze transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometer tarieven vanaf € 0,60/km</Link>.
           </p>
         </div>
       </section>

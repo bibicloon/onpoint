@@ -7,6 +7,17 @@ import { CheckCircle2, ArrowLeft } from 'lucide-react';
 export const metadata: Metadata = {
   title: '⚡ Spoedkoerier vs. Pakketdienst: De 5 Verschillen | Bel 06 30 03 72 57',
   description: 'Wat is het verschil tussen een dedicated spoedkoerier en een reguliere pakketdienst? Ontdek levertijden, risico op overslag en discretie. Bel: 06 30 03 72 57.',
+  alternates: {
+    canonical: '/kennisbank/spoedkoerier-vs-pakketdienst-verschillen',
+  },
+  openGraph: {
+    title: 'Spoedkoerier vs. Pakketdienst: De 5 Belangrijkste Verschillen',
+    description: 'Waarom 100% dedicated vervoer zonder overslag het verschil maakt bij tijdskritische en waardevolle zendingen.',
+    url: 'https://onpointkoeriers.nl/kennisbank/spoedkoerier-vs-pakketdienst-verschillen',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'article',
+  },
 };
 
 export default function SpoedkoerierVsPakketdienstPage() {
@@ -19,9 +30,14 @@ export default function SpoedkoerierVsPakketdienstPage() {
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": "Spoedkoerier vs. Pakketdienst: De 5 Belangrijkste Verschillen",
+            "description": "Ontdek de 5 cruciale verschillen tussen een dedicated spoedkoerier zonder overslag en een reguliere netwerk-pakketdienst.",
+            "image": "https://onpointkoeriers.nl/images/hero-diensten.jpg",
+            "datePublished": "2026-01-15T09:00:00+01:00",
+            "dateModified": "2026-10-28T17:00:00+01:00",
             "author": {
               "@type": "Organization",
-              "name": "OnPoint Koeriers"
+              "name": "OnPoint Koeriers",
+              "url": "https://onpointkoeriers.nl"
             },
             "publisher": {
               "@type": "Organization",
@@ -92,7 +108,7 @@ export default function SpoedkoerierVsPakketdienstPage() {
         <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '950px', margin: '0 auto' }}>
           
           {/* CARD VERSCHIL 1 */}
-          <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: '35px 40px', color: '#313851', marginBottom: '30px' }}>
+          <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(20px, 4vw, 40px)', color: '#313851', marginBottom: '30px' }}>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px' }}>
               <CheckCircle2 color="#313851" /> 1. Geen Overslag of Sorteercentra (0% Risico)
             </h3>
@@ -102,17 +118,17 @@ export default function SpoedkoerierVsPakketdienstPage() {
           </div>
 
           {/* CARD VERSCHIL 2 */}
-          <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: '35px 40px', color: '#313851', marginBottom: '30px' }}>
+          <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(20px, 4vw, 40px)', color: '#313851', marginBottom: '30px' }}>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px' }}>
               <CheckCircle2 color="#313851" /> 2. Exact Levertijdvenster (Binnen Uren i.p.v. Dagen)
             </h3>
             <p style={{ lineHeight: '1.6', margin: 0 }}>
-              Pakketdiensten beloven "bezorging morgen tussen 08:00 en 18:00 uur". Bij OnPoint Koeriers is de chauffeur binnen **30 minuten onderweg** en weet u exact op de minuut nauw hoe laat uw zending wordt overhandigd.
+              Pakketdiensten beloven &quot;bezorging morgen tussen 08:00 en 18:00 uur&quot;. Bij OnPoint Koeriers is de chauffeur binnen <strong>30 minuten onderweg</strong> en weet u exact op de minuut nauwkeurig hoe laat uw zending wordt overhandigd.
             </p>
           </div>
 
           {/* CARD VERSCHIL 3 */}
-          <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: '35px 40px', color: '#313851', marginBottom: '30px' }}>
+          <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(20px, 4vw, 40px)', color: '#313851', marginBottom: '30px' }}>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px' }}>
               <CheckCircle2 color="#313851" /> 3. Direct Contact met de Chauffeur
             </h3>
@@ -122,7 +138,7 @@ export default function SpoedkoerierVsPakketdienstPage() {
           </div>
 
           {/* CARD VERSCHIL 4 */}
-          <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: '35px 40px', color: '#313851', marginBottom: '30px' }}>
+          <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(20px, 4vw, 40px)', color: '#313851', marginBottom: '30px' }}>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px' }}>
               <CheckCircle2 color="#313851" /> 4. Discretie voor Juridisch & Medisch Vervoer
             </h3>
@@ -132,12 +148,12 @@ export default function SpoedkoerierVsPakketdienstPage() {
           </div>
 
           {/* CARD VERSCHIL 5 */}
-          <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: '35px 40px', color: '#313851', marginBottom: '40px' }}>
+          <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(20px, 4vw, 40px)', color: '#313851', marginBottom: '40px' }}>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px' }}>
               <CheckCircle2 color="#313851" /> 5. Wendbaarheid in Binnensteden en Havens
             </h3>
             <p style={{ lineHeight: '1.6', margin: 0 }}>
-              Onze vloot bestaat uit compacte personenauto's en Caddy-bestelbussen. Wij kunnen moeiteloos parkeren bij rechtbanken, ziekenhuizen, drukke winkelstraten en de Zuidas waar grote vrachtwagens niet eens mogen inrijden.
+              Onze vloot bestaat uit compacte personenauto&apos;s en Caddy-bestelbussen. Wij kunnen moeiteloos parkeren bij rechtbanken, ziekenhuizen, drukke winkelstraten en de Zuidas waar grote vrachtwagens niet eens mogen inrijden.
             </p>
           </div>
 
@@ -146,7 +162,7 @@ export default function SpoedkoerierVsPakketdienstPage() {
             backgroundColor: '#C2CBD3', 
             borderRadius: '8px', 
             boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', 
-            padding: '50px 40px', 
+            padding: 'clamp(32px, 5vw, 50px) clamp(20px, 4vw, 40px)', 
             textAlign: 'center' 
           }}>
             <h3 style={{ color: '#313851', marginBottom: '1rem', fontSize: '1.8rem', fontWeight: 'bold' }}>
@@ -155,9 +171,14 @@ export default function SpoedkoerierVsPakketdienstPage() {
             <p style={{ color: '#313851', marginBottom: '2rem', fontSize: '1.05rem' }}>
               Voorkom vertragingen en risico op overslag. Bel direct onze spoedlijn.
             </p>
-            <Link href="/contact" className="btn btn-action">
-              PLAN EEN DEDICATED RIT
-            </Link>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
+              <Link href="/contact" className="btn btn-action">
+                PLAN EEN DEDICATED RIT
+              </Link>
+            </div>
           </div>
 
         </div>

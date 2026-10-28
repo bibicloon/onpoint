@@ -7,12 +7,23 @@ import { Timer, CarFront, Globe } from 'lucide-react';
 export const metadata: Metadata = { 
   title: '⚡ Spoedkoerier Venlo | Binnen 30 Min. Ter Plaatse | Bel 06 30 03 72 57', 
   description: 'Direct een spoedkoerier in Venlo, Trade Port Europe of grensstreek nodig? Binnen 30 minuten op locatie. 100% dedicated vervoer. Bel direct: 06 30 03 72 57.', 
+  alternates: {
+    canonical: '/werkgebied/venlo',
+  },
+  openGraph: {
+    title: '⚡ Spoedkoerier Venlo & Trade Port | OnPoint Koeriers',
+    description: 'Binnen 30 minuten op locatie in Venlo en Trade Port Europe voor direct spoedtransport naar Nederland, Duitsland en Europa.',
+    url: 'https://onpointkoeriers.nl/werkgebied/venlo',
+    siteName: 'OnPoint Koeriers',
+    locale: 'nl_NL',
+    type: 'website',
+  },
 };
 
 export default function VenloPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Venlo", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/venlo", "telephone": "0630037257", "areaServed": { "@type": "City", "name": "Venlo" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Venlo", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/venlo", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Venlo" } }) }} />
       
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
@@ -35,6 +46,9 @@ export default function VenloPage() {
               Snelle <Link href="/spoedtransport" style={{ textDecoration: 'underline' }}>spoedkoerier</Link> voor de <Link href="/zakelijk" style={{ textDecoration: 'underline' }}>zakelijke markt</Link> in Venlo, Trade Port Europe en de grensstreek.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary">
+                BEL DIRECT: 06 30 03 72 57
+              </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
               </Link>
@@ -50,7 +64,7 @@ export default function VenloPage() {
             Grensverleggend Spoedtransport vanuit Venlo
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            Als een van Europa's belangrijkste logistieke hubs is Venlo de poort naar Duitsland en het Ruhrgebied. Via de A67 en A73 verzorgt OnPoint Koeriers razendsnel dedicated transport voor e-commerce, warehousing en industriële bedrijven op Trade Port West, Noorderpoort en de omliggende regio.
+            Als een van Europa's belangrijkste logistieke hubs is Venlo de poort naar Duitsland en het Ruhrgebied. Via de A67 en A73 verzorgt OnPoint Koeriers razendsnel dedicated transport voor e-commerce, warehousing en industriële bedrijven op Trade Port Noord & West, Fresh Park Venlo en Noorderpoort tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometer tarieven</Link>.
           </p>
         </div>
       </section>
