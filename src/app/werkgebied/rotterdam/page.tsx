@@ -5,8 +5,8 @@ import styles from '@/app/page.module.css';
 import { Timer, Route, CarFront } from 'lucide-react';
 
 export const metadata: Metadata = { 
-  title: '⚡ Spoedkoerier Rotterdam & Haven | Binnen 30 Min. | Bel 06 30 03 72 57', 
-  description: 'Spoedkoerier in Rotterdam, Botlek, Europoort of Maasvlakte nodig? Binnen 30 minuten ter plaatse voor haven, industrie en zakelijk vervoer. Bel 06 30 03 72 57.', 
+  title: '⚡ Spoedkoerier Rotterdam & Haven | Binnen 30 Min. | 24/7 Bereikbaar', 
+  description: 'Spoedkoerier in Rotterdam, Botlek, Europoort of Maasvlakte nodig? Binnen 30 minuten ter plaatse voor haven, industrie en zakelijk vervoer. Bel of WhatsApp direct.', 
   alternates: {
     canonical: '/werkgebied/rotterdam',
   },
@@ -21,9 +21,20 @@ export const metadata: Metadata = {
 };
 
 export default function RotterdamPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Werkgebied", "item": "https://onpointkoeriers.nl/werkgebied/nederland" },
+      { "@type": "ListItem", "position": 3, "name": "Spoedkoerier Rotterdam", "item": "https://onpointkoeriers.nl/werkgebied/rotterdam" }
+    ]
+  };
+
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Rotterdam", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/rotterdam", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Rotterdam" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Rotterdam", "image": "https://onpointkoeriers.nl/images/hero-cinematic-onpoint.jpg", "url": "https://onpointkoeriers.nl/werkgebied/rotterdam", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Rotterdam" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -45,8 +56,8 @@ export default function RotterdamPage() {
               Uw zending vanuit de Maasstad razendsnel en zonder overslag naar de eindbestemming.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers Rotterdam">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
@@ -82,19 +93,19 @@ export default function RotterdamPage() {
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className={styles.uspGrid}>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Timer /></div>
+              <div className={styles.uspIcon}><Timer aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>24/7 Inzetbaar</h3>
               <p style={{ color: '#313851' }}>Direct beschikbaar voor logistieke nood, ook buiten kantooruren.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Route /></div>
+              <div className={styles.uspIcon}><Route aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Terminals & Schepen</h3>
               <p style={{ color: '#313851' }}>Wij leveren rechtstreeks af op terminals, bij schepen of op industrieterreinen.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><CarFront /></div>
+              <div className={styles.uspIcon}><CarFront aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Wendbaar Vervoer</h3>
-              <p style={{ color: '#313851' }}>Sneller dan groot vrachtverkeer dankzij onze Caddy's en personenauto's.</p>
+              <p style={{ color: '#313851' }}>Sneller dan groot vrachtverkeer dankzij onze Caddy&apos;s en personenauto&apos;s.</p>
             </div>
           </div>
           

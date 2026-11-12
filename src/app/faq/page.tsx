@@ -45,12 +45,25 @@ export default function FAQPage() {
     }))
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Veelgestelde Vragen (FAQ)", "item": "https://onpointkoeriers.nl/faq" }
+    ]
+  };
+
   return (
     <main>
       {/* FAQ Schema.org JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* SECTIE 1 - HERO */}
@@ -99,7 +112,7 @@ export default function FAQPage() {
               Onze planners staan 24 uur per dag voor u klaar om uw zending binnen 30 minuten in te plannen.
             </p>
             <div className={styles.ctaActions}>
-              <a href="tel:+31630037257" className="btn btn-primary">BEL DIRECT: 06 30 03 72 57</a>
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">BEL DIRECT</a>
               <Link href="/contact" className="btn btn-ghost">ONLINE AANVRAAG DOEN</Link>
             </div>
           </div>

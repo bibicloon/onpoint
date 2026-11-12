@@ -36,11 +36,21 @@ export default function MedischSpoedtransportPage() {
     "provider": {
       "@type": "CourierService",
       "name": "OnPoint Koeriers",
-      "telephone": "+31630037257",
-      "url": "https://onpointkoeriers.nl"
+      "url": "https://onpointkoeriers.nl",
+      "image": "https://onpointkoeriers.nl/images/hero-cinematic-onpoint.jpg"
     },
     "areaServed": "NL",
     "description": "24/7 Medisch spoedtransport voor ziekenhuizen, laboratoria, apotheken en medische toeleveranciers."
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Diensten", "item": "https://onpointkoeriers.nl/diensten" },
+      { "@type": "ListItem", "position": 3, "name": "Medisch Spoedtransport", "item": "https://onpointkoeriers.nl/diensten/medisch-spoedtransport" }
+    ]
   };
 
   return (
@@ -48,6 +58,10 @@ export default function MedischSpoedtransportPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* SECTIE 1 - HERO */}
@@ -71,8 +85,8 @@ export default function MedischSpoedtransportPage() {
               Zorgvuldig en dedicated vervoer voor ziekenhuizen, laboratoria, apotheken en medische leveranciers.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
@@ -109,19 +123,19 @@ export default function MedischSpoedtransportPage() {
           
           <div className={styles.uspGrid}>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Clock color="#313851" /></div>
+              <div className={styles.uspIcon}><Clock color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Binnen 30 Min. Ter Plaatse</h3>
               <p style={{ color: '#313851' }}>Onze koerier staat na uw aanvraag binnen 30 tot 45 minuten klaar op de ophaallocatie bij de zorginstelling of het lab.</p>
             </div>
 
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Activity color="#313851" /></div>
+              <div className={styles.uspIcon}><Activity color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>100% Dedicated Vervoer</h3>
               <p style={{ color: '#313851' }}>Uw zending staat 100% exclusief in ons voertuig. Geen risico op verwisseling of vertraging op sorteercentra.</p>
             </div>
 
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><ShieldCheck color="#313851" /></div>
+              <div className={styles.uspIcon}><ShieldCheck color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Digitale Ontvangstbevestiging</h3>
               <p style={{ color: '#313851' }}>Direct na overhandiging aan de arts of analist ontvangt u een digitale Proof of Delivery met handtekening en tijdstip.</p>
             </div>
@@ -141,12 +155,12 @@ export default function MedischSpoedtransportPage() {
               Wat vervoeren wij met medische spoed?
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '15px', textAlign: 'left', marginBottom: '2.5rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Laboratorium monsters & swabs</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Medische apparatuur & OK-artikelen</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Dringende medicatie & recepten</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Tandtechnische & prothese zendingen</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Bloed- en plasmaonderzoeken</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Vertrouwelijke patiëntendossiers</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} aria-hidden="true" /> Laboratorium monsters & swabs</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} aria-hidden="true" /> Medische apparatuur & OK-artikelen</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} aria-hidden="true" /> Dringende medicatie & recepten</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} aria-hidden="true" /> Tandtechnische & prothese zendingen</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} aria-hidden="true" /> Bloed- en plasmaonderzoeken</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} aria-hidden="true" /> Vertrouwelijke patiëntendossiers</div>
             </div>
             <Link href="/contact" className="btn btn-action">
               NEEM DIRECT CONTACT OP

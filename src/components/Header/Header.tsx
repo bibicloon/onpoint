@@ -25,7 +25,7 @@ export default function Header() {
         <Link href="/" className={styles.logo} onClick={closeMenu}>
           OnPoint.
         </Link>
-        <nav className={styles.nav}>
+        <nav className={styles.nav} aria-label="Hoofdnavigatie">
           <ul className={styles.navList}>
             <li><Link href="/spoedtransport" className={styles.navLink}>Spoedtransport</Link></li>
             <li><Link href="/diensten" className={styles.navLink}>Diensten</Link></li>
@@ -36,27 +36,28 @@ export default function Header() {
           </ul>
         </nav>
         <div className={styles.actions}>
-          <a href="tel:+31630037257" className={`btn btn-primary ${styles.callBtn}`}>BEL DIRECT</a>
+          <a href="tel:+31630037257" className={`btn btn-primary ${styles.callBtn}`} aria-label="Bel direct met OnPoint Koeriers">BEL DIRECT</a>
           <Link href="/contact" className={`btn btn-secondary ${styles.contactLink}`}>CONTACT</Link>
         </div>
         
         <div className={styles.mobileHeaderActions}>
-          <a href="tel:+31630037257" className={styles.mobileHeaderCallBtn}>
-            <Phone size={16} />
+          <a href="tel:+31630037257" className={styles.mobileHeaderCallBtn} aria-label="Bel direct met OnPoint Koeriers">
+            <Phone size={16} aria-hidden="true" />
             <span>BEL DIRECT</span>
           </a>
           <button 
             className={styles.mobileMenuBtn} 
             onClick={() => setIsMobileMenuOpen(true)}
             aria-label="Open menu"
+            aria-expanded={isMobileMenuOpen}
           >
-            <Menu size={28} />
+            <Menu size={28} aria-hidden="true" />
           </button>
         </div>
       </div>
 
       {isMobileMenuOpen && (
-        <div className={styles.mobileMenuOverlay}>
+        <div className={styles.mobileMenuOverlay} role="dialog" aria-modal="true" aria-label="Mobiel navigatiemenu">
           <div className={styles.mobileMenuHeader}>
             <Link href="/" className={styles.logo} onClick={closeMenu}>
               OnPoint.
@@ -66,7 +67,7 @@ export default function Header() {
               onClick={closeMenu}
               aria-label="Sluit menu"
             >
-              <X size={32} />
+              <X size={32} aria-hidden="true" />
             </button>
           </div>
           <ul className={styles.mobileNavList}>
@@ -79,7 +80,7 @@ export default function Header() {
             <li><Link href="/contact" className={styles.mobileNavLink} onClick={closeMenu}>Contact</Link></li>
           </ul>
           <div className={styles.mobileActions}>
-            <a href="tel:+31630037257" className={styles.mobileCallBtn}>BEL DIRECT</a>
+            <a href="tel:+31630037257" className={styles.mobileCallBtn} aria-label="Bel direct met OnPoint Koeriers">BEL DIRECT</a>
           </div>
         </div>
       )}

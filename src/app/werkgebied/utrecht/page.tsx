@@ -5,8 +5,8 @@ import styles from '@/app/page.module.css';
 import { Timer, CarFront, Globe } from 'lucide-react';
 
 export const metadata: Metadata = { 
-  title: '⚡ Spoedkoerier Utrecht | Binnen 30 Min. Ter Plaatse | Bel 06 30 03 72 57', 
-  description: 'Direct een spoedkoerier in Utrecht, Lage Weide of Papendorp nodig? Binnen 30 minuten op locatie. 100% dedicated vervoer. Bel direct: 06 30 03 72 57.', 
+  title: '⚡ Spoedkoerier Utrecht | Binnen 30 Min. Ter Plaatse | 24/7 Bereikbaar', 
+  description: 'Direct een spoedkoerier in Utrecht, Lage Weide of Papendorp nodig? Binnen 30 minuten op locatie. 100% dedicated vervoer. Bel of WhatsApp direct.', 
   alternates: {
     canonical: '/werkgebied/utrecht',
   },
@@ -21,9 +21,20 @@ export const metadata: Metadata = {
 };
 
 export default function UtrechtPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Werkgebied", "item": "https://onpointkoeriers.nl/werkgebied/nederland" },
+      { "@type": "ListItem", "position": 3, "name": "Spoedkoerier Utrecht", "item": "https://onpointkoeriers.nl/werkgebied/utrecht" }
+    ]
+  };
+
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Utrecht", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/utrecht", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Utrecht" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Utrecht", "image": "https://onpointkoeriers.nl/images/hero-cinematic-onpoint.jpg", "url": "https://onpointkoeriers.nl/werkgebied/utrecht", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Utrecht" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
@@ -46,8 +57,8 @@ export default function UtrechtPage() {
               Premium <Link href="/spoedtransport" style={{ textDecoration: 'underline' }}>spoedtransport</Link> voor de <Link href="/zakelijk" style={{ textDecoration: 'underline' }}>zakelijke markt</Link> in Utrecht, Lage Weide en Papendorp.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers Utrecht">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
@@ -64,7 +75,7 @@ export default function UtrechtPage() {
             Het Centrale Knooppunt van Nederland
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            Als centraal verkeersknooppunt van Nederland zijn de snelwegen A1, A2, A12 en A27 rond Utrecht van cruciaal belang voor snelle logistiek. OnPoint Koeriers navigeert met compacte personenauto's en Caddy-bestelbussen razendsnel door het Utrechtse stadsverkeer en over bedrijventerreinen zoals Lage Weide, Papendorp, Rijnsweerd en Nieuwegein tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
+            Als centraal verkeersknooppunt van Nederland zijn de snelwegen A1, A2, A12 en A27 rond Utrecht van cruciaal belang voor snelle logistiek. OnPoint Koeriers navigeert met compacte personenauto&apos;s en Caddy-bestelbussen razendsnel door het Utrechtse stadsverkeer en over bedrijventerreinen zoals Lage Weide, Papendorp, Rijnsweerd en Nieuwegein tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>
@@ -84,19 +95,19 @@ export default function UtrechtPage() {
           
           <div className={styles.uspGrid}>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Timer color="#313851" /></div>
+              <div className={styles.uspIcon}><Timer color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Binnen 30 Min. Ter Plaatse</h3>
               <p style={{ color: '#313851' }}>Dankzij onze centrale uitvalsbasis staan wij binnen no-time op uw ophaallocatie in Utrecht.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Globe color="#313851" /></div>
+              <div className={styles.uspIcon}><Globe color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>100% Dedicated</h3>
               <p style={{ color: '#313851' }}>Geen tussenstops of overslag. Uw zending gaat rechtstreeks van A naar B zonder vertraging.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><CarFront color="#313851" /></div>
+              <div className={styles.uspIcon}><CarFront color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Wendbare Voertuigen</h3>
-              <p style={{ color: '#313851' }}>Onze personenauto's en Caddy's manoeuvreren makkelijk door het centrum en drukke knooppunten.</p>
+              <p style={{ color: '#313851' }}>Onze personenauto&apos;s en Caddy&apos;s manoeuvreren makkelijk door het centrum en drukke knooppunten.</p>
             </div>
           </div>
 

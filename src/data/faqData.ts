@@ -10,7 +10,7 @@ export const faqData: FAQItem[] = [
   },
   {
     question: "Wat kost een spoedkoerier per kilometer?",
-    answer: "Onze tarieven worden berekend op basis van een transparante kilometerprijs vanaf de ophaallocatie tot de afleverlocatie. We hanteren geen verborgen toeslagen. Bel direct naar 06 30 03 72 57 voor een exacte en vrijblijvende prijsopgave binnen 2 minuten."
+    answer: "Onze tarieven worden berekend op basis van een transparante kilometerprijs vanaf € 0,60 per km (personenauto) of € 0,65 per km (Caddy) vanaf de ophaallocatie tot de afleverlocatie, met een starttarief van € 25,-. We hanteren geen verborgen toeslagen. Gebruik onze directe belknop of WhatsApp-knop voor een exacte en vrijblijvende prijsopgave binnen 2 minuten."
   },
   {
     question: "Zijn jullie 24/7 bereikbaar en inzetbaar, ook 's nachts en in het weekend?",
@@ -50,7 +50,7 @@ export const faqData: FAQItem[] = [
   },
   {
     question: "Hoe kan ik direct een spoedrit reserveren?",
-    answer: "Voor de snelste afhandeling kunt u het beste direct bellen naar 06 30 03 72 57. Onze planner staat u meteen te woord en stuurt direct een chauffeur op pad. U kunt ook het contactformulier op onze website invullen."
+    answer: "Voor de snelste afhandeling kunt u het beste klikken op de knop 'Bel Direct' of de WhatsApp-knop op onze website. Onze planner staat u meteen te woord en stuurt direct een chauffeur op pad. U kunt ook het contactformulier op onze website invullen."
   },
   {
     question: "Wat gebeurt er als de ontvanger niet aanwezig is op het afleveradres?",

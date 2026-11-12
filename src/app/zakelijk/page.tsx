@@ -6,7 +6,7 @@ import { Handshake, FileText, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Zakelijke Koeriersdienst & Vaste B2B Spoedkoerier | OnPoint Koeriers',
-  description: 'Op zoek naar een vaste zakelijke koeriersdienst? OnPoint Koeriers verzorgt B2B spoedtransport, vaste routes en periodieke zendingen op factuur. Bel 06 30 03 72 57.',
+  description: 'Op zoek naar een vaste zakelijke koeriersdienst? OnPoint Koeriers verzorgt B2B spoedtransport, vaste routes en periodieke zendingen op factuur. 24/7 direct inzetbaar.',
   alternates: {
     canonical: '/zakelijk',
   },
@@ -21,8 +21,21 @@ export const metadata: Metadata = {
 };
 
 export default function ZakelijkPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Zakelijk", "item": "https://onpointkoeriers.nl/zakelijk" }
+    ]
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -44,8 +57,8 @@ export default function ZakelijkPage() {
               Structureel ontzorgd worden? Wij bouwen graag aan duurzame partnerships voor al uw vaste routes en periodieke spoedzendingen.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 NEEM CONTACT OP
@@ -83,17 +96,17 @@ export default function ZakelijkPage() {
           {/* De 3 USP Blokken */}
           <div className={styles.uspGrid} style={{ marginBottom: '60px' }}>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Handshake color="#313851" /></div>
+              <div className={styles.uspIcon}><Handshake color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Vast Contactpersoon</h3>
               <p style={{ color: '#313851' }}>Korte lijnen en direct schakelen met een planner die uw bedrijf van binnen en buiten kent.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><FileText color="#313851" /></div>
+              <div className={styles.uspIcon}><FileText color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Zakelijke Tarieven</h3>
               <p style={{ color: '#313851' }}>Voor vaste ritten en structurele samenwerkingen maken wij graag contractafspraken met aangepaste tarieven op maat.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Star color="#313851" /></div>
+              <div className={styles.uspIcon}><Star color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Absolute Prioriteit</h3>
               <p style={{ color: '#313851' }}>Vaste partners krijgen bij ons altijd voorrang, óók in de nacht of tijdens het weekend.</p>
             </div>

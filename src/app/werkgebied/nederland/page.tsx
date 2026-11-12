@@ -5,8 +5,8 @@ import styles from '@/app/page.module.css';
 import { Timer, Target, PhoneCall } from 'lucide-react';
 
 export const metadata: Metadata = { 
-  title: '⚡ Spoedkoerier Nederland & Europa | Binnen 30 Min. Onderweg | Bel 06 30 03 72 57', 
-  description: 'Landelijke spoedkoerier in heel Nederland & Europa. Binnen 30-45 minuten op elke ophaallocatie. 100% dedicated vervoer zonder overslag vanaf €0,60/km. Bel 06 30 03 72 57.',
+  title: '⚡ Spoedkoerier Nederland & Europa | Binnen 30 Min. Onderweg | 24/7 Bereikbaar', 
+  description: 'Landelijke spoedkoerier in heel Nederland & Europa. Binnen 30-45 minuten op elke ophaallocatie. 100% dedicated vervoer zonder overslag vanaf €0,60/km. Bel of WhatsApp direct.',
   alternates: {
     canonical: '/werkgebied/nederland',
   },
@@ -21,9 +21,19 @@ export const metadata: Metadata = {
 };
 
 export default function NederlandPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Spoedkoerier Nederland", "item": "https://onpointkoeriers.nl/werkgebied/nederland" }
+    ]
+  };
+
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Nederland", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/nederland", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "Country", "name": "Netherlands" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Nederland", "image": "https://onpointkoeriers.nl/images/hero-cinematic-onpoint.jpg", "url": "https://onpointkoeriers.nl/werkgebied/nederland", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "Country", "name": "Netherlands" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -45,8 +55,8 @@ export default function NederlandPage() {
               Uw betrouwbare partner voor nationaal en internationaal spoedtransport zonder overslag.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers Nederland">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
@@ -82,17 +92,17 @@ export default function NederlandPage() {
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className={styles.uspGrid}>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Timer /></div>
+              <div className={styles.uspIcon}><Timer aria-hidden="true" /></div>
               <h3>Snel & Wendbaar</h3>
-              <p>Dankzij de inzet van representatieve personenauto's en Caddy's navigeren wij razendsnel door het verkeer en bereiken we moeiteloos elke stedelijke of industriële locatie in Nederland.</p>
+              <p>Dankzij de inzet van representatieve personenauto&apos;s en Caddy&apos;s navigeren wij razendsnel door het verkeer en bereiken we moeiteloos elke stedelijke of industriële locatie in Nederland.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Target /></div>
+              <div className={styles.uspIcon}><Target aria-hidden="true" /></div>
               <h3>100% Dedicated</h3>
               <p>Uw zending wordt exclusief vervoerd. Geen overslag, geen gecombineerde ritten. Direct van de ophaallocatie naar de eindbestemming.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><PhoneCall /></div>
+              <div className={styles.uspIcon}><PhoneCall aria-hidden="true" /></div>
               <h3>Altijd Bereikbaar</h3>
               <p>Logistieke noodgevallen houden zich niet aan kantoortijden. Daarom zijn wij flexibel inzetbaar voor al uw urgente transportvragen, overal in het land.</p>
             </div>

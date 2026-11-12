@@ -21,8 +21,21 @@ export const metadata: Metadata = {
 };
 
 export default function DienstenPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Diensten", "item": "https://onpointkoeriers.nl/diensten" }
+    ]
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -44,8 +57,8 @@ export default function DienstenPage() {
               Razendsnel en flexibel spoedtransport, direct onderweg voor uw belangrijkste zendingen.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 PLAN UW TRANSPORT
@@ -83,7 +96,7 @@ export default function DienstenPage() {
             
             {/* Kaart 1 */}
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><CarFront color="#313851" /></div>
+              <div className={styles.uspIcon}><CarFront color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851', marginBottom: '1rem', fontSize: '1.25rem' }}>Spoedtransport (Personenauto)</h3>
               <p style={{ color: '#313851', margin: 0, fontSize: '0.95rem', lineHeight: '1.6' }}>
                 Ultieme snelheid en wendbaarheid in drukke stadscentra. Ideaal voor vertrouwelijke documenten, sleutels of kleine, waardevolle zendingen die onopvallend en direct van A naar B moeten.
@@ -92,7 +105,7 @@ export default function DienstenPage() {
 
             {/* Kaart 2 */}
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Truck color="#313851" /></div>
+              <div className={styles.uspIcon}><Truck color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851', marginBottom: '1rem', fontSize: '1.25rem' }}>Pakket & Distributie (Caddy)</h3>
               <p style={{ color: '#313851', margin: 0, fontSize: '0.95rem', lineHeight: '1.6' }}>
                 Focus op grotere zendingen. Perfect voor stadsdistributie waarbij de zending veilig en direct voor de deur wordt afgeleverd, precies op plekken waar grote bussen of vrachtwagens vastlopen.
@@ -101,7 +114,7 @@ export default function DienstenPage() {
 
             {/* Kaart 3 */}
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Target color="#313851" /></div>
+              <div className={styles.uspIcon}><Target color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851', marginBottom: '1rem', fontSize: '1.25rem' }}>Dedicated & Directe Ritten</h3>
               <p style={{ color: '#313851', margin: 0, fontSize: '0.95rem', lineHeight: '1.6' }}>
                 De garantie van exclusiviteit: uw zending staat exclusief in onze auto of bestelbus en gaat zonder overslag op een distributiecentrum rechtstreeks naar de eindbestemming.
@@ -110,7 +123,7 @@ export default function DienstenPage() {
 
             {/* Kaart 4 (Nieuw: COB) */}
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Plane color="#313851" /></div>
+              <div className={styles.uspIcon}><Plane color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851', marginBottom: '1rem', fontSize: '1.25rem' }}>Courier On Board (COB)</h3>
               <p style={{ color: '#313851', margin: 0, fontSize: '0.95rem', lineHeight: '1.6' }}>
                 Voor uw meest kritieke zendingen wereldwijd. Onze koerier stapt persoonlijk met uw documenten of kleine onderdelen in het vliegtuig. Permanente begeleiding en directe overhandiging, 100% veilig.

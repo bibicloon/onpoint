@@ -21,8 +21,21 @@ export const metadata: Metadata = {
 };
 
 export default function OverOnsPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Over Ons", "item": "https://onpointkoeriers.nl/over-ons" }
+    ]
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -40,9 +53,17 @@ export default function OverOnsPage() {
             <h1 className={styles.heroTitle} style={{ color: 'var(--color-light)', fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
               Over OnPoint Koeriers
             </h1>
-            <p className={styles.heroSubtitle} style={{ color: 'var(--color-light)', maxWidth: '800px', margin: '0 auto' }}>
+            <p className={styles.heroSubtitle} style={{ color: 'var(--color-light)', maxWidth: '800px', margin: '0 auto 2rem' }}>
               Uw betrouwbare partner voor dedicated spoedtransport.
             </p>
+            <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
+                BEL DIRECT
+              </a>
+              <Link href="/contact" className="btn btn-action">
+                PLAN UW TRANSPORT
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -79,7 +100,7 @@ export default function OverOnsPage() {
             
             {/* Kaart 1 */}
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Target color="#313851" /></div>
+              <div className={styles.uspIcon}><Target color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851', marginBottom: '1rem', fontSize: '1.25rem' }}>100% Dedicated</h3>
               <p style={{ color: '#313851', margin: 0, fontSize: '1rem' }}>
                 Uw zending staat altijd exclusief bij ons in de wagen. Wij combineren geen ritten, waardoor uw pakket de absolute en onverdeelde prioriteit krijgt.
@@ -88,7 +109,7 @@ export default function OverOnsPage() {
 
             {/* Kaart 2 */}
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><PhoneCall color="#313851" /></div>
+              <div className={styles.uspIcon}><PhoneCall color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851', marginBottom: '1rem', fontSize: '1.25rem' }}>Direct Contact</h3>
               <p style={{ color: '#313851', margin: 0, fontSize: '1rem' }}>
                 Geen anonieme klantenservice of wachttijden. U heeft altijd direct en persoonlijk contact met de chauffeur die verantwoordelijk is voor uw zending.
@@ -97,7 +118,7 @@ export default function OverOnsPage() {
 
             {/* Kaart 3 */}
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Lock color="#313851" /></div>
+              <div className={styles.uspIcon}><Lock color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851', marginBottom: '1rem', fontSize: '1.25rem' }}>Discretie</h3>
               <p style={{ color: '#313851', margin: 0, fontSize: '1rem' }}>
                 Wij behandelen vertrouwelijke documenten en waardevolle objecten met de allerhoogste zorg. Volledige privacy en veiligheid zijn gegarandeerd.
@@ -106,7 +127,7 @@ export default function OverOnsPage() {
 
             {/* Kaart 4 */}
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Timer color="#313851" /></div>
+              <div className={styles.uspIcon}><Timer color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851', marginBottom: '1rem', fontSize: '1.25rem' }}>Stedelijke Snelheid</h3>
               <p style={{ color: '#313851', margin: 0, fontSize: '1rem' }}>
                 Dankzij onze compacte voertuigen navigeren wij razendsnel door de smalste straten in drukke stadscentra, waar grotere vrachtwagens onmogelijk kunnen komen.

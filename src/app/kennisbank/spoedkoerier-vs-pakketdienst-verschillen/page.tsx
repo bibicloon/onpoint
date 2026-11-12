@@ -5,8 +5,8 @@ import styles from '@/app/page.module.css';
 import { CheckCircle2, ArrowLeft } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '⚡ Spoedkoerier vs. Pakketdienst: De 5 Verschillen | Bel 06 30 03 72 57',
-  description: 'Wat is het verschil tussen een dedicated spoedkoerier en een reguliere pakketdienst? Ontdek levertijden, risico op overslag en discretie. Bel: 06 30 03 72 57.',
+  title: '⚡ Spoedkoerier vs. Pakketdienst: De 5 Verschillen | OnPoint Koeriers',
+  description: 'Wat is het verschil tussen een dedicated spoedkoerier en een reguliere pakketdienst? Ontdek levertijden, risico op overslag en discretie.',
   alternates: {
     canonical: '/kennisbank/spoedkoerier-vs-pakketdienst-verschillen',
   },
@@ -21,6 +21,16 @@ export const metadata: Metadata = {
 };
 
 export default function SpoedkoerierVsPakketdienstPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Kennisbank", "item": "https://onpointkoeriers.nl/kennisbank" },
+      { "@type": "ListItem", "position": 3, "name": "Spoedkoerier vs. Pakketdienst", "item": "https://onpointkoeriers.nl/kennisbank/spoedkoerier-vs-pakketdienst-verschillen" }
+    ]
+  };
+
   return (
     <main>
       <script
@@ -44,12 +54,16 @@ export default function SpoedkoerierVsPakketdienstPage() {
               "name": "OnPoint Koeriers",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://onpointkoeriers.nl/logo.png"
+                "url": "https://onpointkoeriers.nl/images/hero-cinematic-onpoint.jpg"
               }
             },
             "mainEntityOfPage": "https://onpointkoeriers.nl/kennisbank/spoedkoerier-vs-pakketdienst-verschillen"
           })
         }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* SECTIE 1 - HERO */}
@@ -67,7 +81,7 @@ export default function SpoedkoerierVsPakketdienstPage() {
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.heroContent} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', margin: '0 auto' }}>
             <Link href="/kennisbank" style={{ color: '#F6F3ED', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '1rem', fontWeight: 600 }}>
-              <ArrowLeft size={18} /> Terug naar Kennisbank
+              <ArrowLeft size={18} aria-hidden="true" /> Terug naar Kennisbank
             </Link>
             <h1 className={styles.heroTitle} style={{ color: '#F6F3ED', fontSize: 'clamp(2rem, 3.5vw, 3.2rem)' }}>
               Spoedkoerier vs. Pakketdienst
@@ -110,7 +124,7 @@ export default function SpoedkoerierVsPakketdienstPage() {
           {/* CARD VERSCHIL 1 */}
           <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(20px, 4vw, 40px)', color: '#313851', marginBottom: '30px' }}>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <CheckCircle2 color="#313851" /> 1. Geen Overslag of Sorteercentra (0% Risico)
+              <CheckCircle2 color="#313851" aria-hidden="true" /> 1. Geen Overslag of Sorteercentra (0% Risico)
             </h3>
             <p style={{ lineHeight: '1.6', margin: 0 }}>
               Bij een gewone pakketdienst passeert uw pakket 3 tot 5 sorteerbanden en verdeelcentra. Hier ontstaan 95% van alle beschadigingen en zoekrakingen. Een <Link href="/spoedtransport" style={{ textDecoration: 'underline' }}>spoedkoerier</Link> haalt uw zending op en rijdt in één streep rechtstreeks naar de afleverlocatie. U bent 100% gegarandeerd van schadevrije aankomst.
@@ -120,7 +134,7 @@ export default function SpoedkoerierVsPakketdienstPage() {
           {/* CARD VERSCHIL 2 */}
           <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(20px, 4vw, 40px)', color: '#313851', marginBottom: '30px' }}>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <CheckCircle2 color="#313851" /> 2. Exact Levertijdvenster (Binnen Uren i.p.v. Dagen)
+              <CheckCircle2 color="#313851" aria-hidden="true" /> 2. Exact Levertijdvenster (Binnen Uren i.p.v. Dagen)
             </h3>
             <p style={{ lineHeight: '1.6', margin: 0 }}>
               Pakketdiensten beloven &quot;bezorging morgen tussen 08:00 en 18:00 uur&quot;. Bij OnPoint Koeriers is de chauffeur binnen <strong>30 minuten onderweg</strong> en weet u exact op de minuut nauwkeurig hoe laat uw zending wordt overhandigd.
@@ -130,7 +144,7 @@ export default function SpoedkoerierVsPakketdienstPage() {
           {/* CARD VERSCHIL 3 */}
           <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(20px, 4vw, 40px)', color: '#313851', marginBottom: '30px' }}>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <CheckCircle2 color="#313851" /> 3. Direct Contact met de Chauffeur
+              <CheckCircle2 color="#313851" aria-hidden="true" /> 3. Direct Contact met de Chauffeur
             </h3>
             <p style={{ lineHeight: '1.6', margin: 0 }}>
               Geen geautomatiseerde chatrobots of 45 minuten wachttijd aan de telefoon. U spreekt bij OnPoint Koeriers direct met de planning of de chauffeur die uw zending in zijn auto heeft liggen.
@@ -140,7 +154,7 @@ export default function SpoedkoerierVsPakketdienstPage() {
           {/* CARD VERSCHIL 4 */}
           <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(20px, 4vw, 40px)', color: '#313851', marginBottom: '30px' }}>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <CheckCircle2 color="#313851" /> 4. Discretie voor Juridisch & Medisch Vervoer
+              <CheckCircle2 color="#313851" aria-hidden="true" /> 4. Discretie voor Juridisch & Medisch Vervoer
             </h3>
             <p style={{ lineHeight: '1.6', margin: 0 }}>
               Voor vertrouwelijke stukken (zie <Link href="/diensten/juridisch-documenten-koerier" style={{ textDecoration: 'underline' }}>juridisch vervoer</Link>) of koel/medische monsters (zie <Link href="/diensten/medisch-spoedtransport" style={{ textDecoration: 'underline' }}>medisch transport</Link>) is een anoniem sorteerproces onverantwoord. Onze chauffeurs handelen discreet en verzorgen een persoonlijke overhandiging tegen een handtekening.
@@ -150,7 +164,7 @@ export default function SpoedkoerierVsPakketdienstPage() {
           {/* CARD VERSCHIL 5 */}
           <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(20px, 4vw, 40px)', color: '#313851', marginBottom: '40px' }}>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <CheckCircle2 color="#313851" /> 5. Wendbaarheid in Binnensteden en Havens
+              <CheckCircle2 color="#313851" aria-hidden="true" /> 5. Wendbaarheid in Binnensteden en Havens
             </h3>
             <p style={{ lineHeight: '1.6', margin: 0 }}>
               Onze vloot bestaat uit compacte personenauto&apos;s en Caddy-bestelbussen. Wij kunnen moeiteloos parkeren bij rechtbanken, ziekenhuizen, drukke winkelstraten en de Zuidas waar grote vrachtwagens niet eens mogen inrijden.
@@ -169,11 +183,11 @@ export default function SpoedkoerierVsPakketdienstPage() {
               Heeft u direct 100% dedicated vervoer nodig?
             </h3>
             <p style={{ color: '#313851', marginBottom: '2rem', fontSize: '1.05rem' }}>
-              Voorkom vertragingen en risico op overslag. Bel direct onze spoedlijn.
+              Voorkom vertragingen en risico op overslag. Neem direct telefonisch of via WhatsApp contact op.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 PLAN EEN DEDICATED RIT

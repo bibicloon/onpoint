@@ -5,8 +5,8 @@ import styles from '@/app/page.module.css';
 import { CheckCircle2, ArrowLeft } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '⚡ Hoe Snel is een Spoedkoerier Ter Plaatse? | Bel 06 30 03 72 57',
-  description: 'Binnen hoeveel minuten staat een spoedkoerier voor de deur? Ontdek onze 30-minuten garanties, uitvalsbases in Nederland & Europa. Bel: 06 30 03 72 57.',
+  title: '⚡ Hoe Snel is een Spoedkoerier Ter Plaatse? (30 Min.) | OnPoint Koeriers',
+  description: 'Binnen hoeveel minuten staat een spoedkoerier voor de deur? Ontdek onze 30-minuten garanties en uitvalsbases in Nederland & Europa.',
   alternates: {
     canonical: '/kennisbank/hoe-snel-is-een-spoedkoerier-ter-plaatse',
   },
@@ -21,6 +21,16 @@ export const metadata: Metadata = {
 };
 
 export default function HoeSnelIsEenSpoedkoerierPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Kennisbank", "item": "https://onpointkoeriers.nl/kennisbank" },
+      { "@type": "ListItem", "position": 3, "name": "Hoe Snel is een Spoedkoerier Ter Plaatse?", "item": "https://onpointkoeriers.nl/kennisbank/hoe-snel-is-een-spoedkoerier-ter-plaatse" }
+    ]
+  };
+
   return (
     <main>
       <script
@@ -44,12 +54,16 @@ export default function HoeSnelIsEenSpoedkoerierPage() {
               "name": "OnPoint Koeriers",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://onpointkoeriers.nl/logo.png"
+                "url": "https://onpointkoeriers.nl/images/hero-cinematic-onpoint.jpg"
               }
             },
             "mainEntityOfPage": "https://onpointkoeriers.nl/kennisbank/hoe-snel-is-een-spoedkoerier-ter-plaatse"
           })
         }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* SECTIE 1 - HERO */}
@@ -67,7 +81,7 @@ export default function HoeSnelIsEenSpoedkoerierPage() {
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.heroContent} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', margin: '0 auto' }}>
             <Link href="/kennisbank" style={{ color: '#F6F3ED', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '1rem', fontWeight: 600 }}>
-              <ArrowLeft size={18} /> Terug naar Kennisbank
+              <ArrowLeft size={18} aria-hidden="true" /> Terug naar Kennisbank
             </Link>
             <h1 className={styles.heroTitle} style={{ color: '#F6F3ED', fontSize: 'clamp(2rem, 3.5vw, 3.2rem)' }}>
               Hoe Snel is een Spoedkoerier Ter Plaatse?
@@ -86,7 +100,7 @@ export default function HoeSnelIsEenSpoedkoerierPage() {
             Binnen 30 Minuten Onderweg op de Ophaallocatie
           </h2>
           <p style={{ fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '1.5rem' }}>
-            Wanneer u contact opneemt met OnPoint Koeriers via <strong>06 30 03 72 57</strong>, telt elke seconde. Onze stelregel is helder: in veruit de meeste grote steden en logistieke hotspots in Nederland staat onze chauffeur <strong>binnen 30 minuten op de ophaallocatie</strong>.
+            Wanneer u contact opneemt met OnPoint Koeriers via onze <strong>directe belknop of WhatsApp</strong>, telt elke seconde. Onze stelregel is helder: in veruit de meeste grote steden en logistieke hotspots in Nederland staat onze chauffeur <strong>binnen 30 minuten op de ophaallocatie</strong>.
           </p>
           <p style={{ fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '0' }}>
             Zodra de zending is ingeladen, rijdt de chauffeur zonder tussenstops via de snelste route direct naar de afleverlocatie.
@@ -110,7 +124,7 @@ export default function HoeSnelIsEenSpoedkoerierPage() {
           {/* PILLER 1 */}
           <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(20px, 4vw, 40px)', color: '#313851', marginBottom: '30px' }}>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <CheckCircle2 color="#313851" /> 1. Strategische Spreiding in Nederland
+              <CheckCircle2 color="#313851" aria-hidden="true" /> 1. Strategische Spreiding in Nederland
             </h3>
             <p style={{ lineHeight: '1.6', margin: 0 }}>
               Wij zijn direct actief in grote knooppunten zoals <Link href="/werkgebied/amsterdam" style={{ textDecoration: 'underline' }}>Amsterdam</Link>, <Link href="/werkgebied/schiphol" style={{ textDecoration: 'underline' }}>Schiphol</Link>, <Link href="/werkgebied/utrecht" style={{ textDecoration: 'underline' }}>Utrecht</Link>, <Link href="/werkgebied/rotterdam" style={{ textDecoration: 'underline' }}>Rotterdam</Link>, <Link href="/werkgebied/eindhoven" style={{ textDecoration: 'underline' }}>Eindhoven</Link>, <Link href="/werkgebied/breda" style={{ textDecoration: 'underline' }}>Breda</Link>, <Link href="/werkgebied/venlo" style={{ textDecoration: 'underline' }}>Venlo</Link> en <Link href="/werkgebied/arnhem" style={{ textDecoration: 'underline' }}>Arnhem</Link>. Doordat onze chauffeurs dicht bij de snelwegen (A1, A2, A4, A12, A16, A27) gecentreerd staan, is de aanrijtijd minimaal.
@@ -120,7 +134,7 @@ export default function HoeSnelIsEenSpoedkoerierPage() {
           {/* PILLER 2 */}
           <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(20px, 4vw, 40px)', color: '#313851', marginBottom: '30px' }}>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <CheckCircle2 color="#313851" /> 2. Wendbaar Wagenpark (Geen File-Vertraging)
+              <CheckCircle2 color="#313851" aria-hidden="true" /> 2. Wendbaar Wagenpark (Geen File-Vertraging)
             </h3>
             <p style={{ lineHeight: '1.6', margin: 0 }}>
               Onze vloot van personenauto&apos;s en Caddy-bestelbussen mag gebruik maken van alle milieuzones, smalle binnenstadstraten en drukke bedrijfsterreinen. Waar grote vrachtwagens vastlopen in de spits, manoeuvreren onze wagens snel naar de voordeur.
@@ -130,7 +144,7 @@ export default function HoeSnelIsEenSpoedkoerierPage() {
           {/* PILLER 3 */}
           <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(20px, 4vw, 40px)', color: '#313851', marginBottom: '30px' }}>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <CheckCircle2 color="#313851" /> 3. Direct Telefonisch Schakelen
+              <CheckCircle2 color="#313851" aria-hidden="true" /> 3. Direct Telefonisch Schakelen
             </h3>
             <p style={{ lineHeight: '1.6', margin: 0 }}>
               Als u belt, voert onze planningsdienst direct de dispatch uit. We verspillen geen tijd aan offertetrajecten via mail: we bevestigen de rit per telefoon of WhatsApp en sturen de dichtstbijzijnde auto aan.
@@ -140,7 +154,7 @@ export default function HoeSnelIsEenSpoedkoerierPage() {
           {/* PILLER 4 */}
           <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(20px, 4vw, 40px)', color: '#313851', marginBottom: '40px' }}>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <CheckCircle2 color="#313851" /> 4. Real-Time Status Updates
+              <CheckCircle2 color="#313851" aria-hidden="true" /> 4. Real-Time Status Updates
             </h3>
             <p style={{ lineHeight: '1.6', margin: 0 }}>
               U krijgt een geschatte aankomsttijd (ETA) en ontvangt een melding bij aflevering inclusief de naam en handtekening van de ontvanger.
@@ -159,11 +173,11 @@ export default function HoeSnelIsEenSpoedkoerierPage() {
               Nu direct een spoedkoerier nodig?
             </h3>
             <p style={{ color: '#313851', marginBottom: '2rem', fontSize: '1.05rem' }}>
-              Bel 06 30 03 72 57 en onze chauffeur is binnen 30 minuten onderweg.
+              Klik op de directe belknop of stuur een WhatsApp en onze chauffeur is binnen 30 minuten onderweg.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 ONLINE RIT AANVRAGEN

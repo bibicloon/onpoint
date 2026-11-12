@@ -5,14 +5,14 @@ import styles from '@/app/page.module.css';
 import { CarFront, Truck, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '⚡ Tarieven Spoedkoerier Per KM | Direct Offerte: 06 30 03 72 57',
-  description: 'Eerlijke kilometerprijs vanaf € 0,60/km voor spoedtransport. Geen verborgen toeslagen. Binnen 30 min. onderweg. Bel direct voor prijsopgave: 06 30 03 72 57.',
+  title: '⚡ Tarieven Spoedkoerier Per KM (€ 0,60/km) | Direct Offerte | OnPoint Koeriers',
+  description: 'Eerlijke kilometerprijs vanaf € 0,60/km voor spoedtransport (personenauto) en € 0,65/km (Caddy). Geen verborgen toeslagen. Binnen 30 min. onderweg.',
   alternates: {
     canonical: '/tarieven',
   },
   openGraph: {
     title: '⚡ Tarieven Spoedkoerier Per KM (€ 0,60/km) | OnPoint Koeriers',
-    description: 'Eerlijke kilometerprijs vanaf € 0,60/km voor spoedtransport en € 0,65/km voor Caddy bestelwagen. Geen spoedtoeslag.',
+    description: 'Eerlijke kilometerprijs vanaf € 0,60/km voor spoedtransport en € 0,65/km voor Caddy bestelwagen. Geen spoedtoeslag overdag.',
     url: 'https://onpointkoeriers.nl/tarieven',
     siteName: 'OnPoint Koeriers',
     locale: 'nl_NL',
@@ -21,8 +21,56 @@ export const metadata: Metadata = {
 };
 
 export default function TarievenPage() {
+  const offerSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Dedicated Spoedtransport per Kilometer",
+    "provider": {
+      "@type": "CourierService",
+      "name": "OnPoint Koeriers",
+      "url": "https://onpointkoeriers.nl"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Spoedkoerier Tarieven per KM",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Spoedkoerier Personenauto",
+          "description": "Dedicated spoedtransport per personenauto (€ 0,60 per km, starttarief € 25,- ex BTW)",
+          "price": "0.60",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Spoedkoerier Caddy Bestelwagen",
+          "description": "Dedicated spoedtransport per Caddy-bestelwagen (€ 0,65 per km, starttarief € 25,- ex BTW)",
+          "price": "0.65",
+          "priceCurrency": "EUR"
+        }
+      ]
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Tarieven", "item": "https://onpointkoeriers.nl/tarieven" }
+    ]
+  };
+
   return (
     <main style={{ backgroundColor: '#F6F3ED' }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -44,8 +92,8 @@ export default function TarievenPage() {
               Geen verborgen kosten, heldere afspraken. U weet vooraf precies waar u aan toe bent.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 BEREKEN RITPRIJS
@@ -72,19 +120,19 @@ export default function TarievenPage() {
             </h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               <li style={{ color: '#313851', marginBottom: '16px', display: 'flex', alignItems: 'flex-start', gap: '16px', fontSize: '1rem' }}>
-                <CheckCircle2 color="#313851" size={24} style={{ flexShrink: 0, marginTop: '2px' }} />
+                <CheckCircle2 color="#313851" size={24} style={{ flexShrink: 0, marginTop: '2px' }} aria-hidden="true" />
                 <span><strong>Starttarief / Voorrijkosten:</strong> € 25,-</span>
               </li>
               <li style={{ color: '#313851', marginBottom: '16px', display: 'flex', alignItems: 'flex-start', gap: '16px', fontSize: '1rem' }}>
-                <CheckCircle2 color="#313851" size={24} style={{ flexShrink: 0, marginTop: '2px' }} />
+                <CheckCircle2 color="#313851" size={24} style={{ flexShrink: 0, marginTop: '2px' }} aria-hidden="true" />
                 <span><strong>Wachttijd op locatie:</strong> Eerste 15 minuten gratis, daarna € 10,- per 15 minuten.</span>
               </li>
               <li style={{ color: '#313851', marginBottom: '16px', display: 'flex', alignItems: 'flex-start', gap: '16px', fontSize: '1rem' }}>
-                <CheckCircle2 color="#313851" size={24} style={{ flexShrink: 0, marginTop: '2px' }} />
+                <CheckCircle2 color="#313851" size={24} style={{ flexShrink: 0, marginTop: '2px' }} aria-hidden="true" />
                 <span><strong>Toeslagen:</strong> Voor ritten in het weekend of tijdens de nacht (22:00 - 06:00) geldt een toeslag van 25%.</span>
               </li>
               <li style={{ color: '#313851', display: 'flex', alignItems: 'flex-start', gap: '16px', fontSize: '1rem' }}>
-                <CheckCircle2 color="#313851" size={24} style={{ flexShrink: 0, marginTop: '2px' }} />
+                <CheckCircle2 color="#313851" size={24} style={{ flexShrink: 0, marginTop: '2px' }} aria-hidden="true" />
                 <span>Alle genoemde prijzen zijn exclusief 21% BTW en eventuele tolkosten.</span>
               </li>
             </ul>
@@ -119,22 +167,22 @@ export default function TarievenPage() {
               alignItems: 'center',
               textAlign: 'center'
             }}>
-              <CarFront color="#313851" size={48} style={{ marginBottom: '16px' }} />
+              <CarFront color="#313851" size={48} style={{ marginBottom: '16px' }} aria-hidden="true" />
               <h3 style={{ color: '#313851', fontSize: '1.5rem', marginBottom: '8px' }}>Personenauto</h3>
               <div style={{ color: '#313851', fontSize: '2.5rem', fontWeight: 700, marginBottom: '24px' }}>
                 € 0,60 <span style={{ fontSize: '1rem', fontWeight: 500 }}>per km</span>
               </div>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, textAlign: 'left', width: '100%' }}>
                 <li style={{ color: '#313851', marginBottom: '12px', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                  <CheckCircle2 color="#313851" size={20} style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <CheckCircle2 color="#313851" size={20} style={{ flexShrink: 0, marginTop: '2px' }} aria-hidden="true" />
                   Ideaal voor documenten en kleine pakketten
                 </li>
                 <li style={{ color: '#313851', marginBottom: '12px', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                  <CheckCircle2 color="#313851" size={20} style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <CheckCircle2 color="#313851" size={20} style={{ flexShrink: 0, marginTop: '2px' }} aria-hidden="true" />
                   Direct beschikbaar
                 </li>
                 <li style={{ color: '#313851', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                  <CheckCircle2 color="#313851" size={20} style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <CheckCircle2 color="#313851" size={20} style={{ flexShrink: 0, marginTop: '2px' }} aria-hidden="true" />
                   Discreet vervoer
                 </li>
               </ul>
@@ -152,22 +200,22 @@ export default function TarievenPage() {
               alignItems: 'center',
               textAlign: 'center'
             }}>
-              <Truck color="#313851" size={48} style={{ marginBottom: '16px' }} />
+              <Truck color="#313851" size={48} style={{ marginBottom: '16px' }} aria-hidden="true" />
               <h3 style={{ color: '#313851', fontSize: '1.5rem', marginBottom: '8px' }}>Caddy-formaat</h3>
               <div style={{ color: '#313851', fontSize: '2.5rem', fontWeight: 700, marginBottom: '24px' }}>
                 € 0,65 <span style={{ fontSize: '1rem', fontWeight: 500 }}>per km</span>
               </div>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, textAlign: 'left', width: '100%' }}>
                 <li style={{ color: '#313851', marginBottom: '12px', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                  <CheckCircle2 color="#313851" size={20} style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <CheckCircle2 color="#313851" size={20} style={{ flexShrink: 0, marginTop: '2px' }} aria-hidden="true" />
                   Voor grotere zendingen of meerdere colli
                 </li>
                 <li style={{ color: '#313851', marginBottom: '12px', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                  <CheckCircle2 color="#313851" size={20} style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <CheckCircle2 color="#313851" size={20} style={{ flexShrink: 0, marginTop: '2px' }} aria-hidden="true" />
                   Veilig en afgesloten transport
                 </li>
                 <li style={{ color: '#313851', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                  <CheckCircle2 color="#313851" size={20} style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <CheckCircle2 color="#313851" size={20} style={{ flexShrink: 0, marginTop: '2px' }} aria-hidden="true" />
                   Razendsnel van A naar B
                 </li>
               </ul>

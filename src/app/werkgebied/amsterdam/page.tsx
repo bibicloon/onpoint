@@ -5,8 +5,8 @@ import styles from '@/app/page.module.css';
 import { Timer, CarFront, Globe } from 'lucide-react';
 
 export const metadata: Metadata = { 
-  title: '⚡ Spoedkoerier Amsterdam | Binnen 30 Min. Ter Plaatse | Bel 06 30 03 72 57', 
-  description: 'Direct een spoedkoerier in Amsterdam, Zuidas of Westpoort nodig? Binnen 30 minuten op de ophaallocatie. 100% dedicated vervoer zonder overslag. Bel nu: 06 30 03 72 57.', 
+  title: '⚡ Spoedkoerier Amsterdam | Binnen 30 Min. Ter Plaatse | OnPoint Koeriers', 
+  description: 'Direct een spoedkoerier in Amsterdam, Zuidas of Westpoort nodig? Binnen 30 minuten op de ophaallocatie. 100% dedicated vervoer zonder overslag vanaf € 0,60/km.', 
   alternates: {
     canonical: '/werkgebied/amsterdam',
   },
@@ -21,9 +21,19 @@ export const metadata: Metadata = {
 };
 
 export default function AmsterdamPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Spoedkoerier Amsterdam", "item": "https://onpointkoeriers.nl/werkgebied/amsterdam" }
+    ]
+  };
+
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Amsterdam", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/amsterdam", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Amsterdam" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Amsterdam", "image": "https://onpointkoeriers.nl/images/hero-cinematic-onpoint.jpg", "url": "https://onpointkoeriers.nl/werkgebied/amsterdam", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Amsterdam" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -45,8 +55,8 @@ export default function AmsterdamPage() {
               Premium <Link href="/spoedtransport" style={{ textDecoration: 'underline' }}>spoedtransport</Link> voor de <Link href="/zakelijk" style={{ textDecoration: 'underline' }}>zakelijke markt</Link>. Exclusief met wendbare personenauto's of compacte bestelwagens.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
@@ -82,17 +92,17 @@ export default function AmsterdamPage() {
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className={styles.uspGrid}>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><CarFront /></div>
+              <div className={styles.uspIcon}><CarFront aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Stedelijke Wendbaarheid</h3>
               <p style={{ color: '#313851' }}>Waar grote vrachtwagens stilstaan, navigeren wij moeiteloos door de smalste straten van Amsterdam.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Globe /></div>
+              <div className={styles.uspIcon}><Globe aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>100% Dedicated</h3>
               <p style={{ color: '#313851' }}>Geen overslag of tussenstops. Uw zending gaat direct vanuit Amsterdam naar de eindbestemming.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Timer /></div>
+              <div className={styles.uspIcon}><Timer aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Snel op de Ring A10</h3>
               <p style={{ color: '#313851' }}>Dankzij onze snelle reactietijd zijn wij binnen no-time op de ring A10 en direct onderweg.</p>
             </div>

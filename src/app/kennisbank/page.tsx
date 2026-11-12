@@ -21,6 +21,15 @@ export const metadata: Metadata = {
 };
 
 export default function KennisbankPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Kennisbank", "item": "https://onpointkoeriers.nl/kennisbank" }
+    ]
+  };
+
   return (
     <main>
       <script
@@ -34,6 +43,10 @@ export default function KennisbankPage() {
             "url": "https://onpointkoeriers.nl/kennisbank"
           })
         }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* SECTIE 1 - HERO */}
@@ -57,8 +70,8 @@ export default function KennisbankPage() {
               Alles wat u moet weten over spoedvervoer, kilometer tarieven, wetgeving en logistieke oplossingen.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 Stel direct een vraag
@@ -98,7 +111,7 @@ export default function KennisbankPage() {
             {/* Artikel 1 */}
             <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(18px, 3vw, 30px)', border: '2px solid #313851', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <div style={{ marginBottom: '16px' }}><Calculator color="#313851" size={36} /></div>
+                <div style={{ marginBottom: '16px' }}><Calculator color="#313851" size={36} aria-hidden="true" /></div>
                 <h3 style={{ color: '#313851', fontSize: '1.35rem', marginBottom: '12px', fontWeight: 700 }}>
                   Wat Kost een Spoedkoerier per KM?
                 </h3>
@@ -107,14 +120,14 @@ export default function KennisbankPage() {
                 </p>
               </div>
               <Link href="/kennisbank/wat-kost-een-spoedkoerier-per-km" className="btn btn-action" style={{ textAlign: 'center', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-                Lees artikel <ArrowRight size={18} />
+                Lees artikel <ArrowRight size={18} aria-hidden="true" />
               </Link>
             </div>
 
             {/* Artikel 2 */}
             <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(18px, 3vw, 30px)', border: '2px solid #313851', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <div style={{ marginBottom: '16px' }}><Scale color="#313851" size={36} /></div>
+                <div style={{ marginBottom: '16px' }}><Scale color="#313851" size={36} aria-hidden="true" /></div>
                 <h3 style={{ color: '#313851', fontSize: '1.35rem', marginBottom: '12px', fontWeight: 700 }}>
                   Spoedkoerier vs. Pakketdienst
                 </h3>
@@ -123,14 +136,14 @@ export default function KennisbankPage() {
                 </p>
               </div>
               <Link href="/kennisbank/spoedkoerier-vs-pakketdienst-verschillen" className="btn btn-action" style={{ textAlign: 'center', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-                Lees artikel <ArrowRight size={18} />
+                Lees artikel <ArrowRight size={18} aria-hidden="true" />
               </Link>
             </div>
 
             {/* Artikel 3 */}
             <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(18px, 3vw, 30px)', border: '2px solid #313851', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <div style={{ marginBottom: '16px' }}><Clock color="#313851" size={36} /></div>
+                <div style={{ marginBottom: '16px' }}><Clock color="#313851" size={36} aria-hidden="true" /></div>
                 <h3 style={{ color: '#313851', fontSize: '1.35rem', marginBottom: '12px', fontWeight: 700 }}>
                   Hoe Snel is een Spoedkoerier Ter Plaatse?
                 </h3>
@@ -139,7 +152,7 @@ export default function KennisbankPage() {
                 </p>
               </div>
               <Link href="/kennisbank/hoe-snel-is-een-spoedkoerier-ter-plaatse" className="btn btn-action" style={{ textAlign: 'center', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-                Lees artikel <ArrowRight size={18} />
+                Lees artikel <ArrowRight size={18} aria-hidden="true" />
               </Link>
             </div>
 

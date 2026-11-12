@@ -5,8 +5,8 @@ import styles from '@/app/page.module.css';
 import { CarFront, Target, Lock, PhoneCall, Zap, UserCheck } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '⚡ Spoedtransport 24/7 | Binnen 30 Min. Ter Plaatse | Bel 06 30 03 72 57',
-  description: 'Direct spoedtransport nodig? OnPoint Koeriers is binnen 30 minuten op de ophaallocatie. 100% dedicated vervoer zonder overslag in NL & EU. Bel nu: 06 30 03 72 57.',
+  title: '⚡ Spoedtransport 24/7 | Binnen 30 Min. Ter Plaatse | OnPoint Koeriers',
+  description: 'Direct spoedtransport nodig? OnPoint Koeriers is binnen 30 minuten op de ophaallocatie. 100% dedicated vervoer zonder overslag in NL & EU vanaf € 0,60/km.',
   alternates: {
     canonical: '/spoedtransport',
   },
@@ -28,11 +28,20 @@ export default function SpoedtransportPage() {
     "provider": {
       "@type": "CourierService",
       "name": "OnPoint Koeriers",
-      "telephone": "+31630037257",
-      "url": "https://onpointkoeriers.nl"
+      "url": "https://onpointkoeriers.nl",
+      "image": "https://onpointkoeriers.nl/images/hero-cinematic-onpoint.jpg"
     },
     "areaServed": ["NL", "BE", "DE", "EU"],
     "description": "Direct spoedtransport binnen 30 minuten op de ophaallocatie. 100% dedicated vervoer zonder overslag in Nederland en Europa."
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Spoedtransport", "item": "https://onpointkoeriers.nl/spoedtransport" }
+    ]
   };
 
   return (
@@ -40,6 +49,10 @@ export default function SpoedtransportPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
@@ -62,8 +75,8 @@ export default function SpoedtransportPage() {
               Uw zending direct van A naar B zonder overslag. Wendbaar, discreet en altijd de hoogste prioriteit.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 PLAN UW TRANSPORT
@@ -101,7 +114,7 @@ export default function SpoedtransportPage() {
             
             {/* Kaart 1 */}
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><CarFront /></div>
+              <div className={styles.uspIcon}><CarFront aria-hidden="true" /></div>
               <h3 style={{ color: '#313851', marginBottom: '1rem', fontSize: '1.25rem' }}>Stedelijke Wendbaarheid</h3>
               <p style={{ color: '#313851', margin: 0, fontSize: '1rem' }}>
                 Met onze compacte personenauto's en Caddy's navigeren we moeiteloos door drukke stadscentra en smalle straten. Sneller ter plaatse dan groot vrachtvervoer.
@@ -110,7 +123,7 @@ export default function SpoedtransportPage() {
 
             {/* Kaart 2 */}
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Target /></div>
+              <div className={styles.uspIcon}><Target aria-hidden="true" /></div>
               <h3 style={{ color: '#313851', marginBottom: '1rem', fontSize: '1.25rem' }}>Geen Distributiecentra</h3>
               <p style={{ color: '#313851', margin: 0, fontSize: '1rem' }}>
                 Uw zending ligt exclusief bij ons in het voertuig. Wij doen niet aan overladen of gecombineerde routes. Direct van de afzender naar de ontvanger.
@@ -119,7 +132,7 @@ export default function SpoedtransportPage() {
 
             {/* Kaart 3 */}
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Lock /></div>
+              <div className={styles.uspIcon}><Lock aria-hidden="true" /></div>
               <h3 style={{ color: '#313851', marginBottom: '1rem', fontSize: '1.25rem' }}>Discretie & Veiligheid</h3>
               <p style={{ color: '#313851', margin: 0, fontSize: '1rem' }}>
                 Van cruciale auto-onderdelen en medische samples tot vertrouwelijke documenten en paspoorten. Wij behandelen uw zending met de allerhoogste zorg en absolute privacy.
@@ -128,7 +141,7 @@ export default function SpoedtransportPage() {
 
             {/* Kaart 4 */}
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><PhoneCall /></div>
+              <div className={styles.uspIcon}><PhoneCall aria-hidden="true" /></div>
               <h3 style={{ color: '#313851', marginBottom: '1rem', fontSize: '1.25rem' }}>Direct Contact</h3>
               <p style={{ color: '#313851', margin: 0, fontSize: '1rem' }}>
                 Bel of app ons. U krijgt direct een chauffeur aan de lijn, zonder keuzemenu's.
@@ -137,7 +150,7 @@ export default function SpoedtransportPage() {
 
             {/* Kaart 5 */}
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Zap /></div>
+              <div className={styles.uspIcon}><Zap aria-hidden="true" /></div>
               <h3 style={{ color: '#313851', marginBottom: '1rem', fontSize: '1.25rem' }}>Snel Ophalen</h3>
               <p style={{ color: '#313851', margin: 0, fontSize: '1rem' }}>
                 Wij zijn direct onderweg met het juiste compacte voertuig voor uw zending.
@@ -146,7 +159,7 @@ export default function SpoedtransportPage() {
 
             {/* Kaart 6 */}
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><UserCheck /></div>
+              <div className={styles.uspIcon}><UserCheck aria-hidden="true" /></div>
               <h3 style={{ color: '#313851', marginBottom: '1rem', fontSize: '1.25rem' }}>Persoonlijke Levering</h3>
               <p style={{ color: '#313851', margin: 0, fontSize: '1rem' }}>
                 Wij rijden via de meest efficiënte route rechtstreeks naar de eindbestemming. Zonder overslag of onnodige tussenstops leveren wij uw zending veilig en persoonlijk af bij de juiste contactpersoon.

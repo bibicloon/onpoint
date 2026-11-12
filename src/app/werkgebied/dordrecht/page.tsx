@@ -5,8 +5,8 @@ import styles from '@/app/page.module.css';
 import { Timer, CarFront, Globe } from 'lucide-react';
 
 export const metadata: Metadata = { 
-  title: '⚡ Spoedkoerier Dordrecht | Binnen 30 Min. Ter Plaatse | Bel 06 30 03 72 57', 
-  description: 'Direct een spoedkoerier in Dordrecht, Drechtsteden of Kil 1, 2, 3 nodig? Binnen 30 minuten op locatie. 100% dedicated vervoer. Bel direct: 06 30 03 72 57.', 
+  title: '⚡ Spoedkoerier Dordrecht | Binnen 30 Min. Ter Plaatse | OnPoint Koeriers', 
+  description: 'Direct een spoedkoerier in Dordrecht, Drechtsteden of Kil 1, 2, 3 nodig? Binnen 30 minuten op locatie. 100% dedicated vervoer vanaf € 0,60/km.', 
   alternates: {
     canonical: '/werkgebied/dordrecht',
   },
@@ -21,9 +21,19 @@ export const metadata: Metadata = {
 };
 
 export default function DordrechtPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Spoedkoerier Dordrecht", "item": "https://onpointkoeriers.nl/werkgebied/dordrecht" }
+    ]
+  };
+
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Dordrecht", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/dordrecht", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Dordrecht" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Dordrecht", "image": "https://onpointkoeriers.nl/images/hero-cinematic-onpoint.jpg", "url": "https://onpointkoeriers.nl/werkgebied/dordrecht", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Dordrecht" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
@@ -46,8 +56,8 @@ export default function DordrechtPage() {
               Snelle en betrouwbare <Link href="/spoedtransport" style={{ textDecoration: 'underline' }}>spoedkoerier</Link> in Dordrecht, Papendrecht, Sliedrecht en Zwijndrecht.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
@@ -84,17 +94,17 @@ export default function DordrechtPage() {
           
           <div className={styles.uspGrid}>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Timer color="#313851" /></div>
+              <div className={styles.uspIcon}><Timer color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Binnen 30 Min. Ter Plaatse</h3>
               <p style={{ color: '#313851' }}>Directe dispatch naar Krabbepolder, Dordtse Kil en omgeving.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Globe color="#313851" /></div>
+              <div className={styles.uspIcon}><Globe color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Regionaal & Landelijk</h3>
               <p style={{ color: '#313851' }}>Van Dordrecht naar Rotterdam, Moerdijk, Breda of Schiphol zonder vertraging.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><CarFront color="#313851" /></div>
+              <div className={styles.uspIcon}><CarFront color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Compact & Efficient</h3>
               <p style={{ color: '#313851' }}>Personenauto's en Caddy-bestelbussen voor snelle levering van uw pakketten.</p>
             </div>

@@ -5,8 +5,8 @@ import styles from '@/app/page.module.css';
 import { Timer, CarFront, Globe } from 'lucide-react';
 
 export const metadata: Metadata = { 
-  title: '⚡ Spoedkoerier Eindhoven | High Tech Campus 24/7 | Bel 06 30 03 72 57', 
-  description: 'Spoedkoerier in Eindhoven, Brainport of High Tech Campus nodig? Binnen 30-45 minuten op de ophaallocatie. 100% dedicated B2B vervoer. Bel nu: 06 30 03 72 57.', 
+  title: '⚡ Spoedkoerier Eindhoven | High Tech Campus 24/7 | OnPoint Koeriers', 
+  description: 'Spoedkoerier in Eindhoven, Brainport of High Tech Campus nodig? Binnen 30-45 minuten op de ophaallocatie. 100% dedicated B2B vervoer vanaf € 0,60/km.', 
   alternates: {
     canonical: '/werkgebied/eindhoven',
   },
@@ -21,9 +21,19 @@ export const metadata: Metadata = {
 };
 
 export default function EindhovenPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Spoedkoerier Eindhoven", "item": "https://onpointkoeriers.nl/werkgebied/eindhoven" }
+    ]
+  };
+
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Eindhoven", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/eindhoven", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Eindhoven" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Eindhoven", "image": "https://onpointkoeriers.nl/images/hero-cinematic-onpoint.jpg", "url": "https://onpointkoeriers.nl/werkgebied/eindhoven", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Eindhoven" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -45,8 +55,8 @@ export default function EindhovenPage() {
               Premium spoedtransport voor de zakelijke markt en high-tech industrie. Exclusief met personenauto's of compacte bestelwagens.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
@@ -82,17 +92,17 @@ export default function EindhovenPage() {
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className={styles.uspGrid}>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Timer /></div>
+              <div className={styles.uspIcon}><Timer aria-hidden="true" /></div>
               <h3>Techniek & Industrie</h3>
               <p>Directe inzetbaarheid voor productiebedrijven, machinebouwers en de automotive sector in Zuid-Nederland.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><CarFront /></div>
+              <div className={styles.uspIcon}><CarFront aria-hidden="true" /></div>
               <h3>Compact & Zeker</h3>
               <p>Vervoer uitsluitend met representatieve personenauto's en Caddy's. 100% dedicated transport voor uw urgente zending.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Globe /></div>
+              <div className={styles.uspIcon}><Globe aria-hidden="true" /></div>
               <h3>Europa-breed</h3>
               <p>Vanuit Eindhoven via de A67 direct onderweg naar bestemmingen in België, Duitsland en de rest van Europa.</p>
             </div>

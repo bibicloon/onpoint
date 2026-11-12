@@ -36,11 +36,21 @@ export default function JuridischDocumentenPage() {
     "provider": {
       "@type": "CourierService",
       "name": "OnPoint Koeriers",
-      "telephone": "+31630037257",
-      "url": "https://onpointkoeriers.nl"
+      "url": "https://onpointkoeriers.nl",
+      "image": "https://onpointkoeriers.nl/images/hero-cinematic-onpoint.jpg"
     },
     "areaServed": "NL",
     "description": "Discreet spoedtransport van juridische documenten, contracten en paspoorten voor advocatenkantoren en notarissen."
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Diensten", "item": "https://onpointkoeriers.nl/diensten" },
+      { "@type": "ListItem", "position": 3, "name": "Juridisch & Documenten", "item": "https://onpointkoeriers.nl/diensten/juridisch-documenten-koerier" }
+    ]
   };
 
   return (
@@ -48,6 +58,10 @@ export default function JuridischDocumentenPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* SECTIE 1 - HERO */}
@@ -71,8 +85,8 @@ export default function JuridischDocumentenPage() {
               100% discrete en rechtstreekse bezorging van juridische stukken, paspoorten en vertrouwelijke contracten.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
@@ -109,19 +123,19 @@ export default function JuridischDocumentenPage() {
           
           <div className={styles.uspGrid}>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Lock color="#313851" /></div>
+              <div className={styles.uspIcon}><Lock color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Discreet & Geheimhouding</h3>
               <p style={{ color: '#313851' }}>Onze koeriers handelen met de hoogste mate van geheimhouding. Uw zending wordt nooit onbeheerd achtergelaten.</p>
             </div>
 
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><FileText color="#313851" /></div>
+              <div className={styles.uspIcon}><FileText color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Persoonlijke Handtekening</h3>
               <p style={{ color: '#313851' }}>Documenten worden uitsluitend persoonlijk overhandigd aan de specifieke jurist, notaris of bevoegde ontvanger met digitale POD.</p>
             </div>
 
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Clock color="#313851" /></div>
+              <div className={styles.uspIcon}><Clock color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Rechtstreeks naar Rechtbank</h3>
               <p style={{ color: '#313851' }}>Moet een dossier voor het sluiten van de griffie worden ingediend? Wij rijden direct en zonder tussenstops naar het gerechtshof.</p>
             </div>
@@ -141,12 +155,12 @@ export default function JuridischDocumentenPage() {
               Voor wie rijden wij documenten-spoedtransport?
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '15px', textAlign: 'left', marginBottom: '2.5rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Advocatenkantoren & Juridisch adviseurs</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Notariskantoren & Maatschappen</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Ambassades & Consulaten (Paspoorten)</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Accountancy & Corporate Finance</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Overheidsinstellingen & Gemeenten</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Fysieke sleutels & kluisdocumenten</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} aria-hidden="true" /> Advocatenkantoren & Juridisch adviseurs</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} aria-hidden="true" /> Notariskantoren & Maatschappen</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} aria-hidden="true" /> Ambassades & Consulaten (Paspoorten)</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} aria-hidden="true" /> Accountancy & Corporate Finance</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} aria-hidden="true" /> Overheidsinstellingen & Gemeenten</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} aria-hidden="true" /> Fysieke sleutels & kluisdocumenten</div>
             </div>
             <Link href="/contact" className="btn btn-action">
               NEEM DIRECT CONTACT OP

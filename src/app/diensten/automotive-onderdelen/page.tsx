@@ -36,11 +36,21 @@ export default function AutomotiveOnderdelenPage() {
     "provider": {
       "@type": "CourierService",
       "name": "OnPoint Koeriers",
-      "telephone": "+31630037257",
-      "url": "https://onpointkoeriers.nl"
+      "url": "https://onpointkoeriers.nl",
+      "image": "https://onpointkoeriers.nl/images/hero-cinematic-onpoint.jpg"
     },
     "areaServed": "NL",
     "description": "Spoedtransport van auto-onderdelen, elektronica en vervangingsonderdelen voor merkdealers, autobedrijven en de maakindustrie."
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Diensten", "item": "https://onpointkoeriers.nl/diensten" },
+      { "@type": "ListItem", "position": 3, "name": "Automotive & Onderdelen", "item": "https://onpointkoeriers.nl/diensten/automotive-onderdelen" }
+    ]
   };
 
   return (
@@ -48,6 +58,10 @@ export default function AutomotiveOnderdelenPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* SECTIE 1 - HERO */}
@@ -71,8 +85,8 @@ export default function AutomotiveOnderdelenPage() {
               Directe levering van kritieke onderdelen, motoren, elektronica en gereedschappen aan garages en dealers.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
@@ -109,19 +123,19 @@ export default function AutomotiveOnderdelenPage() {
           
           <div className={styles.uspGrid}>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Zap color="#313851" /></div>
+              <div className={styles.uspIcon}><Zap color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Directe Ophaalsnelheid</h3>
               <p style={{ color: '#313851' }}>Binnen 30-45 minuten na de oproep rijdt onze koerier voor bij het distributiecentrum of de onderdelenleverancier.</p>
             </div>
 
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Truck color="#313851" /></div>
+              <div className={styles.uspIcon}><Truck color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Auto & Caddy Voertuigen</h3>
               <p style={{ color: '#313851' }}>Van een klein elektronisch stuurapparaat in onze personenauto tot een europallet met onderdelen in onze Caddy-bestelbus.</p>
             </div>
 
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Wrench color="#313851" /></div>
+              <div className={styles.uspIcon}><Wrench color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Werkplaats Bezorging</h3>
               <p style={{ color: '#313851' }}>Onze chauffeur levert het onderdeel persoonlijk af aan de werkplaatsbalie of baliebeheerder, inclusief aftekening.</p>
             </div>
@@ -141,12 +155,12 @@ export default function AutomotiveOnderdelenPage() {
               Wat vervoeren wij voor de automotive- en industriële sector?
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '15px', textAlign: 'left', marginBottom: '2.5rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Carrosserie- & motordelen</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Stuurapparaten & ECU elektronica</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Diagnoseapparatuur & speciaal gereedschap</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Banden, velgen & uitlaatsystemen</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Machineonderdelen voor de industrie</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} /> Schadeherstel vervangende onderdelen</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} aria-hidden="true" /> Carrosserie- & motordelen</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} aria-hidden="true" /> Stuurapparaten & ECU elektronica</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} aria-hidden="true" /> Diagnoseapparatuur & speciaal gereedschap</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} aria-hidden="true" /> Banden, velgen & uitlaatsystemen</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} aria-hidden="true" /> Machineonderdelen voor de industrie</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#313851', fontWeight: 600 }}><CheckCircle2 color="#313851" size={20} aria-hidden="true" /> Schadeherstel vervangende onderdelen</div>
             </div>
             <Link href="/contact" className="btn btn-action">
               NEEM DIRECT CONTACT OP

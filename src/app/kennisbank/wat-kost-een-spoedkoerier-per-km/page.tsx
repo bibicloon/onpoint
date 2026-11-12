@@ -5,8 +5,8 @@ import styles from '@/app/page.module.css';
 import { CheckCircle2, ArrowLeft } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '⚡ Wat Kost een Spoedkoerier per KM? | Prijzen 2026 | Bel 06 30 03 72 57',
-  description: 'Wat kost een spoedkoerier per kilometer? Bekijk heldere tarieven vanaf €0,60/km, starttarieven, toeslagen en praktische rekenvoorbeelden. Bel direct 06 30 03 72 57.',
+  title: '⚡ Wat Kost een Spoedkoerier per KM? | Prijzen 2026 | OnPoint Koeriers',
+  description: 'Wat kost een spoedkoerier per kilometer? Bekijk heldere tarieven vanaf €0,60/km, starttarieven, toeslagen en praktische rekenvoorbeelden.',
   alternates: {
     canonical: '/kennisbank/wat-kost-een-spoedkoerier-per-km',
   },
@@ -21,6 +21,16 @@ export const metadata: Metadata = {
 };
 
 export default function WatKostEenSpoedkoerierPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Kennisbank", "item": "https://onpointkoeriers.nl/kennisbank" },
+      { "@type": "ListItem", "position": 3, "name": "Wat Kost een Spoedkoerier per KM?", "item": "https://onpointkoeriers.nl/kennisbank/wat-kost-een-spoedkoerier-per-km" }
+    ]
+  };
+
   return (
     <main>
       <script
@@ -44,12 +54,16 @@ export default function WatKostEenSpoedkoerierPage() {
               "name": "OnPoint Koeriers",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://onpointkoeriers.nl/logo.png"
+                "url": "https://onpointkoeriers.nl/images/hero-cinematic-onpoint.jpg"
               }
             },
             "mainEntityOfPage": "https://onpointkoeriers.nl/kennisbank/wat-kost-een-spoedkoerier-per-km"
           })
         }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* SECTIE 1 - HERO */}
@@ -67,7 +81,7 @@ export default function WatKostEenSpoedkoerierPage() {
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.heroContent} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', margin: '0 auto' }}>
             <Link href="/kennisbank" style={{ color: '#F6F3ED', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '1rem', fontWeight: 600 }}>
-              <ArrowLeft size={18} /> Terug naar Kennisbank
+              <ArrowLeft size={18} aria-hidden="true" /> Terug naar Kennisbank
             </Link>
             <h1 className={styles.heroTitle} style={{ color: '#F6F3ED', fontSize: 'clamp(2rem, 3.5vw, 3.2rem)' }}>
               Wat Kost een Spoedkoerier per KM?
@@ -114,15 +128,15 @@ export default function WatKostEenSpoedkoerierPage() {
             </h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 20px 0' }}>
               <li style={{ marginBottom: '14px', display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '1.05rem' }}>
-                <CheckCircle2 color="#313851" size={22} style={{ flexShrink: 0, marginTop: '2px' }} />
+                <CheckCircle2 color="#313851" size={22} style={{ flexShrink: 0, marginTop: '2px' }} aria-hidden="true" />
                 <span><strong>Personenauto:</strong> € 0,60 per km (geschikt voor akten, kleine dozen, sleutels tot 100 kg)</span>
               </li>
               <li style={{ marginBottom: '14px', display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '1.05rem' }}>
-                <CheckCircle2 color="#313851" size={22} style={{ flexShrink: 0, marginTop: '2px' }} />
+                <CheckCircle2 color="#313851" size={22} style={{ flexShrink: 0, marginTop: '2px' }} aria-hidden="true" />
                 <span><strong>Caddy Bestelbus:</strong> € 0,65 per km (geschikt voor meerdere colli, pallets of apparatuur tot 500 kg)</span>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '1.05rem' }}>
-                <CheckCircle2 color="#313851" size={22} style={{ flexShrink: 0, marginTop: '2px' }} />
+                <CheckCircle2 color="#313851" size={22} style={{ flexShrink: 0, marginTop: '2px' }} aria-hidden="true" />
                 <span><strong>Starttarief / Voorrijkosten:</strong> € 25,- (vaste instapkosten, 0% spoedtoeslag overdag)</span>
               </li>
             </ul>
@@ -163,15 +177,15 @@ export default function WatKostEenSpoedkoerierPage() {
             </p>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               <li style={{ marginBottom: '12px', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                <CheckCircle2 color="#313851" size={20} style={{ flexShrink: 0, marginTop: '2px' }} />
+                <CheckCircle2 color="#313851" size={20} style={{ flexShrink: 0, marginTop: '2px' }} aria-hidden="true" />
                 <span><strong>Nacht- & Weekendtoeslag:</strong> 25% toeslag voor ritten tussen 22:00 en 06:00 uur of op zaterdag/zondag.</span>
               </li>
               <li style={{ marginBottom: '12px', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                <CheckCircle2 color="#313851" size={20} style={{ flexShrink: 0, marginTop: '2px' }} />
+                <CheckCircle2 color="#313851" size={20} style={{ flexShrink: 0, marginTop: '2px' }} aria-hidden="true" />
                 <span><strong>Wachttijd:</strong> De eerste 15 minuten wachttijd op de laad-/loslocatie zijn gratis. Daarna € 10,- per 15 min.</span>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                <CheckCircle2 color="#313851" size={20} style={{ flexShrink: 0, marginTop: '2px' }} />
+                <CheckCircle2 color="#313851" size={20} style={{ flexShrink: 0, marginTop: '2px' }} aria-hidden="true" />
                 <span><strong>Tolkosten / Ferry:</strong> Eventuele directe tolkosten (bijv. Westerscheldetunnel of buitenlandse tolwegen) worden 1-op-1 doorberekend.</span>
               </li>
             </ul>
@@ -189,11 +203,11 @@ export default function WatKostEenSpoedkoerierPage() {
               Direct de exacte prijs voor uw rit berekenen?
             </h3>
             <p style={{ color: '#313851', marginBottom: '2rem', fontSize: '1.05rem' }}>
-              Bel onze planningsdienst. U krijgt direct een scherpe prijsopgave en de chauffeur kan binnen 30 minuten rijden.
+              Bel onze planningsdienst of stuur een WhatsApp. U krijgt direct een scherpe prijsopgave en de chauffeur kan binnen 30 minuten rijden.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 BEREKEN RITPRIJS ONLINE

@@ -5,7 +5,7 @@ import styles from '@/app/page.module.css';
 import { Lock, UserCheck, CarFront } from 'lucide-react';
 
 export const metadata: Metadata = { 
-  title: '⚡ Spoedkoerier Den Haag | Discreet & Binnen 30 Min. | Bel 06 30 03 72 57', 
+  title: '⚡ Spoedkoerier Den Haag | Discreet & Binnen 30 Min. | OnPoint Koeriers', 
   description: 'Discreet spoedtransport en documenten koerier in Den Haag, Beatrixkwartier en Forepark. Binnen 30 min. ter plaatse voor advocatuur, overheid en bedrijven.', 
   alternates: {
     canonical: '/werkgebied/den-haag',
@@ -21,9 +21,19 @@ export const metadata: Metadata = {
 };
 
 export default function DenHaagPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Spoedkoerier Den Haag", "item": "https://onpointkoeriers.nl/werkgebied/den-haag" }
+    ]
+  };
+
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Den Haag", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/den-haag", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Den Haag" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Den Haag", "image": "https://onpointkoeriers.nl/images/hero-cinematic-onpoint.jpg", "url": "https://onpointkoeriers.nl/werkgebied/den-haag", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Den Haag" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -45,8 +55,8 @@ export default function DenHaagPage() {
               Representatief spoedvervoer voor de overheid, advocatuur en zakelijke dienstverlening.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
@@ -82,17 +92,17 @@ export default function DenHaagPage() {
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className={styles.uspGrid}>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Lock /></div>
+              <div className={styles.uspIcon}><Lock aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Absolute Discretie</h3>
               <p style={{ color: '#313851' }}>Volledige privacy en veiligheid voor al uw vertrouwelijke stukken.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><UserCheck /></div>
+              <div className={styles.uspIcon}><UserCheck aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Hand-tot-Hand</h3>
               <p style={{ color: '#313851' }}>Persoonlijke overhandiging aan de juiste ontvanger.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><CarFront /></div>
+              <div className={styles.uspIcon}><CarFront aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Representatief</h3>
               <p style={{ color: '#313851' }}>Representatieve wagens en chauffeurs, passend bij uw zakelijke uitstraling.</p>
             </div>

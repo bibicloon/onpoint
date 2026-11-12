@@ -5,8 +5,8 @@ import styles from '@/app/page.module.css';
 import { Timer, CarFront, Globe } from 'lucide-react';
 
 export const metadata: Metadata = { 
-  title: '⚡ Spoedkoerier Arnhem | Binnen 30 Min. Ter Plaatse | Bel 06 30 03 72 57', 
-  description: 'Direct een spoedkoerier in Arnhem, IPKW of Gelderland nodig? Binnen 30 minuten op locatie. 100% dedicated vervoer. Bel direct: 06 30 03 72 57.', 
+  title: '⚡ Spoedkoerier Arnhem | Binnen 30 Min. Ter Plaatse | OnPoint Koeriers', 
+  description: 'Direct een spoedkoerier in Arnhem, IPKW of Gelderland nodig? Binnen 30 minuten op locatie. 100% dedicated vervoer vanaf € 0,60/km.', 
   alternates: {
     canonical: '/werkgebied/arnhem',
   },
@@ -21,9 +21,19 @@ export const metadata: Metadata = {
 };
 
 export default function ArnhemPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Spoedkoerier Arnhem", "item": "https://onpointkoeriers.nl/werkgebied/arnhem" }
+    ]
+  };
+
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Arnhem", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/arnhem", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Arnhem" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Arnhem", "image": "https://onpointkoeriers.nl/images/hero-cinematic-onpoint.jpg", "url": "https://onpointkoeriers.nl/werkgebied/arnhem", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Arnhem" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
@@ -46,8 +56,8 @@ export default function ArnhemPage() {
               Directe <Link href="/spoedtransport" style={{ textDecoration: 'underline' }}>spoedkoerier</Link> voor bedrijven op IPKW, Het Broek, IJsseloord en heel Arnhem-Nijmegen.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
@@ -84,17 +94,17 @@ export default function ArnhemPage() {
           
           <div className={styles.uspGrid}>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Timer color="#313851" /></div>
+              <div className={styles.uspIcon}><Timer color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Binnen 30 Min. Ter Plaatse</h3>
               <p style={{ color: '#313851' }}>Snel ter plaatse in heel Arnhem, Velp, Duiven en Elst.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Globe color="#313851" /></div>
+              <div className={styles.uspIcon}><Globe color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>100% Dedicated Vervoer</h3>
               <p style={{ color: '#313851' }}>Uw zending rijdt rechtstreeks zonder tussenstops of verzameling met andere vracht.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><CarFront color="#313851" /></div>
+              <div className={styles.uspIcon}><CarFront color="#313851" aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Snel & Wendbaar</h3>
               <p style={{ color: '#313851' }}>Efficiënte voertuigen voor snelle en secure bezorging in de stadsregio.</p>
             </div>

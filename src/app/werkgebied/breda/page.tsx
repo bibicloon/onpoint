@@ -5,8 +5,8 @@ import styles from '@/app/page.module.css';
 import { Timer, CarFront, Globe } from 'lucide-react';
 
 export const metadata: Metadata = { 
-  title: '⚡ Spoedkoerier Breda & Hazeldonk | Binnen 30 Min. | Bel 06 30 03 72 57', 
-  description: 'Direct een spoedkoerier in Breda, Hazeldonk of West-Brabant nodig? Binnen 30 minuten ter plaatse. 100% dedicated vervoer naar NL, België & EU. Bel 06 30 03 72 57.', 
+  title: '⚡ Spoedkoerier Breda & Hazeldonk | Binnen 30 Min. | OnPoint Koeriers', 
+  description: 'Direct een spoedkoerier in Breda, Hazeldonk of West-Brabant nodig? Binnen 30 minuten ter plaatse. 100% dedicated vervoer naar NL, België & EU vanaf € 0,60/km.', 
   alternates: {
     canonical: '/werkgebied/breda',
   },
@@ -21,9 +21,19 @@ export const metadata: Metadata = {
 };
 
 export default function BredaPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://onpointkoeriers.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Spoedkoerier Breda", "item": "https://onpointkoeriers.nl/werkgebied/breda" }
+    ]
+  };
+
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Breda", "image": "https://onpointkoeriers.nl/logo.png", "url": "https://onpointkoeriers.nl/werkgebied/breda", "telephone": "+31630037257", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Breda" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CourierService", "name": "OnPoint Koeriers Breda", "image": "https://onpointkoeriers.nl/images/hero-cinematic-onpoint.jpg", "url": "https://onpointkoeriers.nl/werkgebied/breda", "priceRange": "€0,60 - €0,65 per km", "areaServed": { "@type": "City", "name": "Breda" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* SECTIE 1 - HERO */}
       <section className={styles.hero} style={{ minHeight: '60vh', height: '60vh' }}>
         <div className={styles.heroImageWrapper}>
@@ -45,8 +55,8 @@ export default function BredaPage() {
               Premium spoedtransport voor de zakelijke markt en logistieke sector. Exclusief met personenauto's of compacte bestelwagens.
             </p>
             <div className={styles.heroActions} style={{ justifyContent: 'center' }}>
-              <a href="tel:+31630037257" className="btn btn-primary">
-                BEL DIRECT: 06 30 03 72 57
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
+                BEL DIRECT
               </a>
               <Link href="/contact" className="btn btn-action">
                 Plan uw transport
@@ -82,17 +92,17 @@ export default function BredaPage() {
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className={styles.uspGrid}>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Timer /></div>
+              <div className={styles.uspIcon}><Timer aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Snel op Locatie</h3>
               <p style={{ color: '#313851' }}>Directe inzetbaarheid voor bedrijven in Breda, Hazeldonk en omgeving.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><CarFront /></div>
+              <div className={styles.uspIcon}><CarFront aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Compact & Zeker</h3>
               <p style={{ color: '#313851' }}>Vervoer uitsluitend met representatieve personenauto's en Caddy's. 100% dedicated transport voor uw urgente zending.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
-              <div className={styles.uspIcon}><Globe /></div>
+              <div className={styles.uspIcon}><Globe aria-hidden="true" /></div>
               <h3 style={{ color: '#313851' }}>Europa-breed</h3>
               <p style={{ color: '#313851' }}>Vanuit Breda direct de grens over of snel onderweg naar de rest van Nederland.</p>
             </div>

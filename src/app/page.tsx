@@ -7,8 +7,8 @@ import FAQAccordion from '@/components/FAQ/FAQAccordion';
 import { faqData } from '@/data/faqData';
 
 export const metadata: Metadata = {
-  title: '⚡ Spoedkoerier Binnen 30 Min. Ter Plaatse | Bel 06 30 03 72 57',
-  description: 'Acute spoedzending? OnPoint Koeriers is binnen 30-45 min. op locatie in heel NL & EU. 24/7 dedicated vervoer zonder overslag vanaf €0,60/km. Bel direct: 06 30 03 72 57.',
+  title: '⚡ Spoedkoerier Binnen 30 Min. Ter Plaatse | 24/7 Direct Inzetbaar | OnPoint Koeriers',
+  description: 'Acute spoedzending? OnPoint Koeriers is binnen 30-45 min. op locatie in heel NL & EU. 24/7 dedicated vervoer zonder overslag vanaf €0,60/km. Direct bellen of WhatsApp.',
   alternates: {
     canonical: '/',
   },
@@ -27,10 +27,9 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "CourierService",
     "name": "OnPoint Koeriers",
-    "image": "https://onpointkoeriers.nl/logo.png",
+    "image": "https://onpointkoeriers.nl/images/hero-cinematic-onpoint.jpg",
     "@id": "https://onpointkoeriers.nl/#organization",
     "url": "https://onpointkoeriers.nl",
-    "telephone": "+31630037257",
     "priceRange": "€0,60 - €0,65 per km (starttarief €25)",
     "address": {
       "@type": "PostalAddress",
@@ -55,8 +54,8 @@ export default function Home() {
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+31630037257",
       "contactType": "customer service",
+      "url": "https://onpointkoeriers.nl/contact",
       "availableLanguage": ["Dutch", "English"],
       "areaServed": ["NL", "BE", "DE", "EU"]
     },
@@ -123,7 +122,7 @@ export default function Home() {
             <h1 className={styles.heroTitle}>Direct onderweg.<br />Rechtstreeks geleverd.</h1>
             <p className={styles.heroSubtitle}>Premium spoedtransport voor bedrijven met urgente zendingen die passen in een personenauto of compacte bestelwagen.</p>
             <div className={styles.heroActions}>
-              <a href="tel:+31630037257" className="btn btn-primary">BEL DIRECT</a>
+              <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">BEL DIRECT</a>
               <Link href="/diensten" className="btn btn-ghost">BEKIJK MOGELIJKHEDEN</Link>
             </div>
           </div>
@@ -135,17 +134,17 @@ export default function Home() {
         <div className="container">
           <div className={styles.uspGrid}>
             <div className={styles.uspCard}>
-              <div className={styles.uspIcon}><Target /></div>
+              <div className={styles.uspIcon}><Target aria-hidden="true" /></div>
               <h3>Direct schakelen</h3>
               <p>Directe inzetbaarheid. Geen onnodige overslag. Uw zending gaat direct van A naar B zonder vertraging.</p>
             </div>
             <div className={styles.uspCard}>
-              <div className={styles.uspIcon}><ShieldCheck /></div>
+              <div className={styles.uspIcon}><ShieldCheck aria-hidden="true" /></div>
               <h3>Gespecialiseerd spoedtransport</h3>
               <p>Nauwkeurige aflevering op de afgesproken tijd. Persoonlijk overhandigd aan de juiste ontvanger.</p>
             </div>
             <div className={styles.uspCard}>
-              <div className={styles.uspIcon}><Globe /></div>
+              <div className={styles.uspIcon}><Globe aria-hidden="true" /></div>
               <h3>Nederland & Europa</h3>
               <p>Representatieve chauffeurs en voertuigen passend bij de zakelijke uitstraling van uw onderneming in heel Europa.</p>
             </div>
@@ -293,40 +292,40 @@ export default function Home() {
             
             <div style={{ backgroundColor: '#C2CBD3', border: '1.5px solid #313851', borderRadius: '12px', padding: 'clamp(20px, 4vw, 30px)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <div style={{ marginBottom: '12px' }}><Calculator color="#313851" size={32} /></div>
+                <div style={{ marginBottom: '12px' }}><Calculator color="#313851" size={32} aria-hidden="true" /></div>
                 <h3 style={{ color: '#313851', fontSize: '1.25rem', marginBottom: '10px', fontWeight: 700 }}>Wat Kost een Spoedkoerier per KM?</h3>
                 <p style={{ color: '#313851', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '20px' }}>
                   Kilometer tarieven vanaf €0,60/km, starttarieven, toeslagen en praktische rekenvoorbeelden.
                 </p>
               </div>
               <Link href="/kennisbank/wat-kost-een-spoedkoerier-per-km" className="btn btn-action" style={{ textAlign: 'center', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-                Lees artikel <ArrowRight size={16} />
+                Lees artikel <ArrowRight size={16} aria-hidden="true" />
               </Link>
             </div>
 
             <div style={{ backgroundColor: '#C2CBD3', border: '1.5px solid #313851', borderRadius: '12px', padding: 'clamp(20px, 4vw, 30px)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <div style={{ marginBottom: '12px' }}><Scale color="#313851" size={32} /></div>
+                <div style={{ marginBottom: '12px' }}><Scale color="#313851" size={32} aria-hidden="true" /></div>
                 <h3 style={{ color: '#313851', fontSize: '1.25rem', marginBottom: '10px', fontWeight: 700 }}>Spoedkoerier vs. Pakketdienst</h3>
                 <p style={{ color: '#313851', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '20px' }}>
                   De 5 belangrijkste verschillen tussen 100% dedicated vervoer en distributienetwerken.
                 </p>
               </div>
               <Link href="/kennisbank/spoedkoerier-vs-pakketdienst-verschillen" className="btn btn-action" style={{ textAlign: 'center', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-                Lees artikel <ArrowRight size={16} />
+                Lees artikel <ArrowRight size={16} aria-hidden="true" />
               </Link>
             </div>
 
             <div style={{ backgroundColor: '#C2CBD3', border: '1.5px solid #313851', borderRadius: '12px', padding: 'clamp(20px, 4vw, 30px)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <div style={{ marginBottom: '12px' }}><Clock color="#313851" size={32} /></div>
+                <div style={{ marginBottom: '12px' }}><Clock color="#313851" size={32} aria-hidden="true" /></div>
                 <h3 style={{ color: '#313851', fontSize: '1.25rem', marginBottom: '10px', fontWeight: 700 }}>Hoe Snel Ter Plaatse?</h3>
                 <p style={{ color: '#313851', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '20px' }}>
                   Binnen 30 minuten onderweg. Ontdek hoe wendbare voertuigen de bezorgsnelheid garanderen.
                 </p>
               </div>
               <Link href="/kennisbank/hoe-snel-is-een-spoedkoerier-ter-plaatse" className="btn btn-action" style={{ textAlign: 'center', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-                Lees artikel <ArrowRight size={16} />
+                Lees artikel <ArrowRight size={16} aria-hidden="true" />
               </Link>
             </div>
 

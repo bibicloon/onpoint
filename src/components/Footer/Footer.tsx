@@ -18,8 +18,10 @@ export default function Footer() {
           <h4 className={styles.subheading}>Snel naar</h4>
           <ul className={styles.list}>
             <li><Link href="/" className={styles.link}>Home</Link></li>
+            <li><Link href="/spoedtransport" className={styles.link}>Spoedtransport</Link></li>
             <li><Link href="/diensten" className={styles.link}>Diensten</Link></li>
             <li><Link href="/tarieven" className={styles.link}>Tarieven</Link></li>
+            <li><Link href="/zakelijk" className={styles.link}>Zakelijk</Link></li>
             <li><Link href="/kennisbank" className={styles.link}>Kennisbank</Link></li>
             <li><Link href="/faq" className={styles.link}>Veelgestelde Vragen (FAQ)</Link></li>
             <li><Link href="/over-ons" className={styles.link}>Over Ons</Link></li>
@@ -37,6 +39,7 @@ export default function Footer() {
         <div className={styles.column}>
           <h4 className={styles.subheading}>Werkgebieden</h4>
           <div className={styles.seoList}>
+            <Link href="/werkgebied/nederland" className={styles.seoLink}>Nederland</Link><span className={styles.seoSeparator}>•</span>
             <Link href="/werkgebied/amsterdam" className={styles.seoLink}>Amsterdam</Link><span className={styles.seoSeparator}>•</span>
             <Link href="/werkgebied/utrecht" className={styles.seoLink}>Utrecht</Link><span className={styles.seoSeparator}>•</span>
             <Link href="/werkgebied/schiphol" className={styles.seoLink}>Schiphol</Link><span className={styles.seoSeparator}>•</span>
@@ -58,7 +61,8 @@ export default function Footer() {
         <div className={styles.column}>
           <h4 className={styles.subheading}>Contact</h4>
           <ul className={styles.list}>
-            <li><a href="tel:0630037257" className={styles.link}>06 30 03 72 57</a></li>
+            <li><a href="tel:+31630037257" className={styles.link} aria-label="Bel direct met OnPoint Koeriers">Direct Bellen (24/7)</a></li>
+            <li><a href="https://wa.me/31630037257" target="_blank" rel="noopener noreferrer" className={styles.link} aria-label="Stuur een WhatsApp bericht naar OnPoint Koeriers">Direct WhatsApp</a></li>
             <li><a href="mailto:onpointkoerier@outlook.com" className={styles.link}>onpointkoerier@outlook.com</a></li>
             <li className={styles.textItem}>Vestiging: Amsterdam</li>
             <li className={styles.textItem}>KVK: 42077914 | BTW: NL005478178B19</li>
