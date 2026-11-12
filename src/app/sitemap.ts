@@ -23,6 +23,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: '/diensten/medisch-spoedtransport', file: 'diensten/medisch-spoedtransport/page.tsx', priority: 0.9, changeFrequency: 'weekly' as const },
     { url: '/diensten/juridisch-documenten-koerier', file: 'diensten/juridisch-documenten-koerier/page.tsx', priority: 0.9, changeFrequency: 'weekly' as const },
     { url: '/diensten/automotive-onderdelen', file: 'diensten/automotive-onderdelen/page.tsx', priority: 0.9, changeFrequency: 'weekly' as const },
+    { url: '/diensten/luchtvracht-aog-koerier', file: 'diensten/luchtvracht-aog-koerier/page.tsx', priority: 0.9, changeFrequency: 'weekly' as const },
+    { url: '/diensten/machinebouw-industrie-koerier', file: 'diensten/machinebouw-industrie-koerier/page.tsx', priority: 0.9, changeFrequency: 'weekly' as const },
     { url: '/tarieven', file: 'tarieven/page.tsx', priority: 0.9, changeFrequency: 'weekly' as const },
     { url: '/zakelijk', file: 'zakelijk/page.tsx', priority: 0.9, changeFrequency: 'weekly' as const },
     { url: '/over-ons', file: 'over-ons/page.tsx', priority: 0.8, changeFrequency: 'monthly' as const },

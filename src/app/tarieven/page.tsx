@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import styles from '@/app/page.module.css';
 import { CarFront, Truck, CheckCircle2 } from 'lucide-react';
+import PriceCalculator from '@/components/PriceCalculator/PriceCalculator';
 
 export const metadata: Metadata = {
   title: '⚡ Tarieven Spoedkoerier Per KM (€ 0,60/km) | Direct Offerte | OnPoint Koeriers',
@@ -79,6 +80,7 @@ export default function TarievenPage() {
             alt="Compacte Caddy bestelbus voor transparant geprijsd spoedtransport" 
             fill 
             priority
+            sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
           <div className={styles.heroOverlay}></div>
@@ -95,11 +97,18 @@ export default function TarievenPage() {
               <a href="tel:+31630037257" className="btn btn-primary" aria-label="Bel direct met OnPoint Koeriers">
                 BEL DIRECT
               </a>
-              <Link href="/contact" className="btn btn-action">
+              <a href="#calculator" className="btn btn-action">
                 BEREKEN RITPRIJS
-              </Link>
+              </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* SECTIE 1B - INTERACTIEVE RITPRIJS CALCULATOR */}
+      <section style={{ padding: '80px 0', backgroundColor: '#F6F3ED' }}>
+        <div className="container">
+          <PriceCalculator />
         </div>
       </section>
 
@@ -147,6 +156,7 @@ export default function TarievenPage() {
             src="/images/bg_tarieven_automotive.jpg"
             alt="Tarieven automotive achtergrond"
             fill
+            sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
         </div>

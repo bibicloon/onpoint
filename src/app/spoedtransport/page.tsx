@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import styles from '@/app/page.module.css';
-import { CarFront, Target, Lock, PhoneCall, Zap, UserCheck } from 'lucide-react';
+import { CarFront, Target, Lock, PhoneCall, Zap, UserCheck, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: '⚡ Spoedtransport 24/7 | Binnen 30 Min. Ter Plaatse | OnPoint Koeriers',
@@ -62,6 +62,7 @@ export default function SpoedtransportPage() {
             alt="OnPoint Koeriers auto met hoge snelheid op weg naar een spoedtransport bestemming" 
             fill 
             priority
+            sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
           <div className={styles.heroOverlay} style={{ background: 'rgba(49, 56, 81, 0.65)' }}></div>
@@ -105,6 +106,7 @@ export default function SpoedtransportPage() {
             src="/images/bg_spoedtransport_dark_left.jpg"
             alt="Spoedtransport op donkere lege weg"
             fill
+            sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'left center' }}
           />
         </div>
@@ -166,6 +168,41 @@ export default function SpoedtransportPage() {
               </p>
             </div>
 
+          </div>
+
+          {/* Garanties & Zekerheden Blok */}
+          <div style={{ 
+            backgroundColor: '#C2CBD3', 
+            borderRadius: '8px', 
+            border: '2px solid #313851',
+            padding: 'clamp(28px, 4vw, 48px)', 
+            maxWidth: '950px', 
+            margin: '60px auto 0 auto', 
+            textAlign: 'center',
+            color: '#313851'
+          }}>
+            <h2 style={{ color: '#313851', marginBottom: '1rem', fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', fontWeight: 'bold' }}>
+              Onze Garanties bij Elk Spoedtransport
+            </h2>
+            <p style={{ color: '#313851', maxWidth: '750px', margin: '0 auto 2rem auto', lineHeight: '1.6' }}>
+              Of het nu gaat om <Link href="/diensten/luchtvracht-aog-koerier" style={{ textDecoration: 'underline' }}>AOG-luchtvracht</Link>, <Link href="/diensten/machinebouw-industrie-koerier" style={{ textDecoration: 'underline' }}>machineonderdelen</Link> of <Link href="/diensten/medisch-spoedtransport" style={{ textDecoration: 'underline' }}>medische monsters</Link>: u kunt rekenen op vaste vervoersgaranties en volledige transparantie.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '14px', textAlign: 'left', marginBottom: '2rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontWeight: 600 }}><CheckCircle2 size={20} color="#313851" aria-hidden="true" /> Binnen 30-45 min. op ophaallocatie</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontWeight: 600 }}><CheckCircle2 size={20} color="#313851" aria-hidden="true" /> 100% Dedicated (geen bijlading)</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontWeight: 600 }}><CheckCircle2 size={20} color="#313851" aria-hidden="true" /> Hand-tot-hand overdracht + bewijs</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontWeight: 600 }}><CheckCircle2 size={20} color="#313851" aria-hidden="true" /> Verzekerd conform AVC / CMR</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontWeight: 600 }}><CheckCircle2 size={20} color="#313851" aria-hidden="true" /> Vast tarief vanaf € 0,60/km</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontWeight: 600 }}><CheckCircle2 size={20} color="#313851" aria-hidden="true" /> 24/7 bereikbaar (ook nacht & weekend)</div>
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
+              <Link href="/tarieven#calculator" className="btn btn-action">
+                BEREKEN DIRECT UW RITPRIJS →
+              </Link>
+              <Link href="/contact" className="btn btn-primary">
+                PLAN UW SPOEDRIT IN
+              </Link>
+            </div>
           </div>
         </div>
       </section>

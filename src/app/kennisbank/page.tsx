@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import styles from '@/app/page.module.css';
-import { Calculator, Scale, Clock, ArrowRight } from 'lucide-react';
+import { Calculator, Scale, Clock, Plane, Briefcase, Globe, ShieldCheck, Moon, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Kennisbank Spoedtransport & Logistiek | OnPoint Koeriers',
@@ -57,6 +57,7 @@ export default function KennisbankPage() {
             alt="OnPoint Koeriers Kennisbank gidsen over spoedtransport en logistiek" 
             fill 
             priority
+            sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
           <div className={styles.heroOverlay} style={{ background: 'rgba(49, 56, 81, 0.65)' }}></div>
@@ -100,6 +101,7 @@ export default function KennisbankPage() {
             src="/images/bg_spoedtransport_dark_left.jpg"
             alt="Kennisbank achtergrond"
             fill
+            sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
         </div>
@@ -152,6 +154,86 @@ export default function KennisbankPage() {
                 </p>
               </div>
               <Link href="/kennisbank/hoe-snel-is-een-spoedkoerier-ter-plaatse" className="btn btn-action" style={{ textAlign: 'center', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                Lees artikel <ArrowRight size={18} aria-hidden="true" />
+              </Link>
+            </div>
+
+            {/* Artikel 4 */}
+            <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(18px, 3vw, 30px)', border: '2px solid #313851', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <div style={{ marginBottom: '16px' }}><Plane color="#313851" size={36} aria-hidden="true" /></div>
+                <h3 style={{ color: '#313851', fontSize: '1.35rem', marginBottom: '12px', fontWeight: 700 }}>
+                  AOG Koerier & Luchtvracht Schiphol
+                </h3>
+                <p style={{ color: '#313851', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '24px' }}>
+                  Hoe werkt Aircraft on Ground (AOG) spoedtransport vanaf Schiphol en wanneer zet u een Courier On Board (COB) in?
+                </p>
+              </div>
+              <Link href="/kennisbank/aog-koerier-schiphol-luchtvracht" className="btn btn-action" style={{ textAlign: 'center', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                Lees artikel <ArrowRight size={18} aria-hidden="true" />
+              </Link>
+            </div>
+
+            {/* Artikel 5 */}
+            <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(18px, 3vw, 30px)', border: '2px solid #313851', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <div style={{ marginBottom: '16px' }}><Briefcase color="#313851" size={36} aria-hidden="true" /></div>
+                <h3 style={{ color: '#313851', fontSize: '1.35rem', marginBottom: '12px', fontWeight: 700 }}>
+                  Zakelijke Koerier Inhuren: 7 Punten
+                </h3>
+                <p style={{ color: '#313851', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '24px' }}>
+                  Praktische B2B checklist voor bedrijven: van AVC/CMR-garanties en kilometerprijzen tot hand-tot-hand overdracht.
+                </p>
+              </div>
+              <Link href="/kennisbank/koerier-inhuren-zakelijk-waar-op-letten" className="btn btn-action" style={{ textAlign: 'center', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                Lees artikel <ArrowRight size={18} aria-hidden="true" />
+              </Link>
+            </div>
+
+            {/* Artikel 6 */}
+            <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(18px, 3vw, 30px)', border: '2px solid #313851', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <div style={{ marginBottom: '16px' }}><Globe color="#313851" size={36} aria-hidden="true" /></div>
+                <h3 style={{ color: '#313851', fontSize: '1.35rem', marginBottom: '12px', fontWeight: 700 }}>
+                  Spoedtransport Duitsland & België
+                </h3>
+                <p style={{ color: '#313851', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '24px' }}>
+                  Alles over grensoverschrijdend same-day spoedvervoer naar Antwerpen, Brussel, het Ruhrgebied en Frankfurt.
+                </p>
+              </div>
+              <Link href="/kennisbank/spoedtransport-duitsland-belgie-regels" className="btn btn-action" style={{ textAlign: 'center', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                Lees artikel <ArrowRight size={18} aria-hidden="true" />
+              </Link>
+            </div>
+
+            {/* Artikel 7 */}
+            <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(18px, 3vw, 30px)', border: '2px solid #313851', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <div style={{ marginBottom: '16px' }}><ShieldCheck color="#313851" size={36} aria-hidden="true" /></div>
+                <h3 style={{ color: '#313851', fontSize: '1.35rem', marginBottom: '12px', fontWeight: 700 }}>
+                  Eisen aan Medisch Spoedtransport
+                </h3>
+                <p style={{ color: '#313851', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '24px' }}>
+                  Welke protocollen gelden voor het vervoeren van laboratoriummonsters, bloedproducten, medicatie en OK-instrumenten?
+                </p>
+              </div>
+              <Link href="/kennisbank/medisch-transport-koerier-eisen" className="btn btn-action" style={{ textAlign: 'center', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                Lees artikel <ArrowRight size={18} aria-hidden="true" />
+              </Link>
+            </div>
+
+            {/* Artikel 8 */}
+            <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: 'clamp(24px, 4vw, 35px) clamp(18px, 3vw, 30px)', border: '2px solid #313851', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <div style={{ marginBottom: '16px' }}><Moon color="#313851" size={36} aria-hidden="true" /></div>
+                <h3 style={{ color: '#313851', fontSize: '1.35rem', marginBottom: '12px', fontWeight: 700 }}>
+                  24/7 Nachtkoerier & Weekend Service
+                </h3>
+                <p style={{ color: '#313851', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '24px' }}>
+                  Direct onderweg buiten kantoortijden (22:00 – 06:00 uur) en in het weekend tegen een eerlijke toeslag van slechts 25%.
+                </p>
+              </div>
+              <Link href="/kennisbank/nachtkoerier-weekend-spoedtransport" className="btn btn-action" style={{ textAlign: 'center', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
                 Lees artikel <ArrowRight size={18} aria-hidden="true" />
               </Link>
             </div>

@@ -113,6 +113,7 @@ export default function Home() {
             alt="Premium spoedtransport met een snelle personenauto op de snelweg" 
             fill 
             priority
+            sizes="100vw"
             className={styles.heroImage}
           />
           <div className={styles.heroOverlay}></div>
@@ -159,6 +160,7 @@ export default function Home() {
             src="/images/bg_zakelijk_spoedtransport_dark.jpg"
             alt="Zakelijk Spoedtransport Zuidas Amsterdam"
             fill
+            sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
         </div>
@@ -237,6 +239,30 @@ export default function Home() {
               </Link>
             </div>
 
+            <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: '30px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', border: '1.5px solid #313851' }}>
+              <div>
+                <h3 style={{ color: '#313851', fontSize: '1.3rem', marginBottom: '12px', fontWeight: 700 }}>Luchtvracht, AOG & COB</h3>
+                <p style={{ color: '#313851', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '20px' }}>
+                  24/7 Aircraft on Ground (AOG) spoedkoerier vanaf Schiphol, urgente luchtvracht en Courier On Board.
+                </p>
+              </div>
+              <Link href="/diensten/luchtvracht-aog-koerier" className="btn btn-action" style={{ textAlign: 'center' }}>
+                Bekijk Luchtvracht & AOG →
+              </Link>
+            </div>
+
+            <div style={{ backgroundColor: '#C2CBD3', borderRadius: '12px', padding: '30px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', border: '1.5px solid #313851' }}>
+              <div>
+                <h3 style={{ color: '#313851', fontSize: '1.3rem', marginBottom: '12px', fontWeight: 700 }}>Machinebouw & Industrie</h3>
+                <p style={{ color: '#313851', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '20px' }}>
+                  Spoedvervoer van kritieke machineonderdelen, PLC-modules en high-tech prototypes zonder overslag.
+                </p>
+              </div>
+              <Link href="/diensten/machinebouw-industrie-koerier" className="btn btn-action" style={{ textAlign: 'center' }}>
+                Bekijk Industrie Service →
+              </Link>
+            </div>
+
           </div>
         </div>
       </section>
@@ -276,6 +302,7 @@ export default function Home() {
             src="/images/bg_spoedtransport_dark_left.jpg"
             alt="Kennisbank spoedtransport achtergrond"
             fill
+            sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
         </div>

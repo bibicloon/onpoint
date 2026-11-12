@@ -32,6 +32,8 @@ export default function Footer() {
             <li><Link href="/diensten/medisch-spoedtransport" className={styles.link}>Medisch Transport</Link></li>
             <li><Link href="/diensten/juridisch-documenten-koerier" className={styles.link}>Juridisch & Documenten</Link></li>
             <li><Link href="/diensten/automotive-onderdelen" className={styles.link}>Automotive Onderdelen</Link></li>
+            <li><Link href="/diensten/luchtvracht-aog-koerier" className={styles.link}>Luchtvracht & AOG</Link></li>
+            <li><Link href="/diensten/machinebouw-industrie-koerier" className={styles.link}>Machinebouw & Industrie</Link></li>
           </ul>
         </div>
 

@@ -44,6 +44,7 @@ export default function DienstenPage() {
             alt="OnPoint Koeriers representatief voertuig klaar voor snelle logistieke dienstverlening" 
             fill 
             priority
+            sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
           <div className={styles.heroOverlay} style={{ background: 'rgba(49, 56, 81, 0.7)' }}></div>
@@ -87,6 +88,7 @@ export default function DienstenPage() {
             src="/images/bg_diensten_alps.jpg"
             alt="Diensten Zwitserse Alpen achtergrond"
             fill
+            sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
         </div>
@@ -189,6 +191,30 @@ export default function DienstenPage() {
               </div>
               <Link href="/diensten/automotive-onderdelen" className="btn btn-action" style={{ textAlign: 'center' }}>
                 Bekijk Automotive Service →
+              </Link>
+            </div>
+
+            <div style={{ backgroundColor: '#FFFFFF', border: '1.5px solid #313851', borderRadius: '12px', padding: '30px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <h3 style={{ color: '#313851', fontSize: '1.3rem', marginBottom: '12px' }}>Luchtvracht, AOG & COB</h3>
+                <p style={{ color: '#313851', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '20px' }}>
+                  24/7 Aircraft on Ground (AOG) spoedkoerier vanaf Schiphol, spoedvracht en wereldwijde Courier On Board.
+                </p>
+              </div>
+              <Link href="/diensten/luchtvracht-aog-koerier" className="btn btn-action" style={{ textAlign: 'center' }}>
+                Bekijk Luchtvracht & AOG →
+              </Link>
+            </div>
+
+            <div style={{ backgroundColor: '#FFFFFF', border: '1.5px solid #313851', borderRadius: '12px', padding: '30px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <h3 style={{ color: '#313851', fontSize: '1.3rem', marginBottom: '12px' }}>Machinebouw & Industrie</h3>
+                <p style={{ color: '#313851', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '20px' }}>
+                  Direct vervoer van kritieke machineonderdelen, PLC-modules, matrijzen en high-tech prototypes zonder overslag.
+                </p>
+              </div>
+              <Link href="/diensten/machinebouw-industrie-koerier" className="btn btn-action" style={{ textAlign: 'center' }}>
+                Bekijk Industrie Service →
               </Link>
             </div>
 
