@@ -74,7 +74,7 @@ export default function ZaandamPage() {
             Binnen no-time onderweg vanaf HoogTij, Achtersluispolder en Westerspoor
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            In een industriële en voedingsmiddelen-hub als Zaandam is stilstaan geen optie. Heeft uw bedrijf op HoogTij, Achtersluispolder, Zuiderhout of Westerspoor met spoed een monster, contract of cruciaal onderdeel nodig? Via de A7, A8 en Ring A10 schakelen wij direct tegen heldere <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
+            In een industriële en voedingsmiddelen-hub als Zaandam is stilstaan geen optie. Heeft uw bedrijf op HoogTij, Achtersluispolder, Zuiderhout of Westerspoor met spoed een laboratoriummonster, contract of <Link href="/diensten/automotive-onderdelen" style={{ textDecoration: 'underline' }}>cruciaal machineonderdeel</Link> nodig? Via de A7, A8 en Ring A10 schakelen wij direct vanuit Zaanstad, Wormerveer en Purmerend richting <Link href="/werkgebied/amsterdam" style={{ textDecoration: 'underline' }}>Amsterdam</Link>, <Link href="/werkgebied/alkmaar" style={{ textDecoration: 'underline' }}>Alkmaar</Link>, <Link href="/werkgebied/haarlem" style={{ textDecoration: 'underline' }}>Haarlem</Link> en <Link href="/werkgebied/schiphol" style={{ textDecoration: 'underline' }}>Schiphol</Link> tegen heldere <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>
@@ -94,18 +94,18 @@ export default function ZaandamPage() {
           <div className={styles.uspGrid}>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
               <div className={styles.uspIcon}><Timer aria-hidden="true" /></div>
-              <h3 style={{ color: '#313851' }}>Snel op Locatie</h3>
-              <p style={{ color: '#313851' }}>Directe inzetbaarheid voor bedrijven in Zaandam, de havengebieden en omstreken.</p>
+              <h3 style={{ color: '#313851' }}>HoogTij & Achtersluispolder</h3>
+              <p style={{ color: '#313851' }}>Binnen 30 minuten ter plaatse bij industrie, food- en productiebedrijven in Zaandam, Assendelft en de hele Zaanstreek.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
               <div className={styles.uspIcon}><CarFront aria-hidden="true" /></div>
-              <h3 style={{ color: '#313851' }}>Compact & Zeker</h3>
-              <p style={{ color: '#313851' }}>Vervoer uitsluitend met representatieve personenauto&apos;s en Caddy&apos;s. 100% dedicated transport voor uw urgente zending.</p>
+              <h3 style={{ color: '#313851' }}>100% Dedicated Transport</h3>
+              <p style={{ color: '#313851' }}>Exclusief vervoer met representatieve personenauto&apos;s en Caddy&apos;s zonder tussenstops of overslag.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
               <div className={styles.uspIcon}><Globe aria-hidden="true" /></div>
-              <h3 style={{ color: '#313851' }}>Europa-breed</h3>
-              <p style={{ color: '#313851' }}>Vanuit Zaandam direct de snelweg op en soepel onderweg naar de rest van Europa.</p>
+              <h3 style={{ color: '#313851' }}>Direct via A7, A8 & Ring A10</h3>
+              <p style={{ color: '#313851' }}>Vanuit Zaandam binnen enkele minuten op het hoofdwegennet richting de Randstad, België en Duitsland.</p>
             </div>
           </div>
           
@@ -122,7 +122,7 @@ export default function ZaandamPage() {
             textAlign: 'center' 
           }}>
             <h2 style={{ color: '#313851', marginBottom: '2rem', fontSize: '2rem', fontWeight: 'bold' }}>
-              Een spoedzending die vandaag onderweg moet?
+              Direct een spoedkoerier in Zaandam nodig?
             </h2>
             <Link href="/contact" className="btn btn-action">
               NEEM DIRECT CONTACT OP

@@ -73,7 +73,7 @@ export default function EindhovenPage() {
             Binnen no-time onderweg vanuit Eindhoven, Brainport & De Hurk
           </h2>
           <p style={{ color: 'var(--color-dark)', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            In de Brainport-regio, op de High Tech Campus, Flight Forum en bedrijventerrein De Hurk telt iedere minuut. Valt een productieproces stil of wacht er een monteur op een cruciaal <Link href="/diensten/automotive-onderdelen" style={{ textDecoration: 'underline' }}>machine- of elektronica-onderdeel</Link>? Via de A2, A50 en A67 verzorgt OnPoint Koeriers rechtstreeks spoedtransport vanuit Eindhoven naar elke bestemming in Nederland, België en Duitsland.
+            In de Brainport-regio, op de High Tech Campus, Flight Forum, Acht en bedrijventerrein De Hurk telt iedere minuut. Valt een productieproces stil of wacht er een monteur op een cruciaal <Link href="/diensten/automotive-onderdelen" style={{ textDecoration: 'underline' }}>machine- of elektronica-onderdeel</Link>? Via de A2, A50, A58 en A67 verzorgt OnPoint Koeriers rechtstreeks spoedtransport vanuit Eindhoven richting <Link href="/werkgebied/tilburg" style={{ textDecoration: 'underline' }}>Tilburg</Link>, <Link href="/werkgebied/venlo" style={{ textDecoration: 'underline' }}>Venlo</Link>, <Link href="/werkgebied/breda" style={{ textDecoration: 'underline' }}>Breda</Link>, België en Duitsland tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>
@@ -98,13 +98,13 @@ export default function EindhovenPage() {
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
               <div className={styles.uspIcon}><CarFront aria-hidden="true" /></div>
-              <h3>Compact & Zeker</h3>
-              <p>Vervoer uitsluitend met representatieve personenauto's en Caddy's. 100% dedicated transport voor uw urgente zending.</p>
+              <h3>Brainport & High Tech</h3>
+              <p>Schokvrij, discreet en 100% dedicated vervoer voor kwetsbare hightech componenten en prototypes.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
               <div className={styles.uspIcon}><Globe aria-hidden="true" /></div>
-              <h3>Europa-breed</h3>
-              <p>Vanuit Eindhoven via de A67 direct onderweg naar bestemmingen in België, Duitsland en de rest van Europa.</p>
+              <h3>Direct via A2 & A67</h3>
+              <p>Vanuit Eindhoven via de A67 en A2 direct onderweg naar bestemmingen in België, het Ruhrgebied en heel Europa.</p>
             </div>
           </div>
           
@@ -121,7 +121,7 @@ export default function EindhovenPage() {
             textAlign: 'center' 
           }}>
             <h2 style={{ color: '#313851', marginBottom: '2rem', fontSize: '2rem', fontWeight: 'bold' }}>
-              Een spoedzending die vandaag onderweg moet?
+              Direct een spoedkoerier in Eindhoven nodig?
             </h2>
             <Link href="/contact" className="btn btn-action">
               NEEM DIRECT CONTACT OP

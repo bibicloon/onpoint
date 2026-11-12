@@ -73,7 +73,7 @@ export default function DenHaagPage() {
             Betrouwbaar spoedtransport vanuit Den Haag, Beatrixkwartier en Forepark
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            In het politieke en zakelijke hart van Nederland is discretie van het grootste belang. Wij zijn gespecialiseerd in het veilig en razendsnel vervoeren van <Link href="/diensten/juridisch-documenten-koerier" style={{ textDecoration: 'underline' }}>juridische dossiers, notariële akten, ambassade-documenten en paspoorten</Link>. Onze representatieve chauffeurs bedienen onder meer het Beatrixkwartier, Binckhorst, Forepark en de rechtbanken met 100% dedicated vervoer van hand tot hand.
+            In het politieke en zakelijke hart van Nederland is discretie van het grootste belang. Wij zijn gespecialiseerd in het veilig en razendsnel vervoeren van <Link href="/diensten/juridisch-documenten-koerier" style={{ textDecoration: 'underline' }}>juridische dossiers, notariële akten, ambassade-documenten en paspoorten</Link>. Onze representatieve chauffeurs bedienen het Beatrixkwartier, Binckhorst, Forepark, Rijswijk en Delft, en rijden via de A4, A12 en A13 direct richting <Link href="/werkgebied/rotterdam" style={{ textDecoration: 'underline' }}>Rotterdam</Link>, <Link href="/werkgebied/schiphol" style={{ textDecoration: 'underline' }}>Schiphol</Link>, <Link href="/werkgebied/amsterdam" style={{ textDecoration: 'underline' }}>Amsterdam</Link> en <Link href="/werkgebied/utrecht" style={{ textDecoration: 'underline' }}>Utrecht</Link> tegen vaste <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>
@@ -121,7 +121,7 @@ export default function DenHaagPage() {
             textAlign: 'center' 
           }}>
             <h2 style={{ color: '#313851', marginBottom: '2rem', fontSize: '2rem', fontWeight: 'bold' }}>
-              Een spoedzending die vandaag onderweg moet?
+              Direct een spoedkoerier in Den Haag nodig?
             </h2>
             <Link href="/contact" className="btn btn-action">
               NEEM DIRECT CONTACT OP

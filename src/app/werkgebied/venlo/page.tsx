@@ -75,7 +75,7 @@ export default function VenloPage() {
             Grensverleggend Spoedtransport vanuit Venlo
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            Als een van Europa&apos;s belangrijkste logistieke hubs is Venlo de poort naar Duitsland en het Ruhrgebied. Via de A67 en A73 verzorgt OnPoint Koeriers razendsnel dedicated transport voor e-commerce, warehousing en industriële bedrijven op Trade Port Noord & West, Fresh Park Venlo en Noorderpoort tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometer tarieven</Link>.
+            Als een van Europa&apos;s belangrijkste logistieke hubs is Venlo de poort naar Duitsland en het Ruhrgebied. Via de A67 en A73 verzorgt OnPoint Koeriers razendsnel dedicated transport voor e-commerce, warehousing en industriële bedrijven op Trade Port Noord & West, Fresh Park Venlo en Noorderpoort richting <Link href="/werkgebied/eindhoven" style={{ textDecoration: 'underline' }}>Eindhoven</Link>, <Link href="/werkgebied/arnhem" style={{ textDecoration: 'underline' }}>Arnhem</Link>, Roermond, Duisburg en Düsseldorf tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometer tarieven</Link>.
           </p>
         </div>
       </section>

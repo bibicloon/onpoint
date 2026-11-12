@@ -75,7 +75,7 @@ export default function UtrechtPage() {
             Het Centrale Knooppunt van Nederland
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            Als centraal verkeersknooppunt van Nederland zijn de snelwegen A1, A2, A12 en A27 rond Utrecht van cruciaal belang voor snelle logistiek. OnPoint Koeriers navigeert met compacte personenauto&apos;s en Caddy-bestelbussen razendsnel door het Utrechtse stadsverkeer en over bedrijventerreinen zoals Lage Weide, Papendorp, Rijnsweerd en Nieuwegein tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
+            Als centraal verkeersknooppunt van Nederland zijn de snelwegen A1, A2, A12 en A27 rond Utrecht van cruciaal belang voor snelle logistiek. OnPoint Koeriers navigeert met compacte personenauto&apos;s en Caddy-bestelbussen razendsnel door het Utrechtse stadsverkeer en over bedrijventerreinen zoals Lage Weide, Papendorp, Rijnsweerd, Maarssen en Nieuwegein richting <Link href="/werkgebied/amsterdam" style={{ textDecoration: 'underline' }}>Amsterdam</Link>, <Link href="/werkgebied/rotterdam" style={{ textDecoration: 'underline' }}>Rotterdam</Link>, <Link href="/werkgebied/arnhem" style={{ textDecoration: 'underline' }}>Arnhem</Link> en <Link href="/werkgebied/eindhoven" style={{ textDecoration: 'underline' }}>Eindhoven</Link> tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>

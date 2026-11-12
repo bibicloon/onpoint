@@ -74,7 +74,7 @@ export default function DordrechtPage() {
             Spoedvervoer in het Hart van de Drechtsteden
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            Gelegen aan de drukke A16 en N3 verbindt Dordrecht de Rotterdamse haven met Moerdijk, Breda en Antwerpen. OnPoint Koeriers is uw toegewijde partner voor spoedzendingen op bedrijventerreinen zoals Krabbepolder, Dordtse Kil I, II, III en IV en maritieme bedrijven in de Drechtsteden tegen heldere <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
+            Gelegen aan de drukke A16 en N3 verbindt Dordrecht de <Link href="/werkgebied/rotterdam" style={{ textDecoration: 'underline' }}>Rotterdamse haven</Link> met Moerdijk, <Link href="/werkgebied/breda" style={{ textDecoration: 'underline' }}>Breda</Link> en Antwerpen. OnPoint Koeriers is uw toegewijde partner voor urgente <Link href="/diensten/automotive-onderdelen" style={{ textDecoration: 'underline' }}>scheeps- en machineonderdelen</Link> op bedrijventerreinen zoals Krabbepolder, Dordtse Kil I, II, III en IV en maritieme bedrijven in Zwijndrecht, Sliedrecht en Papendrecht tegen heldere <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>

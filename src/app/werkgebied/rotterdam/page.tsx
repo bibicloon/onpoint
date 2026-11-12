@@ -74,7 +74,7 @@ export default function RotterdamPage() {
             Razendsnel ter plaatse in Rotterdam, Waalhaven, Botlek en Maasvlakte
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            In de dynamiek van de Rotterdamse haven en industrie telt elke minuut. Wij zijn 24/7 inzetbaar voor het vervoer van scheepsonderdelen, maritieme douanedocumenten en urgente onderdelen op Spaanse Polder, Waalhaven, Botlek, Europoort en de Maasvlakte. Via de A15, A16 en A20 rijden we zonder overslag direct van en naar Rotterdam tegen heldere <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
+            In de dynamiek van de Rotterdamse haven en industrie telt elke minuut. Wij zijn 24/7 inzetbaar voor het vervoer van <Link href="/diensten/automotive-onderdelen" style={{ textDecoration: 'underline' }}>scheeps- en machineonderdelen</Link>, maritieme douanedocumenten en urgente zendingen op Spaanse Polder, Waalhaven, Botlek, Europoort en de Maasvlakte. Via de A15, A16 en A20 rijden we zonder overslag direct tussen Rotterdam, <Link href="/werkgebied/dordrecht" style={{ textDecoration: 'underline' }}>Dordrecht</Link>, <Link href="/werkgebied/den-haag" style={{ textDecoration: 'underline' }}>Den Haag</Link>, <Link href="/werkgebied/breda" style={{ textDecoration: 'underline' }}>Breda</Link> en Antwerpen tegen heldere <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>
@@ -122,7 +122,7 @@ export default function RotterdamPage() {
             textAlign: 'center' 
           }}>
             <h2 style={{ color: '#313851', marginBottom: '2rem', fontSize: '2rem', fontWeight: 'bold' }}>
-              Een spoedzending die vandaag onderweg moet?
+              Direct een spoedkoerier in Rotterdam nodig?
             </h2>
             <Link href="/contact" className="btn btn-action">
               NEEM DIRECT CONTACT OP

@@ -73,7 +73,7 @@ export default function AlkmaarPage() {
             Binnen no-time onderweg vanaf Boekelermeer, Beverkoog en Overdie
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            In Alkmaar en de Kop van Noord-Holland mag uw bedrijfsvoering niet haperen. Heeft uw organisatie op de Boekelermeer, Beverkoog, Oudorp of Overdie met spoed een onderdeel, medisch pakket of contract nodig? Via de A9 schakelen wij direct en verzorgen wij 100% dedicated transport tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
+            In Alkmaar en de Kop van Noord-Holland mag uw bedrijfsvoering niet haperen. Heeft uw organisatie op de Boekelermeer, Beverkoog, Oudorp of Overdie met spoed een <Link href="/diensten/automotive-onderdelen" style={{ textDecoration: 'underline' }}>cruciaal onderdeel</Link>, <Link href="/diensten/medisch-spoedtransport" style={{ textDecoration: 'underline' }}>medisch pakket</Link> of contract nodig? Via de A9 schakelen wij direct vanuit Alkmaar, Heerhugowaard en Bergen richting <Link href="/werkgebied/zaandam" style={{ textDecoration: 'underline' }}>Zaandam</Link>, <Link href="/werkgebied/haarlem" style={{ textDecoration: 'underline' }}>Haarlem</Link>, <Link href="/werkgebied/amsterdam" style={{ textDecoration: 'underline' }}>Amsterdam</Link> en heel Europa tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>
@@ -93,18 +93,18 @@ export default function AlkmaarPage() {
           <div className={styles.uspGrid}>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
               <div className={styles.uspIcon}><Timer aria-hidden="true" /></div>
-              <h3 style={{ color: '#313851' }}>Snel op Locatie</h3>
-              <p style={{ color: '#313851' }}>Directe inzetbaarheid voor bedrijven in Alkmaar, de Boekelermeer en de hele Kop van Noord-Holland.</p>
+              <h3 style={{ color: '#313851' }}>Snel op Boekelermeer & Beverkoog</h3>
+              <p style={{ color: '#313851' }}>Binnen 30 minuten voorrijden bij bedrijven in Alkmaar, Heerhugowaard, Heiloo en de gehele Kop van Noord-Holland.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
               <div className={styles.uspIcon}><CarFront aria-hidden="true" /></div>
-              <h3 style={{ color: '#313851' }}>Compact & Zeker</h3>
-              <p style={{ color: '#313851' }}>Vervoer uitsluitend met representatieve personenauto's en Caddy's. 100% dedicated transport voor uw urgente zending.</p>
+              <h3 style={{ color: '#313851' }}>100% Dedicated Vervoer</h3>
+              <p style={{ color: '#313851' }}>Exclusief vervoer met personenauto&apos;s en Caddy&apos;s zonder tussenstops of overslag onderweg.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
               <div className={styles.uspIcon}><Globe aria-hidden="true" /></div>
-              <h3 style={{ color: '#313851' }}>Europa-breed</h3>
-              <p style={{ color: '#313851' }}>Vanuit Alkmaar direct de snelweg op en soepel onderweg naar de rest van Nederland en Europa.</p>
+              <h3 style={{ color: '#313851' }}>Direct via de A9</h3>
+              <p style={{ color: '#313851' }}>Vanuit Alkmaar rechtstreeks over de A9 naar de Randstad, Schiphol en elke bestemming in Europa.</p>
             </div>
           </div>
           
@@ -121,7 +121,7 @@ export default function AlkmaarPage() {
             textAlign: 'center' 
           }}>
             <h2 style={{ color: '#313851', marginBottom: '2rem', fontSize: '2rem', fontWeight: 'bold' }}>
-              Een spoedzending die vandaag onderweg moet?
+              Direct een spoedkoerier in Alkmaar nodig?
             </h2>
             <Link href="/contact" className="btn btn-action">
               NEEM DIRECT CONTACT OP

@@ -74,7 +74,7 @@ export default function SchipholPage() {
             Essentieel transport rondom de logistieke ring A4 & A9
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            Rondom de luchthaven staan de ontwikkelingen nooit stil. Wij richten ons specifiek op de logistieke ring: Schiphol-Centrum, Schiphol-Rijk, Schiphol-Zuidoost, Aalsmeer en Hoofddorp. Ligt er een cruciaal douanedocument klaar of wacht er een AOG-onderdeel (Aircraft on Ground) op direct vervoer? Wij zijn perfect gepositioneerd voor <Link href="/zakelijk" style={{ textDecoration: 'underline' }}>zakelijke spoedritten</Link> rondom de vrachtterminals en Royal FloraHolland tegen vaste <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
+            Rondom de luchthaven staan de ontwikkelingen nooit stil. Wij richten ons specifiek op de logistieke ring: Schiphol-Centrum, Schiphol-Rijk, Schiphol-Zuidoost, Aalsmeer en Hoofddorp. Ligt er een cruciaal douanedocument klaar of wacht er een AOG-onderdeel (Aircraft on Ground) op direct vervoer? Wij zijn perfect gepositioneerd voor <Link href="/zakelijk" style={{ textDecoration: 'underline' }}>zakelijke spoedritten</Link> rondom de vrachtterminals en Royal FloraHolland richting <Link href="/werkgebied/amsterdam" style={{ textDecoration: 'underline' }}>Amsterdam</Link>, <Link href="/werkgebied/haarlem" style={{ textDecoration: 'underline' }}>Haarlem</Link>, <Link href="/werkgebied/rotterdam" style={{ textDecoration: 'underline' }}>Rotterdam</Link> en heel Europa tegen vaste <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>
@@ -122,7 +122,7 @@ export default function SchipholPage() {
             textAlign: 'center' 
           }}>
             <h2 style={{ color: '#313851', marginBottom: '2rem', fontSize: '2rem', fontWeight: 'bold' }}>
-              Een spoedzending die vandaag onderweg moet?
+              Direct een spoedkoerier op Schiphol nodig?
             </h2>
             <Link href="/contact" className="btn btn-action">
               NEEM DIRECT CONTACT OP

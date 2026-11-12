@@ -73,7 +73,7 @@ export default function BredaPage() {
             Binnen no-time onderweg vanuit Breda, Hazeldonk en de A16
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            Als strategisch knooppunt aan de A16, A27 en A58 tussen Rotterdam en Antwerpen telt in Breda iedere minuut. Ligt uw productie stil op bedrijventerrein Hazeldonk, Hoogeind of Steenakker, of moeten er met spoed documenten over de grens geleverd worden? OnPoint Koeriers schakelt direct en rijdt zonder overslag tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
+            Als strategisch knooppunt aan de A16, A27 en A58 tussen <Link href="/werkgebied/rotterdam" style={{ textDecoration: 'underline' }}>Rotterdam</Link>, <Link href="/werkgebied/dordrecht" style={{ textDecoration: 'underline' }}>Dordrecht</Link>, <Link href="/werkgebied/tilburg" style={{ textDecoration: 'underline' }}>Tilburg</Link> en Antwerpen telt in Breda iedere minuut. Ligt uw productie stil op bedrijventerrein Hazeldonk, Hoogeind, Emer of Steenakker, of moeten er met spoed onderdelen of documenten over de Belgische grens geleverd worden? OnPoint Koeriers schakelt direct en rijdt zonder overslag tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>
@@ -93,18 +93,18 @@ export default function BredaPage() {
           <div className={styles.uspGrid}>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
               <div className={styles.uspIcon}><Timer aria-hidden="true" /></div>
-              <h3 style={{ color: '#313851' }}>Snel op Locatie</h3>
-              <p style={{ color: '#313851' }}>Directe inzetbaarheid voor bedrijven in Breda, Hazeldonk en omgeving.</p>
+              <h3 style={{ color: '#313851' }}>Binnen 30 Min. op Hazeldonk</h3>
+              <p style={{ color: '#313851' }}>Directe inzetbaarheid voor logistiek en productie in Breda, Hazeldonk, Oosterhout, Etten-Leur en Moerdijk.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
               <div className={styles.uspIcon}><CarFront aria-hidden="true" /></div>
-              <h3 style={{ color: '#313851' }}>Compact & Zeker</h3>
-              <p style={{ color: '#313851' }}>Vervoer uitsluitend met representatieve personenauto's en Caddy's. 100% dedicated transport voor uw urgente zending.</p>
+              <h3 style={{ color: '#313851' }}>Dedicated Zonder Overslag</h3>
+              <p style={{ color: '#313851' }}>Exclusief vervoer met representatieve personenauto&apos;s en Caddy&apos;s rechtstreeks naar de ontvanger.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
               <div className={styles.uspIcon}><Globe aria-hidden="true" /></div>
-              <h3 style={{ color: '#313851' }}>Europa-breed</h3>
-              <p style={{ color: '#313851' }}>Vanuit Breda direct de grens over of snel onderweg naar de rest van Nederland.</p>
+              <h3 style={{ color: '#313851' }}>Corridor Antwerpen & Benelux</h3>
+              <p style={{ color: '#313851' }}>Vanuit Breda direct via de A16/E19 de grens over naar Antwerpen, Brussel, Gent en de rest van Europa.</p>
             </div>
           </div>
           
@@ -121,7 +121,7 @@ export default function BredaPage() {
             textAlign: 'center' 
           }}>
             <h2 style={{ color: '#313851', marginBottom: '2rem', fontSize: '2rem', fontWeight: 'bold' }}>
-              Een spoedzending die vandaag onderweg moet?
+              Direct een spoedkoerier in Breda nodig?
             </h2>
             <Link href="/contact" className="btn btn-action">
               NEEM DIRECT CONTACT OP

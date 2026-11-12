@@ -2,46 +2,61 @@ import { MetadataRoute } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+async function getFileMtime(filePath: string): Promise<Date> {
+  try {
+    const stat = await fs.promises.stat(filePath);
+    return stat.mtime;
+  } catch {
+    return new Date('2026-11-12T18:00:00Z');
+  }
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://onpointkoeriers.nl';
+  const appDir = path.join(process.cwd(), 'src', 'app');
 
   // Vaste hoofdpagina's
   const staticPages = [
-    { url: '', priority: 1.0 },
-    { url: '/diensten', priority: 0.9 },
-    { url: '/diensten/medisch-spoedtransport', priority: 0.9 },
-    { url: '/diensten/juridisch-documenten-koerier', priority: 0.9 },
-    { url: '/diensten/automotive-onderdelen', priority: 0.9 },
-    { url: '/tarieven', priority: 0.9 },
-    { url: '/zakelijk', priority: 0.9 },
-    { url: '/over-ons', priority: 0.9 },
-    { url: '/contact', priority: 0.9 },
-    { url: '/spoedtransport', priority: 0.9 },
-    { url: '/kennisbank', priority: 0.9 },
-    { url: '/faq', priority: 0.9 }
+    { url: '', file: 'page.tsx', priority: 1.0, changeFrequency: 'weekly' as const },
+    { url: '/spoedtransport', file: 'spoedtransport/page.tsx', priority: 0.9, changeFrequency: 'weekly' as const },
+    { url: '/diensten', file: 'diensten/page.tsx', priority: 0.9, changeFrequency: 'weekly' as const },
+    { url: '/diensten/medisch-spoedtransport', file: 'diensten/medisch-spoedtransport/page.tsx', priority: 0.9, changeFrequency: 'weekly' as const },
+    { url: '/diensten/juridisch-documenten-koerier', file: 'diensten/juridisch-documenten-koerier/page.tsx', priority: 0.9, changeFrequency: 'weekly' as const },
+    { url: '/diensten/automotive-onderdelen', file: 'diensten/automotive-onderdelen/page.tsx', priority: 0.9, changeFrequency: 'weekly' as const },
+    { url: '/tarieven', file: 'tarieven/page.tsx', priority: 0.9, changeFrequency: 'weekly' as const },
+    { url: '/zakelijk', file: 'zakelijk/page.tsx', priority: 0.9, changeFrequency: 'weekly' as const },
+    { url: '/over-ons', file: 'over-ons/page.tsx', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/contact', file: 'contact/page.tsx', priority: 0.9, changeFrequency: 'monthly' as const },
+    { url: '/kennisbank', file: 'kennisbank/page.tsx', priority: 0.9, changeFrequency: 'weekly' as const },
+    { url: '/faq', file: 'faq/page.tsx', priority: 0.8, changeFrequency: 'weekly' as const },
+    { url: '/algemene-voorwaarden', file: 'algemene-voorwaarden/page.tsx', priority: 0.3, changeFrequency: 'yearly' as const },
+    { url: '/privacybeleid', file: 'privacybeleid/page.tsx', priority: 0.3, changeFrequency: 'yearly' as const },
   ];
 
-  const staticRoutes: MetadataRoute.Sitemap = staticPages.map((page) => ({
-    url: `${baseUrl}${page.url}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: page.priority,
-  }));
+  const staticRoutes: MetadataRoute.Sitemap = await Promise.all(
+    staticPages.map(async (page) => ({
+      url: `${baseUrl}${page.url}`,
+      lastModified: await getFileMtime(path.join(appDir, page.file)),
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
+    }))
+  );
 
   // Dynamische werkgebieden uitlezen
   let werkgebiedRoutes: MetadataRoute.Sitemap = [];
   try {
-    const werkgebiedDir = path.join(process.cwd(), 'src', 'app', 'werkgebied');
+    const werkgebiedDir = path.join(appDir, 'werkgebied');
     const entries = await fs.promises.readdir(werkgebiedDir, { withFileTypes: true });
-    
-    werkgebiedRoutes = entries
-      .filter((entry) => entry.isDirectory() && !entry.name.startsWith('['))
-      .map((dir) => ({
+    const dirs = entries.filter((entry) => entry.isDirectory() && !entry.name.startsWith('['));
+
+    werkgebiedRoutes = await Promise.all(
+      dirs.map(async (dir) => ({
         url: `${baseUrl}/werkgebied/${dir.name}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
+        lastModified: await getFileMtime(path.join(werkgebiedDir, dir.name, 'page.tsx')),
+        changeFrequency: 'weekly' as const,
         priority: 0.8,
-      }));
+      }))
+    );
   } catch (error) {
     console.error('Kon werkgebied map niet uitlezen voor sitemap:', error);
   }
@@ -49,17 +64,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Dynamische kennisbank artikelen uitlezen
   let kennisbankRoutes: MetadataRoute.Sitemap = [];
   try {
-    const kennisbankDir = path.join(process.cwd(), 'src', 'app', 'kennisbank');
+    const kennisbankDir = path.join(appDir, 'kennisbank');
     const entries = await fs.promises.readdir(kennisbankDir, { withFileTypes: true });
-    
-    kennisbankRoutes = entries
-      .filter((entry) => entry.isDirectory() && !entry.name.startsWith('['))
-      .map((dir) => ({
+    const dirs = entries.filter((entry) => entry.isDirectory() && !entry.name.startsWith('['));
+
+    kennisbankRoutes = await Promise.all(
+      dirs.map(async (dir) => ({
         url: `${baseUrl}/kennisbank/${dir.name}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
+        lastModified: await getFileMtime(path.join(kennisbankDir, dir.name, 'page.tsx')),
+        changeFrequency: 'monthly' as const,
         priority: 0.8,
-      }));
+      }))
+    );
   } catch (error) {
     console.error('Kon kennisbank map niet uitlezen voor sitemap:', error);
   }

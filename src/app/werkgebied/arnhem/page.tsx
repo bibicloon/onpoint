@@ -74,7 +74,7 @@ export default function ArnhemPage() {
             Strategisch Logistiek Knooppunt in Oost-Nederland
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            Gelegen aan de kruising van de A12, A50 en A325 is Arnhem de cruciale schakel tussen de Randstad, Twente en het Duitse achterland. OnPoint Koeriers staat klaar voor direct dedicated spoedvervoer op Industriepark Kleefse Waard (IPKW), Het Broek, IJsseloord I & II en richting Nijmegen en Oberhausen tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
+            Gelegen aan de kruising van de A12, A50 en A325 is Arnhem de cruciale schakel tussen <Link href="/werkgebied/utrecht" style={{ textDecoration: 'underline' }}>Utrecht</Link>, Twente, <Link href="/werkgebied/venlo" style={{ textDecoration: 'underline' }}>Venlo</Link> en het Duitse achterland. OnPoint Koeriers staat klaar voor direct dedicated spoedvervoer op Industriepark Kleefse Waard (IPKW), Het Broek, IJsseloord I & II, Duiven en richting Nijmegen en Oberhausen tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>

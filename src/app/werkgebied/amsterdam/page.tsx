@@ -73,7 +73,7 @@ export default function AmsterdamPage() {
             Ontwijk de drukte in het centrum, Westpoort en op de Zuidas
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            In Amsterdam is het verkeer vaak een grote uitdaging voor reguliere transporteurs. Met onze compacte Caddy's en personenauto's omzeilen wij het vastgelopen vrachtverkeer in het centrum, de grachtengordel en rond zakelijke districten zoals de Zuidas, Sloterdijk, Westpoort en Amsterdam Zuidoost. Wij zijn de ideale partner voor <Link href="/diensten/juridisch-documenten-koerier" style={{ textDecoration: 'underline' }}>vertrouwelijke documenten</Link> en directe zakelijke zendingen tegen heldere <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometer tarieven</Link>.
+            In Amsterdam is het verkeer vaak een grote uitdaging voor reguliere transporteurs. Met onze compacte Caddy&apos;s en personenauto&apos;s omzeilen wij het vastgelopen vrachtverkeer in het centrum, de grachtengordel en rond zakelijke districten zoals de Zuidas, Sloterdijk, Westpoort en Amsterdam Zuidoost. Wij zijn de ideale partner voor <Link href="/diensten/juridisch-documenten-koerier" style={{ textDecoration: 'underline' }}>vertrouwelijke documenten</Link> en directe zakelijke spoedritten richting <Link href="/werkgebied/schiphol" style={{ textDecoration: 'underline' }}>Schiphol</Link>, <Link href="/werkgebied/zaandam" style={{ textDecoration: 'underline' }}>Zaandam</Link>, <Link href="/werkgebied/haarlem" style={{ textDecoration: 'underline' }}>Haarlem</Link> en <Link href="/werkgebied/utrecht" style={{ textDecoration: 'underline' }}>Utrecht</Link> tegen heldere <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometer tarieven</Link>.
           </p>
         </div>
       </section>
@@ -121,7 +121,7 @@ export default function AmsterdamPage() {
             textAlign: 'center' 
           }}>
             <h2 style={{ color: '#313851', marginBottom: '2rem', fontSize: '2rem', fontWeight: 'bold' }}>
-              Een spoedzending die vandaag onderweg moet?
+              Direct een spoedkoerier in Amsterdam nodig?
             </h2>
             <Link href="/contact" className="btn btn-action">
               NEEM DIRECT CONTACT OP

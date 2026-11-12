@@ -73,7 +73,7 @@ export default function HaarlemPage() {
             Binnen no-time onderweg vanuit Haarlem en de Waarderpolder
           </h2>
           <p style={{ color: '#313851', fontSize: '1.125rem', maxWidth: '800px', margin: '0 auto', marginBottom: '0' }}>
-            Of uw bedrijf zich nu in de bruisende binnenstad van Haarlem, rond het Spaarne Gasthuis of op bedrijventerrein de Waarderpolder bevindt: via de A200 en A9 schakelen wij direct. OnPoint Koeriers verzorgt hoogwaardig spoedtransport naar Amsterdam, Schiphol en de rest van Nederland en Europa tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
+            Of uw bedrijf zich nu in de bruisende binnenstad van Haarlem, rond het <Link href="/diensten/medisch-spoedtransport" style={{ textDecoration: 'underline' }}>Spaarne Gasthuis</Link>, Velsen-Noord of op bedrijventerrein de Waarderpolder bevindt: via de A200 en A9 schakelen wij direct. OnPoint Koeriers verzorgt hoogwaardig spoedtransport naar <Link href="/werkgebied/amsterdam" style={{ textDecoration: 'underline' }}>Amsterdam</Link>, <Link href="/werkgebied/schiphol" style={{ textDecoration: 'underline' }}>Schiphol</Link>, <Link href="/werkgebied/zaandam" style={{ textDecoration: 'underline' }}>Zaandam</Link>, <Link href="/werkgebied/alkmaar" style={{ textDecoration: 'underline' }}>Alkmaar</Link> en heel Europa tegen transparante <Link href="/tarieven" style={{ textDecoration: 'underline' }}>kilometerprijzen</Link>.
           </p>
         </div>
       </section>
@@ -93,18 +93,18 @@ export default function HaarlemPage() {
           <div className={styles.uspGrid}>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
               <div className={styles.uspIcon}><Timer aria-hidden="true" /></div>
-              <h3 style={{ color: '#313851' }}>Snel op Locatie</h3>
-              <p style={{ color: '#313851' }}>Directe inzetbaarheid voor bedrijven in Haarlem, de Waarderpolder en omgeving.</p>
+              <h3 style={{ color: '#313851' }}>Waarderpolder & Kennemerland</h3>
+              <p style={{ color: '#313851' }}>Binnen 30 minuten ter plaatse bij bedrijven in Haarlem, de Waarderpolder, Beverwijk, IJmuiden en Heemstede.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
               <div className={styles.uspIcon}><CarFront aria-hidden="true" /></div>
-              <h3 style={{ color: '#313851' }}>Compact & Zeker</h3>
-              <p style={{ color: '#313851' }}>Vervoer uitsluitend met representatieve personenauto's en Caddy's. 100% dedicated transport voor uw urgente zending.</p>
+              <h3 style={{ color: '#313851' }}>Wendbaar in de Binnenstad</h3>
+              <p style={{ color: '#313851' }}>Met personenauto&apos;s en compacte Caddy&apos;s leveren wij snel en zonder vertraging in het historische centrum van Haarlem.</p>
             </div>
             <div className={styles.uspCard} style={{ backgroundColor: '#C2CBD3' }}>
               <div className={styles.uspIcon}><Globe aria-hidden="true" /></div>
-              <h3 style={{ color: '#313851' }}>Europa-breed</h3>
-              <p style={{ color: '#313851' }}>Vanuit Haarlem direct de snelweg op en soepel onderweg naar de rest van Europa.</p>
+              <h3 style={{ color: '#313851' }}>Direct via A200 & A9</h3>
+              <p style={{ color: '#313851' }}>Binnen enkele minuten op het knooppunt Rottepolderplein richting Schiphol, de Randstad en heel Europa.</p>
             </div>
           </div>
           
@@ -121,7 +121,7 @@ export default function HaarlemPage() {
             textAlign: 'center' 
           }}>
             <h2 style={{ color: '#313851', marginBottom: '2rem', fontSize: '2rem', fontWeight: 'bold' }}>
-              Een spoedzending die vandaag onderweg moet?
+              Direct een spoedkoerier in Haarlem nodig?
             </h2>
             <Link href="/contact" className="btn btn-action">
               NEEM DIRECT CONTACT OP
